@@ -1,0 +1,70 @@
+---
+title: "Divergo"
+excerpt: "Client project: Pine Script strategy based on an innovative approach to divergence"
+header:
+  image:
+  teaser: /assets/images/portfolio/divergo/divergo-chart-1.png
+sidebar:
+  - title: 
+    image: 
+    image_alt: 
+    text: 
+  - title: 
+    text: 
+gallery:
+  - url: /assets/images/portfolio/divergo/divergo-chart-2.png
+    image_path: assets/images/portfolio/divergo/divergo-chart-2.png
+    alt: "Divergo chart image 2"
+  - url: /assets/images/portfolio/divergo/divergo-chart-3.png
+    image_path: assets/images/portfolio/divergo/divergo-chart-3.png
+    alt: "Divergo chart image 3"
+  - url: /assets/images/portfolio/divergo/divergo-equity-curve-1.png
+    image_path: assets/images/portfolio/divergo/divergo-equity-curve-1.png
+    alt: "Divergo equity curve image 1"
+  - url: /assets/images/portfolio/divergo/divergo-equity-curve-2.png
+    image_path: assets/images/portfolio/divergo/divergo-equity-curve-2.png
+    alt: "Divergo equity curve image 2"
+  - url: /assets/images/portfolio/divergo/divergo-equity-curve-3.png
+    image_path: assets/images/portfolio/divergo/divergo-equity-curve-3.png
+    alt: "Divergo equity curve image 3"
+categories:
+  - Trading
+tags:
+  - PineScript
+  - TradingView
+  - Divergence
+  - StrategyDevelopment
+  - Backtesting
+---
+
+![Divergo chart image 1](/assets/images/portfolio/divergo/divergo-chart-1.png)
+*Divergo in action*
+{: style="text-align: center;"}
+
+### Summary
+Developed a Forex strategy using a manually tested, non-standard divergence method — implemented entirely from scratch due to the complexity of the logic.
+{: style="text-align: justify;"}
+
+### Key features
+- Unique divergence technique based on indicator waves, peak and low values
+  - Regular/hidden, bullish/bearish divergences
+- Visualisation of diverences, entries, exits, take profit, stop loss levels
+- Possibility to restrict trading sessions to certain days and time periods
+- Pine Script v6 on TradingView
+- Trading automation via real time alerts, Pine Connector and MetaTrader 4
+- Backtasted over several major Forex and Crypto pairs
+{: style="text-align: justify;"}
+
+### Gallery
+{% include gallery caption="" %}
+
+### Client Testimonial
+> “Others left me disappointed, but Péter delivered exactly what I needed — in just a week and a half.”
+>
+> — Ákos
+
+### Tech Stack
+- Pine Script v6
+- Trading View alerts
+- Pine Connector
+- MetaTrader
