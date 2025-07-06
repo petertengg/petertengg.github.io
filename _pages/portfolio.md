@@ -1,6 +1,7 @@
 ---
 title: Portfolio
-layout: collection
+subtitle: "Things I Have Cooked Up"
+layout: "collection-extended"
 permalink: /portfolio/
 collection: portfolio
 entries_layout: grid

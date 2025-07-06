@@ -1,5 +1,6 @@
-title: Peter's Site
-author: Peter
+title: Péter Tengg
+subtitle: Software Engineer
+author: Péter
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -25,12 +26,25 @@ search_provider          : "lunr"
 lunr:
   search_within_pages    : true
 
-minimal_mistakes_skin: "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 collections:
+  updates:
+    output: true
+    permalink: /:collection/:path/
+
+  bugs-in-the-soup:
+    output: true
+    permalink: /:collection/:path/
+
   portfolio:
     output: true
     permalink: /:collection/:path/
+
+  optimal-banana:
+    output: true
+    permalink: /:collection/:path/
+
 
 defaults:
   # _pages
@@ -40,6 +54,42 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _updates
+  - scope:
+      path: ""
+      type: updates
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      show_date: true
+      share: false
+      comments: false
+      related: true
+  # _programming
+  - scope:
+      path: ""
+      type: bugs-in-the-soup
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      show_date: true
+      share: false
+      comments: false
+      related: true
+  # _cooking
+  - scope:
+      path: ""
+      type: optimal-banana
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      show_date: true
+      share: false
+      comments: false
+      related: true
   # _portfolio
   - scope:
       path: ""
@@ -47,6 +97,8 @@ defaults:
     values:
       layout: single
       author_profile: false
+      read_time: true
+      show_date: true
       share: false
       comments: false
       related: true
@@ -57,6 +109,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      show_date: true
       read_time: true
       share: true
       related: true
