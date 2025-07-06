@@ -1,6 +1,6 @@
 ---
 title: "Divergo"
-excerpt: "Client project: Pine Script strategy based on an innovative approach to divergence"
+excerpt: "\"Others left me disappointed, but Péter delivered exactly what I needed — in just a week and a half.\" - Ákos"
 header:
   image:
   teaser: /assets/images/portfolio/divergo/divergo-chart-1.png
@@ -28,17 +28,18 @@ gallery:
     image_path: assets/images/portfolio/divergo/divergo-equity-curve-3.png
     alt: "Divergo equity curve image 3"
 categories:
+  - Portfolio
   - Trading
 tags:
-  - PineScript
-  - TradingView
-  - Divergence
-  - StrategyDevelopment
-  - Backtesting
+  - "Trading: PineScript"
+  - "Trading: TradingView"
+  - "Trading: Divergence"
+  - "Trading: StrategyDevelopment"
+  - "Trading: Backtesting"
 ---
 
 ![Divergo chart image 1](/assets/images/portfolio/divergo/divergo-chart-1.png)
-*Divergo in action*
+*Figure 1: Divergo in action*
 {: style="text-align: center;"}
 
 ### Summary
