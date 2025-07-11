@@ -5,5 +5,4 @@ layout: "collection-extended"
 permalink: /optimal-banana/
 collection: optimal-banana
 entries_layout: list
-classes: wide
 ---

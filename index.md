@@ -34,6 +34,10 @@ Currently working on Age of Empires II
     <i class="fab fa-discord"></i>
     Discord: <code>peti7199</code>
   </li>
+  <li>
+    <i class="fab fa-instagram"></i>
+    <a href="https://www.instagram.com/minimal_onion/" target="_blank">Instagram</a>
+  </li>
 </ul>
 
 ### About this Site
