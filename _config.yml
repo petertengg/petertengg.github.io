@@ -62,8 +62,8 @@ defaults:
       author_profile: false
       read_time: true
       show_date: true
-      share: false
-      comments: false
+      share: true
+      comments: true
       related: true
   # _programming
   - scope:
@@ -74,8 +74,8 @@ defaults:
       author_profile: false
       read_time: true
       show_date: true
-      share: false
-      comments: false
+      share: true
+      comments: true
       related: true
   # _cooking
   - scope:
@@ -86,8 +86,8 @@ defaults:
       author_profile: false
       read_time: true
       show_date: true
-      share: false
-      comments: false
+      share: true
+      comments: true
       related: true
   # _portfolio
   - scope:
@@ -98,8 +98,8 @@ defaults:
       author_profile: false
       read_time: true
       show_date: true
-      share: false
-      comments: false
+      share: true
+      comments: true
       related: true
   # _posts
   - scope:
@@ -112,6 +112,11 @@ defaults:
       read_time: true
       share: true
       related: true
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "petertengg"
 
 
 include: ["_pages"]
