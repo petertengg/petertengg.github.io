@@ -23,6 +23,10 @@ Currently working on Age of Empires II
 ### Contact
 <ul style="list-style: none; padding-left: 0;">
   <li>
+    <i class="fas fa-file-pdf"></i>
+    <a href="/assets/downloads/CV English - Peter Tengg.pdf" type="application/pdf" download>Download CV</a>
+  </li>
+  <li>
     <i class="fab fa-linkedin"></i>
     <a href="https://www.linkedin.com/in/petertengg/" target="_blank">LinkedIn</a>
   </li>
