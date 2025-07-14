@@ -1,0 +1,625 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Changing Stream for a Perforce Workspace - Péter Tengg</title>
+<meta name="description" content="Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Péter Tengg">
+<meta property="og:title" content="Changing Stream for a Perforce Workspace">
+<meta property="og:url" content="/bugs-in-the-soup/2025-07-06-changing-stream-for-a-perforce-workspace/">
+
+
+  <meta property="og:description" content="Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-07-05T11:33:20+02:00">
+
+
+
+
+
+
+<link rel="canonical" href="/bugs-in-the-soup/2025-07-06-changing-stream-for-a-perforce-workspace/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Péter Tengg Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Changing Stream for a Perforce Workspace | Péter Tengg</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Changing Stream for a Perforce Workspace" />
+<meta name="author" content="Péter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git." />
+<meta property="og:description" content="Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git." />
+<link rel="canonical" href="/bugs-in-the-soup/2025-07-06-changing-stream-for-a-perforce-workspace/" />
+<meta property="og:url" content="/bugs-in-the-soup/2025-07-06-changing-stream-for-a-perforce-workspace/" />
+<meta property="og:site_name" content="Péter Tengg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-05T11:33:20+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Changing Stream for a Perforce Workspace" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Péter"},"dateModified":"2025-07-05T11:33:20+02:00","datePublished":"2025-07-05T11:33:20+02:00","description":"Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.","headline":"Changing Stream for a Perforce Workspace","mainEntityOfPage":{"@type":"WebPage","@id":"/bugs-in-the-soup/2025-07-06-changing-stream-for-a-perforce-workspace/"},"url":"/bugs-in-the-soup/2025-07-06-changing-stream-for-a-perforce-workspace/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Péter Tengg
+          <span class="site-subtitle">Software Engineer</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/updates/"
+                
+                
+              >Updates</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/bugs-in-the-soup/"
+                
+                
+              >Programming</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/optimal-banana/"
+                
+                
+              >Cooking</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/portfolio/"
+                
+                
+              >Portfolio</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Changing Stream for a Perforce Workspace">
+    <meta itemprop="description" content="Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.">
+    <meta itemprop="datePublished" content="2025-07-05T11:33:20+02:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="/bugs-in-the-soup/2025-07-06-changing-stream-for-a-perforce-workspace/" itemprop="url">Changing Stream for a Perforce Workspace
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-05T11:33:20+02:00">July 5, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p class="text-justify">Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.</p>
+
+<h3 id="the-problem">The problem</h3>
+
+<p class="text-justify">It has a drawback, however. Repositories can grow pretty huge over time. At my company, 250–300 GB repositories are not uncommon, and you have to sync them down to your workstation in order to carry out your development work. Syncing can take a whole day, depending on your internet connection. It also requires a lot of disk space.</p>
+
+<p class="text-justify">And that’s only one workspace. We have several streams (similar to Git branches), and if you want to work on more than one, you have to have them mapped to different workspaces on your disk. Even more syncing, even more disk space.</p>
+
+<h3 id="the-solution">The solution</h3>
+
+<p class="text-justify">There is a useful trick, however, that can help you save a lot of time and disk space. It is possible to retarget your workspace to another stream. Depending on the differences between the two streams, the synchronisation after the switch can be very fast, and you will have to keep only one workspace worth of data on your disk.</p>
+
+<h3 id="steps">Steps</h3>
+
+<p>1. Go to <code class="language-plaintext highlighter-rouge">Edit &gt; Preferences &gt; Streams</code> tab and make sure that <code class="language-plaintext highlighter-rouge">"Work in stream" menu behavior</code> is set to <code class="language-plaintext highlighter-rouge">Choose at the time of action</code>.</p>
+
+<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/1.png" alt="Figure 1: Work in stream menu behavior" /></p>
+<p class="text-center"><em>Figure 1: Work in stream menu behavior setting</em></p>
+
+<p>2. In the left panel, select the Workspace tree.</p>
+
+<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/2.png" alt="Figure 2: Workspace tree" /></p>
+<p class="text-center"><em>Figure 2: Workspace tree</em></p>
+
+<p class="text-justify">In the top dropdown menu, select the workspace whose stream you want to change.</p>
+
+<p class="text-justify">The line marked with <code class="language-plaintext highlighter-rouge">1</code> shows the name of your workspace: <code class="language-plaintext highlighter-rouge">synapse_DESKTOP-BF6888H_9492</code> and in parentheses the stream it is currently tracking: <code class="language-plaintext highlighter-rouge">Develop</code>.</p>
+
+<p class="text-justify">The line marked with <code class="language-plaintext highlighter-rouge">2</code> shows the folder on your disk associated with the workspace.</p>
+
+<p>3. In the right panel, select the Streams tab:</p>
+
+<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/3.png" alt="Figure 3: Streams view" /></p>
+<p class="text-center"><em>Figure 3: Streams view</em></p>
+
+<p class="text-justify">You will see a tree structure of the streams available in the right panel.</p>
+
+<p>4. Browse to the stream you want to switch to. Right click it and hover <code class="language-plaintext highlighter-rouge">Work in this Stream</code>.</p>
+
+<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/4.png" alt="Figure 4: Switch stream" /></p>
+<p class="text-center"><em>Figure 4: Switch stream</em></p>
+
+<p class="text-justify">A submenu will open with two choices: <code class="language-plaintext highlighter-rouge">Use different workspace</code> and <code class="language-plaintext highlighter-rouge">Reuse current workspace</code>. We want to choose <code class="language-plaintext highlighter-rouge">Reuse current workspace</code> in this case. This is why we selected <code class="language-plaintext highlighter-rouge">Choose at the time of action</code> in the settings in step 1. If you cannot see <code class="language-plaintext highlighter-rouge">Reuse current workspace</code>, then go back to step 1 to enable it.</p>
+
+<p>5. Click <code class="language-plaintext highlighter-rouge">Yes</code> in the pop-up window asking if you want to get the latest revision:</p>
+
+<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/5.png" alt="Figure 5: Get latest revision pop-up" /></p>
+<p class="text-center"><em>Figure 5: Get latest revision pop-up</em></p>
+
+<p class="text-justify">Depending on the differences between your previous workspace (<code class="language-plaintext highlighter-rouge">Develop</code>) and the new stream (<code class="language-plaintext highlighter-rouge">release</code>), this operation can be quite fast—certainly faster than syncing down the whole stream from scratch—and you will use half the disk space (only one workspace instead of two). There are some caveats, however:</p>
+
+<ol class="text-justify">
+  <li>If the target stream is very different, Perforce might warn about conflicting files or deletions.</li>
+  <li>Your folder on your disk will still be called <code class="language-plaintext highlighter-rouge">d:\dev\workspaces\gummy\develop</code>, but it now tracks the <code class="language-plaintext highlighter-rouge">release</code> stream. In practice it should not cause any problems, but it’s worth remembering. (Maybe you can plan your naming better next time. 🙂)</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#programming-game-dev" class="page__taxonomy-item p-category" rel="tag">Programming: Game Dev</a><span class="sep">, </span>
+    
+      <a href="/tags/#programming-perforce" class="page__taxonomy-item p-category" rel="tag">Programming: Perforce</a><span class="sep">, </span>
+    
+      <a href="/tags/#programming-version-control" class="page__taxonomy-item p-category" rel="tag">Programming: Version Control</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#programming" class="page__taxonomy-item p-category" rel="tag">Programming</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-07-05T11:33:20+02:00">July 5, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Changing+Stream+for+a+Perforce+Workspace%20%2Fbugs-in-the-soup%2F2025-07-06-changing-stream-for-a-perforce-workspace%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fbugs-in-the-soup%2F2025-07-06-changing-stream-for-a-perforce-workspace%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=/bugs-in-the-soup/2025-07-06-changing-stream-for-a-perforce-workspace/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Changing+Stream+for+a+Perforce+Workspace%20%2Fbugs-in-the-soup%2F2025-07-06-changing-stream-for-a-perforce-workspace%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+
+    </div>
+
+    
+      
+        <p>
+          Comments are configured with provider: <strong>disqus</strong>,
+          but are disabled in non-production environments.
+        </p>
+      
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/portfolio/divergo/divergo-chart-1.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/portfolio/divergo/" rel="permalink">Divergo
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-14T07:47:54+02:00">July 14, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">“Others left me disappointed, but Péter delivered exactly what I needed — in just a week and a half.” - Ákos
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/optimal-banana/oven-roasted-whole-chicken/3.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optimal-banana/oven-roasted-whole-chicken/" rel="permalink">Oven Roasted Whole Chicken
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-05T11:33:00+02:00">July 5, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ingredients
+
+  1 chicken, approx 2 kg
+  500 grams champignon mushrooms
+  4 large carrots
+  1 large potato
+  4 medium yellow onions
+  1 bulb of garlic
+  0.5 l...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/updates/welcome-to-my-site/" rel="permalink">Welcome to my Site
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-05T11:33:10+02:00">July 5, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I decided to start a blog because I enjoy writing texts for humans just as much as for machines. Some humans even say that my writings are enganging and enjo...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="/assets/downloads/CV English - Peter Tengg.pdf" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> CV (PDF)</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/petertengg/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://discord.com/users/peti7199" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://www.tradingview.com/u/OperationHeadLessChicken/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-chart-line" aria-hidden="true"></i> TradingView</a></li>
+        
+      
+        
+          <li><a href="https://www.instagram.com/minimal_onion/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feeds/"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feeds </a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="">Péter Tengg</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/bugs-in-the-soup/2025-07-06-changing-stream-for-a-perforce-workspace/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/bugs-in-the-soup/changing-stream-for-a-perforce-workspace"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://petertengg.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+  </body>
+</html>
