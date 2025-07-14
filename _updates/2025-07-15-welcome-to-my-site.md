@@ -1,6 +1,6 @@
 ---
 title: "Welcome to my Site"
-date:   2025-07-05 11:33:10 +0200
+date:   2025-07-14 12:00:10 +0200
 excerpt: "I decided to start a blog because I enjoy writing texts for humans just as much as for machines. Some humans even say that my writings are enganging and enjoyable to read."
 categories:
   - Updates

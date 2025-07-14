@@ -1,6 +1,6 @@
 ---
 title: "Changing Stream for a Perforce Workspace"
-date:   2025-07-05 11:33:20 +0200
+date:   2025-07-14 12:00:00 +0200
 categories:
   - Programming
 tags: 

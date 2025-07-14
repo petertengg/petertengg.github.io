@@ -64,7 +64,7 @@ defaults:
       author_profile: false
       read_time: true
       show_date: true
-      share: true
+      share: false
       comments: true
       related: true
   # _programming
@@ -76,7 +76,7 @@ defaults:
       author_profile: false
       read_time: true
       show_date: true
-      share: true
+      share: false
       comments: true
       related: true
   # _cooking
@@ -88,7 +88,7 @@ defaults:
       author_profile: false
       read_time: true
       show_date: true
-      share: true
+      share: false
       comments: true
       related: true
   # _portfolio
@@ -100,7 +100,7 @@ defaults:
       author_profile: false
       read_time: true
       show_date: true
-      share: true
+      share: false
       comments: true
       related: true
   # _posts
@@ -112,7 +112,7 @@ defaults:
       author_profile: true
       show_date: true
       read_time: true
-      share: true
+      share: false
       related: true
 
 comments:
