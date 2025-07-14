@@ -6,7 +6,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   A personal site by Péter Tengg — exploring creative programming, tasty cooking,
   curious bugs, and portfolio projects. Follow along for updates from code to kitchen.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://petertengg.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
 github_username:  petertengg
 

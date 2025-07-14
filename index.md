@@ -53,4 +53,4 @@ This site is a mixture of professional and personal topics. Instead of maintaini
 - Portfolio – [Things I Have Cooked Up (Not Food!)](/portfolio/)
 - Updates – [What’s New](/updates/)
 
-For more details see [Welcome to my Site](/updates/welcome-to-my-site).
+For more details see [Welcome to my Site](/updates/2025-07-15-welcome-to-my-site).
