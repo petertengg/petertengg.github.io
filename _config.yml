@@ -146,6 +146,16 @@ social:
 
 footer:
   since: "2025"
+  links:
+  - label: "LinkedIn"
+    icon: "fab fa-fw fa-linkedin"
+    url: "https://www.linkedin.com/in/petertengg/"
+  - label: "TradingView"
+    icon: "fas fa-fw fa-chart-line"
+    url: "https://www.tradingview.com/u/OperationHeadLessChicken/"
+  - label: "Instagram"
+    icon: "fab fa-fw fa-instagram"
+    url: "https://www.instagram.com/minimal_onion/"
 
 exclude:
   - .sass-cache/
