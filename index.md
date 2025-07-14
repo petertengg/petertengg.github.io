@@ -23,23 +23,23 @@ Currently working on Age of Empires II
 ### Contact
 <ul style="list-style: none; padding-left: 0;">
   <li>
-    <i class="fas fa-file-pdf"></i>
+    <i class="fas fa-fw fa-file-pdf"></i>
     <a href="/assets/downloads/CV English - Peter Tengg.pdf" type="application/pdf" download>Download CV (pdf)</a>
   </li>
   <li>
-    <i class="fab fa-linkedin"></i>
+    <i class="fab fa-fw fa-linkedin"></i>
     <a href="https://www.linkedin.com/in/petertengg/" target="_blank">LinkedIn</a>
   </li>
   <li>
-    <i class="fas fa-chart-line"></i>
+    <i class="fab fa-fw fa-discord"></i>
+    <a href="https://discord.com/users/peti7199" target="_blank">Discord</a>
+  </li>
+  <li>
+    <i class="fas fa-fw fa-chart-line"></i>
     <a href="https://www.tradingview.com/u/OperationHeadLessChicken/" target="_blank">TradingView</a>
   </li>
   <li>
-    <i class="fab fa-discord"></i>
-    Discord: <code>peti7199</code>
-  </li>
-  <li>
-    <i class="fab fa-instagram"></i>
+    <i class="fab fa-fw fa-instagram"></i>
     <a href="https://www.instagram.com/minimal_onion/" target="_blank">Instagram</a>
   </li>
 </ul>
