@@ -24,7 +24,7 @@ Currently working on Age of Empires II
 <ul style="list-style: none; padding-left: 0;">
   <li>
     <i class="fas fa-file-pdf"></i>
-    <a href="/assets/downloads/CV English - Peter Tengg.pdf" type="application/pdf" download>Download CV</a>
+    <a href="/assets/downloads/CV English - Peter Tengg.pdf" type="application/pdf" download>Download CV (pdf)</a>
   </li>
   <li>
     <i class="fab fa-linkedin"></i>
