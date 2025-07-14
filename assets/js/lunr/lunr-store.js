@@ -24,23 +24,23 @@ var store = [{
         "teaser": null
       },{
     "title": "Bugs in the Soup",
-    "excerpt":" ","url": "/bugs-in-the-soup/"
+    "excerpt":" ","url": "https://petertengg.com/bugs-in-the-soup/"
   },{
     "title": "Posts by Category",
-    "excerpt":" ","url": "/categories/"
+    "excerpt":" ","url": "https://petertengg.com/categories/"
   },{
     "title": "Feeds",
-    "excerpt":"      Programming      Cooking      Updates      Portfolio  ","url": "/feeds/"
+    "excerpt":"      Programming      Cooking      Updates      Portfolio  ","url": "https://petertengg.com/feeds/"
   },{
     "title": "Optimal Banana",
-    "excerpt":" ","url": "/optimal-banana/"
+    "excerpt":" ","url": "https://petertengg.com/optimal-banana/"
   },{
     "title": "Portfolio",
-    "excerpt":" ","url": "/portfolio/"
+    "excerpt":" ","url": "https://petertengg.com/portfolio/"
   },{
     "title": "Posts by Tag",
-    "excerpt":" ","url": "/tags/"
+    "excerpt":" ","url": "https://petertengg.com/tags/"
   },{
     "title": "Updates",
-    "excerpt":" ","url": "/updates/"
+    "excerpt":" ","url": "https://petertengg.com/updates/"
   }]
