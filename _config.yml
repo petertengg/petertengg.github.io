@@ -147,9 +147,15 @@ social:
 footer:
   since: "2025"
   links:
+  - label: "CV (PDF)"
+    icon: "fas fa-fw fa-file-pdf"
+    url: "/assets/downloads/CV English - Peter Tengg.pdf"
   - label: "LinkedIn"
     icon: "fab fa-fw fa-linkedin"
     url: "https://www.linkedin.com/in/petertengg/"
+  - label: "Discord"
+    icon: "fab fa-fw fa-discord"
+    url: "https://discord.com/users/peti7199"
   - label: "TradingView"
     icon: "fas fa-fw fa-chart-line"
     url: "https://www.tradingview.com/u/OperationHeadLessChicken/"
