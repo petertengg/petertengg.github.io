@@ -1,0 +1,7 @@
+Todo:
+- site map for robots (XML)
+- Seo
+- Google analytics
+- what else?
+
+- Adds jekyll-seo-tag
