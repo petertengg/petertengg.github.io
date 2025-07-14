@@ -1,6 +1,6 @@
 ---
 title: "Oven Roasted Whole Chicken"
-date:   2025-07-05 11:33:00 +0200
+date:   "2025-07-14 12:00:00 +0200"
 published: true
 header:
   image:
