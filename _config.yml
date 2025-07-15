@@ -141,7 +141,7 @@ social:
   type:  "Person"
   name:  "Péter Tengg"
   links:
-    - "https://instagram.com/minimal_onion"
+    - "https://instagram.com/optimal_banana"
     - "https://www.linkedin.com/in/petertengg"
 
 footer:
@@ -150,6 +150,8 @@ footer:
   - label: "CV (PDF)"
     icon: "fas fa-fw fa-file-pdf"
     url: "/assets/downloads/CV English - Peter Tengg.pdf"
+    type: "application/pdf"
+    download: true
   - label: "LinkedIn"
     icon: "fab fa-fw fa-linkedin"
     url: "https://www.linkedin.com/in/petertengg/"
@@ -161,7 +163,7 @@ footer:
     url: "https://www.tradingview.com/u/OperationHeadLessChicken/"
   - label: "Instagram"
     icon: "fab fa-fw fa-instagram"
-    url: "https://www.instagram.com/minimal_onion/"
+    url: "https://www.instagram.com/optimal_banana/"
 
 exclude:
   - .sass-cache/

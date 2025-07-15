@@ -28,19 +28,19 @@ Currently working on Age of Empires II
   </li>
   <li>
     <i class="fab fa-fw fa-linkedin"></i>
-    <a href="https://www.linkedin.com/in/petertengg/" target="_blank">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/petertengg/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a>
   </li>
   <li>
     <i class="fab fa-fw fa-discord"></i>
-    <a href="https://discord.com/users/peti7199" target="_blank">Discord</a>
+    <a href="https://discord.com/users/peti7199" target="_blank" rel="nofollow noopener noreferrer">Discord</a>
   </li>
   <li>
     <i class="fas fa-fw fa-chart-line"></i>
-    <a href="https://www.tradingview.com/u/OperationHeadLessChicken/" target="_blank">TradingView</a>
+    <a href="https://www.tradingview.com/u/OperationHeadLessChicken/" target="_blank" rel="nofollow noopener noreferrer">TradingView</a>
   </li>
   <li>
     <i class="fab fa-fw fa-instagram"></i>
-    <a href="https://www.instagram.com/minimal_onion/" target="_blank">Instagram</a>
+    <a href="https://www.instagram.com/optimal_banana/" target="_blank" rel="nofollow noopener noreferrer">Instagram</a>
   </li>
 </ul>
 
