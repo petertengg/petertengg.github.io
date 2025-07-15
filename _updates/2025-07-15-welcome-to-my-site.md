@@ -1,6 +1,6 @@
 ---
 title: "Welcome to my Site"
-date:   2025-07-14 12:00:10 +0200
+date:   2025-07-15 06:00:10 +0200
 excerpt: "I decided to start a blog because I enjoy writing texts for humans just as much as for machines. Some humans even say that my writings are enganging and enjoyable to read."
 categories:
   - Updates
@@ -27,14 +27,14 @@ You can find more information about each topic below.
 {:.text-justify}
 I used to have a standalone blog titled <span class="text-highlight">Bugs in the Soup</span> before on a paid domain. I started it with big enthusiasm, but then my activity dropped. However, it was still a fun project, and I was happy with its content. I have now discovered Jekyll and Github Pages, and I feel like they are the perfect tools to revive my blog. My posts often revolve around the aforementioned obstacle-struggle-solution cycle.
 
-### [Optimal Banana](/cooking/) - Cooking
+### [Optimal Banana](/optimal-banana/) - Cooking
 
 #### Why *"Optimal Banana"*? 
 
 {:.text-justify}
 I used to post about cooking and food on 
 <i class="fab fa-instagram"></i>
-<a href="https://www.instagram.com/minimal_onion/" target="_blank">Instagram</a> as <span class="text-highlight">minimal_onion</span>, but that name was a bit misleading for someone who loves onions and garlic, so I am rebranding. *Optimal* sounds more related to engineering as well. Cooking and engineering are not so different after all. :)
+<a href="https://www.instagram.com/optimal_banana/" target="_blank">Instagram</a> as <span class="text-highlight">optimal_banana</span>, but that name was a bit misleading for someone who loves onions and garlic, so I am rebranding. *Optimal* sounds more related to engineering as well. Cooking and engineering are not so different after all. :)
 
 {:.text-justify}
 Here I will share some of my experiments, successes and learning points in the kitchen. It also helps me remember what I’ve made and how to improve it next time.
@@ -46,7 +46,7 @@ At the end of each cooking post you will see a section titled <span class="text-
 
 You can see my older food posts on
 <i class="fab fa-instagram"></i>
-<a href="https://www.instagram.com/minimal_onion/" target="_blank">Instagram</a>
+<a href="https://www.instagram.com/optimal_banana/" target="_blank">Instagram</a>
 
 Also, for a couple of recipes in Hungarian you can visit my
 <a href="https://www.nosalty.hu/receptkonyv/259694?sajat=1">

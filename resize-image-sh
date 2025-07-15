@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Usage: ./resize-images.sh input_dir [output_dir]
+input_dir="$1"
+output_dir="${2:-$input_dir}"
+
+# Create output directory if it doesn't exist
+mkdir -p "$output_dir"
+
+# Process all .jpg and .png images
+for img in "$input_dir"/*.{jpg,jpeg,png,JPG,JPEG,PNG}; do
+  [ -e "$img" ] || continue
+
+  filename=$(basename "$img")
+  output_file="$output_dir/$filename"
+
+  echo "Processing $filename..."
+  magick "$img" -resize 1200x "$output_file"
+done
+
+echo "Done resizing images to max 1200px width at 100% quality."
