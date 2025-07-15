@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://petertengg.com/feed/updates.xml" rel="self" type="application/atom+xml" /><link href="https://petertengg.com/" rel="alternate" type="text/html" /><updated>2025-07-14T17:52:23+02:00</updated><id>https://petertengg.com/feed/updates.xml</id><title type="html">Péter Tengg | Updates</title><subtitle>A personal site by Péter Tengg — exploring creative programming, tasty cooking, curious bugs, and portfolio projects. Follow along for updates from code to kitchen.</subtitle><author><name>Péter</name></author><entry><title type="html">Welcome to my Site</title><link href="https://petertengg.com/updates/2025-07-15-welcome-to-my-site/" rel="alternate" type="text/html" title="Welcome to my Site" /><published>2025-07-14T12:00:10+02:00</published><updated>2025-07-14T12:00:10+02:00</updated><id>https://petertengg.com/updates/welcome-to-my-site</id><content type="html" xml:base="https://petertengg.com/updates/2025-07-15-welcome-to-my-site/"><![CDATA[<h2 id="welcome">Welcome</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://petertengg.com/feed/updates.xml" rel="self" type="application/atom+xml" /><link href="https://petertengg.com/" rel="alternate" type="text/html" /><updated>2025-07-15T08:16:29+02:00</updated><id>https://petertengg.com/feed/updates.xml</id><title type="html">Péter Tengg | Updates</title><subtitle>A personal site by Péter Tengg — exploring creative programming, tasty cooking, curious bugs, and portfolio projects. Follow along for updates from code to kitchen.</subtitle><author><name>Péter</name></author><entry><title type="html">Welcome to my Site</title><link href="https://petertengg.com/updates/2025-07-15-welcome-to-my-site/" rel="alternate" type="text/html" title="Welcome to my Site" /><published>2025-07-15T06:00:10+02:00</published><updated>2025-07-15T06:00:10+02:00</updated><id>https://petertengg.com/updates/welcome-to-my-site</id><content type="html" xml:base="https://petertengg.com/updates/2025-07-15-welcome-to-my-site/"><![CDATA[<h2 id="welcome">Welcome</h2>
 
 <p class="text-justify">I decided to start a blog because I enjoy writing texts for humans just as much as for machines. Some humans even say that my writings are engaging and enjoyable to read. I didn’t get such positive feedback from a machine (C++ compilers have poor humor) until recently, when AI has become a thing. Now even AI can appreciate my writings (at least seemingly), and I can appreciate their help too. However, I don’t exploit their help beyond fixing grammar issues and typos in my writings, because I think AI is a tool that should be used for boring tasks, not the creative and fun ones. Since I enjoy writing, I keep that part for myself.</p>
 
@@ -13,13 +13,13 @@ You can find more information about each topic below.</p>
 
 <p class="text-justify">I used to have a standalone blog titled <span class="text-highlight">Bugs in the Soup</span> before on a paid domain. I started it with big enthusiasm, but then my activity dropped. However, it was still a fun project, and I was happy with its content. I have now discovered Jekyll and Github Pages, and I feel like they are the perfect tools to revive my blog. My posts often revolve around the aforementioned obstacle-struggle-solution cycle.</p>
 
-<h3 id="optimal-banana---cooking"><a href="/cooking/">Optimal Banana</a> - Cooking</h3>
+<h3 id="optimal-banana---cooking"><a href="/optimal-banana/">Optimal Banana</a> - Cooking</h3>
 
 <h4 id="why-optimal-banana">Why <em>“Optimal Banana”</em>?</h4>
 
 <p class="text-justify">I used to post about cooking and food on 
 <i class="fab fa-instagram"></i>
-<a href="https://www.instagram.com/minimal_onion/" target="_blank">Instagram</a> as <span class="text-highlight">minimal_onion</span>, but that name was a bit misleading for someone who loves onions and garlic, so I am rebranding. <em>Optimal</em> sounds more related to engineering as well. Cooking and engineering are not so different after all. :)</p>
+<a href="https://www.instagram.com/optimal_banana/" target="_blank">Instagram</a> as <span class="text-highlight">optimal_banana</span>, but that name was a bit misleading for someone who loves onions and garlic, so I am rebranding. <em>Optimal</em> sounds more related to engineering as well. Cooking and engineering are not so different after all. :)</p>
 
 <p class="text-justify">Here I will share some of my experiments, successes and learning points in the kitchen. It also helps me remember what I’ve made and how to improve it next time.</p>
 
@@ -29,7 +29,7 @@ You can find more information about each topic below.</p>
 
 <p>You can see my older food posts on
 <i class="fab fa-instagram"></i>
-<a href="https://www.instagram.com/minimal_onion/" target="_blank">Instagram</a></p>
+<a href="https://www.instagram.com/optimal_banana/" target="_blank">Instagram</a></p>
 
 <p>Also, for a couple of recipes in Hungarian you can visit my
 <a href="https://www.nosalty.hu/receptkonyv/259694?sajat=1">

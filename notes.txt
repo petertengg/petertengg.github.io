@@ -1,7 +1,18 @@
-Todo:
-- site map for robots (XML)
-- Seo
-- Google analytics
-- what else?
+Cooking:
+tender chicken:
+- marinade 1 hour
+- good wok, very high heat, don't overcook
+- let it sit
 
-- Adds jekyll-seo-tag
+Portfolio, programming:
+- personal site: also documentation to GitHub. Github link on page
+
+Figure out secret on Github
+
+Commit:
+- Updates post dates to 2025-07-15, official launch dates
+- Adds image resizing script
+- Resizes images
+- Updates Instagram name
+- Opens footer social links in new tabs
+- Makes CV Download from the footer too
