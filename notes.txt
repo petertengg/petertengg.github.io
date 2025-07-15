@@ -1,3 +1,6 @@
+Backlog:
+ - light/dark theme
+
 Cooking:
 tender chicken:
 - marinade 1 hour
@@ -9,10 +12,4 @@ Portfolio, programming:
 
 Figure out secret on Github
 
-Commit:
-- Updates post dates to 2025-07-15, official launch dates
-- Adds image resizing script
-- Resizes images
-- Updates Instagram name
-- Opens footer social links in new tabs
-- Makes CV Download from the footer too
+Follow button on mobile
