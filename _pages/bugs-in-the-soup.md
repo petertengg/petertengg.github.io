@@ -2,7 +2,8 @@
 title: "Bugs in the Soup"
 subtitle: "Programming"
 layout: "collection-extended"
-permalink: /bugs-in-the-soup/
-collection: bugs-in-the-soup
+permalink: /programming/
+collection: programming
 entries_layout: list
+sort_order: reverse
 ---

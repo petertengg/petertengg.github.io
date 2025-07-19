@@ -48,8 +48,8 @@ Currently working on Age of Empires II
 
 {:.text-justify}
 This site is a mixture of professional and personal topics. Instead of maintaining separate blogs, I collect everything here and organise it into sub-blogs. I hope you will find something that interest you. For now you can explore the following topics:
-- Programming – [Bugs in the Soup](/bugs-in-the-soup/)
-- Cooking – [Optimal Banana](/optimal-banana/)
+- Programming – [Bugs in the Soup](/programming/)
+- Cooking – [Optimal Banana](/cooking/)
 - Portfolio – [Things I Have Cooked Up (Not Food!)](/portfolio/)
 - Updates – [What’s New](/updates/)
 

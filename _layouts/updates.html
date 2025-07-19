@@ -4,7 +4,7 @@ layout: archive
 
 {{ content }}
 
-{% assign all_posts = site.bugs-in-the-soup | concat: site.optimal-banana | concat: site.portfolio | concat: site.updates %}
+{% assign all_posts = site.programming | concat: site.cooking | concat: site.portfolio | concat: site.updates %}
 {% assign sorted_posts = all_posts | sort: 'date' | reverse%}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}

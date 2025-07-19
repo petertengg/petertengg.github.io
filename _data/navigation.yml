@@ -2,8 +2,8 @@ main:
 - title: "Updates"
   url: /updates/
 - title: "Programming"
-  url: /bugs-in-the-soup/
+  url: /programming/
 - title: "Cooking"
-  url: /optimal-banana/
+  url: /cooking/
 - title: "Portfolio"
   url: /portfolio/

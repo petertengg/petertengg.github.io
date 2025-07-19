@@ -4,9 +4,9 @@ date:   2025-07-15 06:00:00 +0200
 categories:
   - Programming
 tags: 
-  - "Programming: Game Dev"
-  - "Programming: Perforce"
-  - "Programming: Version Control"
+  - "Game Development"
+  - "Perforce"
+  - "Version Control"
 ---
 
 {:.text-justify}
@@ -29,14 +29,14 @@ There is a useful trick, however, that can help you save a lot of time and disk 
 
 1\. Go to `Edit > Preferences > Streams` tab and make sure that `"Work in stream" menu behavior` is set to `Choose at the time of action`.
 
-![Figure 1: Work in stream menu behavior](/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/1.png)
+![Figure 1: Work in stream menu behavior](/assets/images/programming/changing-stream-for-a-perforce-workspace/1.png)
 {:.text-center}
 *Figure 1: Work in stream menu behavior setting*
 {:.text-center}
 
 2\. In the left panel, select the Workspace tree.
 
-![Figure 2: Workspace tree](/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/2.png)
+![Figure 2: Workspace tree](/assets/images/programming/changing-stream-for-a-perforce-workspace/2.png)
 {:.text-center}
 *Figure 2: Workspace tree*
 {:.text-center}
@@ -52,7 +52,7 @@ The line marked with `2` shows the folder on your disk associated with the works
 
 3\. In the right panel, select the Streams tab:
 
-![Figure 3: Streams view](/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/3.png)
+![Figure 3: Streams view](/assets/images/programming/changing-stream-for-a-perforce-workspace/3.png)
 {:.text-center}
 *Figure 3: Streams view*
 {:.text-center}
@@ -62,7 +62,7 @@ You will see a tree structure of the streams available in the right panel.
 
 4\. Browse to the stream you want to switch to. Right click it and hover `Work in this Stream`.
 
-![Figure 4: Switch stream](/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/4.png)
+![Figure 4: Switch stream](/assets/images/programming/changing-stream-for-a-perforce-workspace/4.png)
 {:.text-center}
 *Figure 4: Switch stream*
 {:.text-center}
@@ -72,7 +72,7 @@ A submenu will open with two choices: `Use different workspace` and `Reuse curre
 
 5\. Click `Yes` in the pop-up window asking if you want to get the latest revision:
 
-![Figure 5: Get latest revision pop-up](/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/5.png)
+![Figure 5: Get latest revision pop-up](/assets/images/programming/changing-stream-for-a-perforce-workspace/5.png)
 {:.text-center}
 *Figure 5: Get latest revision pop-up*
 {:.text-center}

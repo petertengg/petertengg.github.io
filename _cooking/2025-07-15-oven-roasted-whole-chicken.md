@@ -4,13 +4,13 @@ date:   "2025-07-15 06:00:00 +0200"
 published: true
 header:
   image:
-  teaser: /assets/images/optimal-banana/oven-roasted-whole-chicken/3.jpg
+  teaser: /assets/images/cooking/oven-roasted-whole-chicken/3.jpg
 categories:
   - Cooking
 tags: 
-  - "Cooking: Chicken"
-  - "Cooking: International"
-  - "Cooking: Oven"
+  - "Chicken"
+  - "International cuisine"
+  - "Oven"
 ---
 
 ### Ingredients
@@ -43,7 +43,7 @@ tags:
     2. Turn the chicken and repeat on the breast side. 
     3. Stuff the cavity with the quarter lemons and some garlic.<sup><a href="#note1" id="ref1">[1]</a></sup> My chicken looked like this:
 
-    ![After seasoning](/assets/images/optimal-banana/oven-roasted-whole-chicken/1.jpg)
+    ![After seasoning](/assets/images/cooking/oven-roasted-whole-chicken/1.jpg)
     {:.text-center}
     *After seasoning*
     {:.text-center}
@@ -52,7 +52,7 @@ tags:
 5. Peel and halve the onion, quarter them if they are large. Wash the mushrooms, and pat them dry. Peel the carrots and cut them into 5-6 cm long pieces. You can halve the thicker ones lengthwise. Wash the potatoes and cut them into large pieces. I also added more cloves of garlic, because I love garlic.
 6. After an hour, take out the casserole dish and surround the chicken with vegetables. I filled up mine completely.
 
-    ![Half roasted, vegetables added](/assets/images/optimal-banana/oven-roasted-whole-chicken/2.jpg)
+    ![Half roasted, vegetables added](/assets/images/cooking/oven-roasted-whole-chicken/2.jpg)
     {:.text-center}
     *Half roasted, vegetables added*
     {:.text-center}
@@ -66,14 +66,14 @@ tags:
 {:.text-justify}
 - I roasted my chicken a little too long (2 hours) and turned up the heat to 180°C in the last 15 minutes with the lid removed. This is too much, the meat fell off the bones very easily, and my veggies became a bit too tanned. I have adjusted the above recipe already accordingly.
 
-    ![The veggies turned out a bit too tanned](/assets/images/optimal-banana/oven-roasted-whole-chicken/3.jpg)
+    ![The veggies turned out a bit too tanned](/assets/images/cooking/oven-roasted-whole-chicken/3.jpg)
     {:.text-center}
     *The veggies turned out a bit too tanned*
     {:.text-center}
 
 - It seemed like a good idea to spoon some of the juices from the casserole onto my plate when serving, but it turned out very heavy and greasy. Next time I will remove the chicken skin to reduce fat.
 
-    ![The chicken was really good despite being a bit overcooked](/assets/images/optimal-banana/oven-roasted-whole-chicken/4.jpg)
+    ![The chicken was really good despite being a bit overcooked](/assets/images/cooking/oven-roasted-whole-chicken/4.jpg)
     {:.text-center}
     *The chicken was really good despite being a bit overcooked*
     {:.text-center}

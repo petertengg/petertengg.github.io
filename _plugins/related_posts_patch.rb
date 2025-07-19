@@ -39,7 +39,7 @@ module Jekyll
 
     def all_docs
       @all_docs ||= begin
-        collections = %w(updates bugs-in-the-soup optimal-banana portfolio)
+        collections = %w(updates programming cooking portfolio)
         collections.flat_map { |c| site.collections[c]&.docs || [] }
       end
     end

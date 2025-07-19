@@ -5,7 +5,7 @@ excerpt: "I decided to start a blog because I enjoy writing texts for humans jus
 categories:
   - Updates
 tags: 
-  - "Updates: Welcome"
+  - "Welcome"
 ---
 
 ## Welcome
@@ -22,12 +22,12 @@ You can find more information about each topic below.
 
 ## Sub-blogs
 
-### [Bugs in the Soup](/bugs-in-the-soup/) - Programming
+### [Bugs in the Soup](/programming/) - Programming
 
 {:.text-justify}
 I used to have a standalone blog titled <span class="text-highlight">Bugs in the Soup</span> before on a paid domain. I started it with big enthusiasm, but then my activity dropped. However, it was still a fun project, and I was happy with its content. I have now discovered Jekyll and Github Pages, and I feel like they are the perfect tools to revive my blog. My posts often revolve around the aforementioned obstacle-struggle-solution cycle.
 
-### [Optimal Banana](/optimal-banana/) - Cooking
+### [Optimal Banana](/cooking/) - Cooking
 
 #### Why *"Optimal Banana"*? 
 

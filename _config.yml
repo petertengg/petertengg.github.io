@@ -34,7 +34,7 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-  bugs-in-the-soup:
+  programming:
     output: true
     permalink: /:collection/:path/
 
@@ -42,7 +42,7 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-  optimal-banana:
+  cooking:
     output: true
     permalink: /:collection/:path/
 
@@ -70,7 +70,7 @@ defaults:
   # _programming
   - scope:
       path: ""
-      type: bugs-in-the-soup
+      type: programming
     values:
       layout: single
       author_profile: false
@@ -82,7 +82,7 @@ defaults:
   # _cooking
   - scope:
       path: ""
-      type: optimal-banana
+      type: cooking
     values:
       layout: single
       author_profile: false
@@ -133,8 +133,8 @@ tag_archive:
 feed:
   collections:
     - updates
-    - bugs-in-the-soup
-    - optimal-banana
+    - programming
+    - cooking
     - portfolio
 
 social:
@@ -143,6 +143,12 @@ social:
   links:
     - "https://instagram.com/optimal_banana"
     - "https://www.linkedin.com/in/petertengg"
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-TC8TDGQPHL"
+    anonymize_ip: false # default
 
 footer:
   since: "2025"
