@@ -11,8 +11,6 @@ twitter_username: ""
 github_username:  petertengg
 
 # Build settings
-# remote_theme: "mmistakes/minimal-mistakes@4.27.1"
-# safe: false
 theme: "minimal-mistakes-jekyll"
 plugins:
   - jekyll-feed

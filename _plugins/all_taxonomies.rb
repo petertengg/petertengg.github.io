@@ -23,19 +23,9 @@ module AllTaxonomiesPlugin
           end
         end
       end
-
-      site.data["csocs"] = "Hello from plugin"
       # Make available to Liquid templates
       site.data['all_tags'] = all_tags
       site.data['all_categories'] = all_categories
-
-      # puts "[Plugin] Tags generated: #{all_tags.keys.size}"
-      # puts "[Plugin] First tag: #{all_tags.keys.first}"
-      # puts "[Plugin] Docs in first tag: #{all_tags[all_tags.keys.first]&.map { |d| d.url }}"
-
-      # Jekyll.logger.info "[Plugin]", "Tags generated: #{all_tags.keys.size}"
-      # Jekyll.logger.info "[Plugin]", "First tag: #{all_tags.keys.first}"
-      # Jekyll.logger.info "[Plugin]", "Docs in first tag: #{all_tags[all_tags.keys.first]&.map(&:url)}"
     end
   end
 end

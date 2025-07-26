@@ -22,12 +22,10 @@ tags:
 
 ### Summary
 
-{: style="text-align: justify;"}
 Built a personal website in Jekyll, hosted on Github Pages under my custom domain. Tailored the default Jekyll behaviour to better align with my goals for the site. A hub for knowledge sharing, entertainment, and personal branding. 
 
 ### Key features
 
-{: style="text-align: justify;"}
 - Multiple sub-blogs (Programming, Cooking, Portfolio, Updates), with a flexible structure for future topics
 - Unified tags, categories, and related posts across all sections
 - Updates page highlighting the latest content
@@ -39,16 +37,15 @@ Built a personal website in Jekyll, hosted on Github Pages under my custom domai
 
 ### Tech Stack
 
-{: style="text-align: justify;"}
 - Google Analytics
 - Disqus
-- [Minimal Mistakes](https://mademistakes.com/work/jekyll-themes/minimal-mistakes/) Jekyll theme
-- [Liquid](https://shopify.github.io/liquid/), HTML, Markdown, JavaScript
-- [Jekyll](https://jekyllrb.com/)
+- <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes</a> Jekyll theme
+- <a href="https://shopify.github.io/liquid/" target="_blank" rel="nofollow noopener noreferrer">Liquid</a>, HTML, Markdown, JavaScript, CSS
+- <a href="https://jekyllrb.com/" target="_blank" rel="nofollow noopener noreferrer">Jekyll</a>: static site generator
 - Ruby
 - GitHub Pages
 
 ### Links
 - [The live site](https://petertengg.com/)
-- [GitHub repo](https://github.com/petertengg/petertengg.github.io)
-- [Blog post]
+- <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
+- [Blog post](/programming/my-personal-site-getting-to-know-jekyll)

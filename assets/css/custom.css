@@ -1,3 +1,27 @@
 .text-highlight {
   color: lightcoral;
 }
+
+.page__content {
+  text-align: justify;
+}
+
+.li-second-level {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .li-second-level {
+    margin-left: 1rem;
+  }
+}
+
+.li-second-level-indent {
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.page__content code {
+  color: orange; /* or #f97316 for Tailwind orange-500 */
+}

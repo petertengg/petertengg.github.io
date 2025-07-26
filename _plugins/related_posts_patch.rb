@@ -1,4 +1,3 @@
-# _plugins/related_posts_patch.rb
 module Jekyll
   class RelatedPosts
     def build
