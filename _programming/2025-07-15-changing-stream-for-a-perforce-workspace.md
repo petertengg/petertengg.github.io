@@ -11,17 +11,17 @@ tags:
 
 Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git. 
 
-### The problem
+## The problem
 
 It has a drawback, however. Repositories can grow pretty huge over time. At my company, 250–300 GB repositories are not uncommon, and you have to sync them down to your workstation in order to carry out your development work. Syncing can take a whole day, depending on your internet connection. It also requires a lot of disk space.
 
 And that's only one workspace. We have several streams (similar to Git branches), and if you want to work on more than one, you have to have them mapped to different workspaces on your disk. Even more syncing, even more disk space.
 
-### The solution
+## The solution
 
 There is a useful trick, however, that can help you save a lot of time and disk space. It is possible to retarget your workspace to another stream. Depending on the differences between the two streams, the synchronisation after the switch can be very fast, and you will have to keep only one workspace worth of data on your disk.
 
-### Steps
+## Steps
 
 1\. Go to `Edit > Preferences > Streams` tab and make sure that `"Work in stream" menu behavior` is set to `Choose at the time of action`.
 

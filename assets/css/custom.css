@@ -17,9 +17,15 @@
   }
 }
 
-.li-second-level-indent {
-  margin-right: 0.5rem;
-  display: inline-block;
+.li-third-level {
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .li-third-level {
+    margin-left: 2rem;
+  }
 }
 
 .page__content code {

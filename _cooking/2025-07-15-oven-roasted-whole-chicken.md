@@ -13,7 +13,7 @@ tags:
   - "Oven"
 ---
 
-### Ingredients
+## Ingredients
 - 1 chicken, approx 2 kg
 - 500 grams champignon mushrooms 
 - 4 large carrots
@@ -33,7 +33,7 @@ tags:
 
 ---
 
-### Steps
+## Steps
 
 1. Mince or slice the garlic into thin slices. Halve the half lemon.
 2. Preheat the oven to 160°C (fan-forced).
@@ -60,7 +60,7 @@ tags:
 8. Take it out, leave the lid slightly ajar, to allow steam to escape, but the food won't cool down. Let it rest for 15 minutes.
 9. Carve and serve. This is a one-pot dish. You have the meat and the vegetables. Optional: I served it with mustard and pickles.
 
-### Learning points
+## Learning points
 
 - I roasted my chicken a little too long (2 hours) and turned up the heat to 180°C in the last 15 minutes with the lid removed. This is too much, the meat fell off the bones very easily, and my veggies became a bit too tanned. I have adjusted the above recipe already accordingly.
 
@@ -78,12 +78,12 @@ tags:
 
 - Those oven roasted mushrooms turned out very yummy, and I didn't have enough of them. On the other hand, potatoes were a bit boring compared to other vegetables. Next time I will cook more mushrooms and less or no potatoes. (recipe adjusted already)
 
-### Notes
+## Notes
 
 <a id="note1" href="#ref1">[1]</a>: Fresh rosemary or thyme is often used for stuffing, but I didn't have those available. This is why I used dried oregano. You can use any green herb you like, either fresh or dried
 
 <a id="note2" href="#ref2">[2]</a>: You can stab a thick part, e.g. thigh or breast with a fork to check doneness. If the fork goes in easily, and the juice run clear, the chicken is done. Or you can use a meat thermometer, but I don't have such fancy stuff.
 
-### Hogwash
+## Hogwash
 
 Oven roasted chicken is a very basic and easy recipe, probably one suitable for a beginner cook. I don't consider myself a beginner, however, this was the first time I tried roasting a whole chicken. I rarely buy whole chickens, because I've felt that they are cumbersome to deal with. Being Hungarian, the first thing that comes to my mind is to cook a chicken paprikás (csirkepörkölt, csirkepaprikás), which is a stew. It is delicious, but you usually need to cut the chicken into parts, which I find messy and I’m often too lazy to do it. So lately I started cooking soups of whole chickens in huge pots. That works well, but this time I decided to try something new. It turned out quite well for a first try, and next time I will implement the adjustments I have outlined. So yes, I am a beginner when it comes to whole-chicken-roasting. :)

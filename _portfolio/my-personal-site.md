@@ -20,11 +20,11 @@ tags:
 {: style="text-align: center;"}
 ![Personal site image](/assets/images/portfolio/my-personal-site/my-personal-site1.png)
 
-### Summary
+## Summary
 
 Built a personal website in Jekyll, hosted on Github Pages under my custom domain. Tailored the default Jekyll behaviour to better align with my goals for the site. A hub for knowledge sharing, entertainment, and personal branding. 
 
-### Key features
+## Key features
 
 - Multiple sub-blogs (Programming, Cooking, Portfolio, Updates), with a flexible structure for future topics
 - Unified tags, categories, and related posts across all sections
@@ -35,7 +35,7 @@ Built a personal website in Jekyll, hosted on Github Pages under my custom domai
 - Disqus comments integration
 - Google Analytics and Google Search Console for traffic metrics
 
-### Tech Stack
+## Tech stack
 
 - Google Analytics
 - Disqus
@@ -43,9 +43,10 @@ Built a personal website in Jekyll, hosted on Github Pages under my custom domai
 - <a href="https://shopify.github.io/liquid/" target="_blank" rel="nofollow noopener noreferrer">Liquid</a>, HTML, Markdown, JavaScript, CSS
 - <a href="https://jekyllrb.com/" target="_blank" rel="nofollow noopener noreferrer">Jekyll</a>: static site generator
 - Ruby
+- Git
 - GitHub Pages
 
-### Links
+## Links
 - [The live site](https://petertengg.com/)
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
 - [Blog post](/programming/my-personal-site-getting-to-know-jekyll)

@@ -7,7 +7,7 @@ permalink: /
 author_proile: true
 ---
 
-### About Me
+## About me
 
 I am a software engineer with an interest in
 - High-performance systems
@@ -17,9 +17,11 @@ I am a software engineer with an interest in
 - Programming C++, Python, Pine Script
 
 Passionate about the C++ language and its evolution.
-Currently working on Age of Empires II
+Currently working on Age of Empires II.
 
-### Contact
+If you’re interested in working with me or discussing freelancing opportunities, feel free to get in touch:
+
+## Contact
 <ul style="list-style: none; padding-left: 0;">
   <li>
     <i class="fas fa-fw fa-file-pdf"></i>
@@ -43,7 +45,7 @@ Currently working on Age of Empires II
   </li>
 </ul>
 
-### About this Site
+## About this site
 
 This site is a mixture of professional and personal topics. Instead of maintaining separate blogs, I collect everything here and organise it into sub-blogs. I hope you will find something that interest you. For now you can explore the following topics:
 - Programming – [Bugs in the Soup](/programming/)
