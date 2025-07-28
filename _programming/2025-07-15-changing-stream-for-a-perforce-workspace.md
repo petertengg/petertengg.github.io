@@ -23,11 +23,11 @@ There is a useful trick, however, that can help you save a lot of time and disk 
 
 ## Steps
 
-1\. Go to `Edit > Preferences > Streams` tab and make sure that `"Work in stream" menu behavior` is set to `Choose at the time of action`.
+1\. Go to `Edit > Preferences > Streams` tab and make sure that `"Work in stream" menu behaviour` is set to `Choose at the time of action`.
 
-![Figure 1: Work in stream menu behavior](/assets/images/programming/changing-stream-for-a-perforce-workspace/1.png)
+![Figure 1: Work in stream menu behaviour](/assets/images/programming/changing-stream-for-a-perforce-workspace/1.png)
 {:.text-center}
-*Figure 1: Work in stream menu behavior setting*
+*Figure 1: Work in stream menu behaviour setting*
 {:.text-center}
 
 2\. In the left panel, select the Workspace tree.
