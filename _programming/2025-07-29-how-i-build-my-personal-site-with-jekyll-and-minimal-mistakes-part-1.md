@@ -1,12 +1,12 @@
 ---
 title: "How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions"
-date:   2025-07-16 06:00:00 +0200
+date:   2025-07-29 07:47:00 +0200
 published: true
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 categories:
-  - Portfolio
+  - Programming
   - Jekyll
 tags:
   - "Web Development"
@@ -45,7 +45,7 @@ In this section I will tell you why I went for this page structure and what impl
 
 ### Why sub-blogs?
 
-I have come up with this idea of sub-blogs, because I want to post in quite different topics for quite different audiences (e.g.: programming and cooking), so keeping them separated is a good idea. I could have created standalone sites for each, but that wouldn't scale very well. If I suddenly decided to post about [egg shoeing](https://en.wikipedia.org/wiki/Egg_shoeing), which is a completely different topic, I would have to set up another site. Also, I thought it would be a good idea to show my professional and personal interests in one place, so people - my future clients - can get a better, more holistic impression about me.
+I have come up with this idea of sub-blogs, because I want to post in quite different topics for quite different audiences (e.g.: programming and cooking), so keeping them separated is a good idea. I could have created standalone sites for each, but that wouldn't scale very well. If I suddenly decided to post about <a href="https://en.wikipedia.org/wiki/Egg_shoeing" target="_blank" rel="nofollow noopener noreferrer">egg shoeing</a>, which is a completely different topic, I would have to set up another site. Also, I thought it would be a good idea to show my professional and personal interests in one place, so people - my future clients - can get a better, more holistic impression about me.
 
 ### Complication with sub-blogs
 
@@ -184,12 +184,12 @@ This way I removed `GitHub Pages` and `Minimal Mistakes` is no longer a remote t
 
 ## Outroduction
 
-That concludes Part 1. of the series. In the [next](/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2) post we will continue with the implementation process. I will show how the amusingly named `monkey patching` helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.
+That concludes Part 1. of the series. In the next post we will continue with the implementation process. I will show how the amusingly named `monkey patching` helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.
 
 ## Links
 - How I Built my Personal Site with Jekyll and Minimal Mistakes - Part 2: coming soon
 - How I Built my Personal Site with Jekyll and Minimal Mistakes - Part 3: coming soon
-- [Related portfolio entry](/portfolio/my-personal-site)
+- [Related portfolio entry](/portfolio/2025-07-29-my-personal-site)
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
 
 ## Sources

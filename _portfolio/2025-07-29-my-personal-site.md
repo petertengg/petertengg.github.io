@@ -1,6 +1,6 @@
 ---
 title: "My Personal Site"
-date:   2025-07-16 12:00:00 +0200
+date:   2025-07-29 07:46:00 +0200
 published: true
 excerpt: "Built a personal website using Jekyll, hosted on GitHub Pages under a custom domain. Tailored the default setup to better serve my goals for the site."
 header:
@@ -49,4 +49,4 @@ Built a personal website in Jekyll, hosted on Github Pages under my custom domai
 ## Links
 - [The live site](https://petertengg.com/)
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
-- [Blog post](/programming/my-personal-site-getting-to-know-jekyll)
+- [Blog post](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1)

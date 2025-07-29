@@ -173,6 +173,7 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - .gitignore
+  - drafts/
   - gemfiles/
   - Gemfile
   - Gemfile.lock

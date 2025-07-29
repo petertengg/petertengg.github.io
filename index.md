@@ -19,7 +19,7 @@ I am a software engineer with an interest in
 Passionate about the C++ language and its evolution.
 Currently working on Age of Empires II.
 
-If you’re interested in working with me or discussing freelancing opportunities, feel free to get in touch:
+If you’re interested in collaboration or discussing freelancing opportunities, feel free to get in touch:
 
 ## Contact
 <ul style="list-style: none; padding-left: 0;">
