@@ -1,11 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://petertengg.com/feed/portfolio.xml" rel="self" type="application/atom+xml" /><link href="https://petertengg.com/" rel="alternate" type="text/html" /><updated>2025-07-17T07:24:23+02:00</updated><id>https://petertengg.com/feed/portfolio.xml</id><title type="html">Péter Tengg | Portfolio</title><subtitle>A personal site by Péter Tengg — exploring creative programming, tasty cooking, curious bugs, and portfolio projects. Follow along for updates from code to kitchen.</subtitle><author><name>Péter</name></author><entry><title type="html">Divergo</title><link href="https://petertengg.com/portfolio/2025-07-15-divergo/" rel="alternate" type="text/html" title="Divergo" /><published>2025-07-14T12:00:00+02:00</published><updated>2025-07-14T12:00:00+02:00</updated><id>https://petertengg.com/portfolio/divergo</id><content type="html" xml:base="https://petertengg.com/portfolio/2025-07-15-divergo/"><![CDATA[<p style="text-align: center;"><img src="/assets/images/portfolio/divergo/divergo-chart-1.png" alt="Divergo chart image 1" />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://petertengg.com/feed/portfolio.xml" rel="self" type="application/atom+xml" /><link href="https://petertengg.com/" rel="alternate" type="text/html" /><updated>2025-07-29T08:07:02+02:00</updated><id>https://petertengg.com/feed/portfolio.xml</id><title type="html">Péter Tengg | Portfolio</title><subtitle>A personal site by Péter Tengg — exploring creative programming, tasty cooking, curious bugs, and portfolio projects. Follow along for updates from code to kitchen.</subtitle><author><name>Péter</name></author><entry><title type="html">My Personal Site</title><link href="https://petertengg.com/portfolio/2025-07-29-my-personal-site/" rel="alternate" type="text/html" title="My Personal Site" /><published>2025-07-29T07:46:00+02:00</published><updated>2025-07-29T07:46:00+02:00</updated><id>https://petertengg.com/portfolio/my-personal-site</id><content type="html" xml:base="https://petertengg.com/portfolio/2025-07-29-my-personal-site/"><![CDATA[<p style="text-align: center;"><img src="/assets/images/portfolio/my-personal-site/my-personal-site1.png" alt="Personal site image" /></p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Built a personal website in Jekyll, hosted on Github Pages under my custom domain. Tailored the default Jekyll behaviour to better align with my goals for the site. A hub for knowledge sharing, entertainment, and personal branding.</p>
+
+<h2 id="key-features">Key features</h2>
+
+<ul>
+  <li>Multiple sub-blogs (Programming, Cooking, Portfolio, Updates), with a flexible structure for future topics</li>
+  <li>Unified tags, categories, and related posts across all sections</li>
+  <li>Updates page highlighting the latest content</li>
+  <li>Per-section Atom feeds</li>
+  <li>Custom domain and DNS</li>
+  <li>Performance and SEO optimisations</li>
+  <li>Disqus comments integration</li>
+  <li>Google Analytics and Google Search Console for traffic metrics</li>
+</ul>
+
+<h2 id="tech-stack">Tech stack</h2>
+
+<ul>
+  <li>Google Analytics</li>
+  <li>Disqus</li>
+  <li><a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes</a> Jekyll theme</li>
+  <li><a href="https://shopify.github.io/liquid/" target="_blank" rel="nofollow noopener noreferrer">Liquid</a>, HTML, Markdown, JavaScript, CSS</li>
+  <li><a href="https://jekyllrb.com/" target="_blank" rel="nofollow noopener noreferrer">Jekyll</a>: static site generator</li>
+  <li>Ruby</li>
+  <li>Git</li>
+  <li>GitHub Pages</li>
+</ul>
+
+<h2 id="links">Links</h2>
+<ul>
+  <li><a href="https://petertengg.com/">The live site</a></li>
+  <li><a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a></li>
+  <li><a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1">Blog post</a></li>
+</ul>]]></content><author><name>Péter</name></author><category term="Portfolio" /><category term="Jekyll" /><category term="Minimal Mistakes" /><category term="Liquid" /><category term="Jekyll" /><category term="Ruby" /><category term="Github Pages" /><summary type="html"><![CDATA[Built a personal website using Jekyll, hosted on GitHub Pages under a custom domain. Tailored the default setup to better serve my goals for the site.]]></summary></entry><entry><title type="html">Divergo</title><link href="https://petertengg.com/portfolio/2025-07-15-divergo/" rel="alternate" type="text/html" title="Divergo" /><published>2025-07-15T12:00:00+02:00</published><updated>2025-07-15T12:00:00+02:00</updated><id>https://petertengg.com/portfolio/divergo</id><content type="html" xml:base="https://petertengg.com/portfolio/2025-07-15-divergo/"><![CDATA[<p style="text-align: center;"><img src="/assets/images/portfolio/divergo/divergo-chart-1.png" alt="Divergo chart image 1" />
 <em>Figure 1: Divergo in action</em></p>
 
-<h3 id="summary">Summary</h3>
-<p style="text-align: justify;">Developed a Forex strategy using a manually tested, non-standard divergence method — implemented entirely from scratch due to the complexity of the logic.</p>
+<h2 id="summary">Summary</h2>
+<p>Developed a Forex strategy using a manually tested, non-standard divergence method — implemented entirely from scratch due to the complexity of the logic.</p>
 
-<h3 id="key-features">Key features</h3>
-<ul style="text-align: justify;">
+<h2 id="key-features">Key features</h2>
+<ul>
   <li>Unique divergence technique based on indicator waves, peak and low values
     <ul>
       <li>Regular/hidden, bullish/bearish divergences</li>
@@ -18,7 +55,7 @@
   <li>Backtasted over several major Forex and Crypto pairs</li>
 </ul>
 
-<h3 id="gallery">Gallery</h3>
+<h2 id="gallery">Gallery</h2>
 
 <figure class="third ">
   
@@ -58,17 +95,17 @@
   
 </figure>
 
-<h3 id="client-testimonial">Client Testimonial</h3>
+<h2 id="client-testimonial">Client testimonial</h2>
 <blockquote>
   <p>“Others left me disappointed, but Péter delivered exactly what I needed — in just a week and a half.”</p>
 
   <p>— Ákos</p>
 </blockquote>
 
-<h3 id="tech-stack">Tech Stack</h3>
+<h2 id="tech-stack">Tech stack</h2>
 <ul>
   <li>Pine Script v6</li>
   <li>Trading View alerts</li>
   <li>Pine Connector</li>
   <li>MetaTrader</li>
-</ul>]]></content><author><name>Péter</name></author><category term="Portfolio" /><category term="Trading" /><category term="Trading: PineScript" /><category term="Trading: TradingView" /><category term="Trading: Divergence" /><category term="Trading: StrategyDevelopment" /><category term="Trading: Backtesting" /><summary type="html"><![CDATA["Others left me disappointed, but Péter delivered exactly what I needed — in just a week and a half." - Ákos]]></summary></entry></feed>
+</ul>]]></content><author><name>Péter</name></author><category term="Portfolio" /><category term="Trading" /><category term="PineScript" /><category term="TradingView" /><category term="Divergence" /><category term="Strategy Development" /><category term="Backtesting" /><summary type="html"><![CDATA["Others left me disappointed, but Péter delivered exactly what I needed — in just a week and a half." - Ákos]]></summary></entry></feed>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://petertengg.com/feed/programming.xml" rel="self" type="application/atom+xml" /><link href="https://petertengg.com/" rel="alternate" type="text/html" /><updated>2025-07-29T08:07:02+02:00</updated><id>https://petertengg.com/feed/programming.xml</id><title type="html">Péter Tengg | Programming</title><subtitle>A personal site by Péter Tengg — exploring creative programming, tasty cooking, curious bugs, and portfolio projects. Follow along for updates from code to kitchen.</subtitle><author><name>Péter</name></author><entry><title type="html">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions</title><link href="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/" rel="alternate" type="text/html" title="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions" /><published>2025-07-29T07:47:00+02:00</published><updated>2025-07-29T07:47:00+02:00</updated><id>https://petertengg.com/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1</id><content type="html" xml:base="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<p>This is Part 1 in a three-post series, where I sum up the journey of building my website. In this part, I will discuss why I chose this tech stack, the structural design choices I made, and we will face our first challenge early in the implementation process.</p>
+
+<h2 id="selecting-the-tech-stack">Selecting the tech stack</h2>
+
+<p>After doing a little research on the topic, it was quite an obvious choice:</p>
+
+<h3 id="why-github">Why GitHub?</h3>
+<ul>
+  <li>You can host your personal site on GitHub Pages for free and use your custom domain.</li>
+  <li>As a software engineer, hosting it on GitHub felt like a natural fit.</li>
+</ul>
+
+<h3 id="why-jekyll">Why Jekyll?</h3>
+<ul>
+  <li>GitHub Pages comes with Jekyll integration, which makes Jekyll the obvious choice.</li>
+  <li><a href="https://jekyllrb.com/" target="_blank" rel="nofollow noopener noreferrer">Jekyll</a> is a static site generator which is “blog-aware” - well suited for portfolio pages and blogs. Exactly what I needed.</li>
+</ul>
+
+<h3 id="why-ruby-liquid-html-markdown-javascript-css">Why Ruby, <a href="https://shopify.github.io/liquid/" target="_blank" rel="nofollow noopener noreferrer">Liquid</a>, HTML, Markdown, JavaScript, CSS?</h3>
+<p>These are the technologies Jekyll uses to build and customise the websites, so they would be hard to avoid. :)</p>
+
+<h3 id="why-minimal-mistakes">Why <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes</a>?</h3>
+<p>There are several good Jekyll themes out there, but I chose <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code>, because it seemed to be flexible, customisable and feature-rich. It is also minimalistic in both style and design, which gives you a lot of freedom. This freedom comes with some drawbacks however. For a non-technical person the wide range of customisation possibilities can be overwhelming, but I was up for the challenge, and luckily it comes with extensive documentation which helped a lot.</p>
+
+<h2 id="design">Design</h2>
+
+<p>In this section I will tell you why I went for this page structure and what implications it had.</p>
+
+<h3 id="why-sub-blogs">Why sub-blogs?</h3>
+
+<p>I have come up with this idea of sub-blogs, because I want to post in quite different topics for quite different audiences (e.g.: programming and cooking), so keeping them separated is a good idea. I could have created standalone sites for each, but that wouldn’t scale very well. If I suddenly decided to post about <a href="https://en.wikipedia.org/wiki/Egg_shoeing" target="_blank" rel="nofollow noopener noreferrer">egg shoeing</a>, which is a completely different topic, I would have to set up another site. Also, I thought it would be a good idea to show my professional and personal interests in one place, so people - my future clients - can get a better, more holistic impression about me.</p>
+
+<h3 id="complication-with-sub-blogs">Complication with sub-blogs</h3>
+
+<p>It caught me by surprise, that Jekyll doesn’t support sub-blogs natively. There are <code class="language-plaintext highlighter-rouge">collections</code>, which are similar. You can define your collections like <code class="language-plaintext highlighter-rouge">Programming</code>, <code class="language-plaintext highlighter-rouge">Cooking</code>, <code class="language-plaintext highlighter-rouge">Portfolio</code> and <code class="language-plaintext highlighter-rouge">Updates</code>, but they don’t get out-of-the box support for related posts and taxonomies (i.e.: categories and tags). There is one prominent collection called <code class="language-plaintext highlighter-rouge">Posts</code> which get all the love, but the rest (custom collections that you make) are left out. If I had gone for a classic single-topic blog, it would have worked beautifully, but I wanted to build my own structure, and I omitted the <code class="language-plaintext highlighter-rouge">Posts</code> collection entirely. This is where things got interesting. I had to extend Jekyll’s default implementation to add support for my sub-blogs. I will discuss this journey, the obstacles faced and the solutions I came up with.</p>
+
+<h2 id="the-implementation-process">The implementation process</h2>
+
+<p>Since I wasn’t familiar with the Jekyll framework, I explored its capabilities and limitations along the way. The road was a bit bumpy, but it wasn’t too steep, and the process was quite enjoyable.</p>
+
+<h3 id="getting-started">Getting started</h3>
+
+<p>1. Since I had no prior knowledge, I started following <a href="https://www.youtube.com/watch?v=fV01b0duZwU" target="_blank" rel="nofollow noopener noreferrer">this video tutorial</a> which proved to be very helpful. It walked me through all the necessary steps to get me going, even installing the prerequisites, like Ruby and Powershell 7. It was easy to follow, and quite soon, I had a basic “Hello Jekyll” site publicly available on the internet. I didn’t complete the tutorial however. I diverged when he installed the <code class="language-plaintext highlighter-rouge">Hacker</code> theme. Even though its name suggests it would be a good fit for a software engineer’s personal site, I found it quite ugly — so I started looking for alternatives.</p>
+
+<p>2. Enter <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code>. I chose this theme because of the reasons discussed in <a href="#why-minimal-mistakes">Why Minimal Mistakes</a>. I installed it as a remote theme in my <code class="language-plaintext highlighter-rouge">_config.yaml</code>:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">remote_theme</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mmistakes/minimal-mistakes@4.27.2"</span>
+</code></pre></div></div>
+<p>A remote theme can be any Jekyll theme that is publicly hosted on GitHub. You only need to declare it in your config file, and the rest is taken care of by the <a href="https://github.com/benbalter/jekyll-remote-theme" target="_blank" rel="nofollow noopener noreferrer">jekyll-remote-theme</a> plugin. No need to clone the Git repo or install the Ruby Gem of the theme.</p>
+
+<p>I also cloned the Minimal Mistakes repository, and studied their <a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">live site</a> which functions as documentation and demonstration at the same time. This way I could compare the code in the repo, and the output it produces. By doing so, I learned how Jekyll works. <code class="language-plaintext highlighter-rouge">Layouts</code>, <code class="language-plaintext highlighter-rouge">pages</code>, <code class="language-plaintext highlighter-rouge">collections</code>, <code class="language-plaintext highlighter-rouge">includes</code> and <code class="language-plaintext highlighter-rouge">Liquid templates</code>.</p>
+
+<h3 id="categories-and-tags-aka-taxonomies">Categories and tags (aka taxonomies)</h3>
+
+<p>3. At this point I had figured out my site structure discussed in <a href="#why-sub-blogs">Why sub-blogs?</a> and realised that Jekyll only supported tags and categories (taxonomies) for the built-in <code class="language-plaintext highlighter-rouge">Posts</code> collection, but not for the custom made ones. I wasn’t happy about it, so this was the first major extension that I decided to make. I wanted the taxonomies work across all my collections (sub-blogs).</p>
+
+<div class="li-second-level">
+  <p>3.1. First approach. I tried implementing it using only Liquid templates. I didn’t succeed, because Liquid is quite limited. I wasn’t able to build and manipulate associative containers, like hashes. If you know how to achieve this purely in Liquid, I’d love to hear from you.</p>
+
+</div>
+
+<!-- This one is too complicated to escape properly, breaks syntax highlight in this file, so I'll just leave it -->
+<div class="li-second-level">
+  <p>3.2. So I had to look into implementing it in Ruby code. You can extend Jekyll’s functionality via plugins written in Ruby. There are several types of plugins about which you can read <a href="https://jekyllrb.com/docs/plugins/" target="_blank" rel="nofollow noopener noreferrer">here</a>. I needed a Generator plugin because they can be used to generate content based on my own rules. Here is the Ruby code of my <code class="language-plaintext highlighter-rouge">AllTaxonomiesGenerator</code> which generates the <code class="language-plaintext highlighter-rouge">site.all_tags</code> and <code class="language-plaintext highlighter-rouge">site.all_categories</code> collections:</p>
+</div>
+
+<p><a id="all-taxonomies-plugin-code"></a></p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">AllTaxonomiesPlugin</span>
+  <span class="k">class</span> <span class="nc">AllTaxonomiesGenerator</span> <span class="o">&lt;</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">Generator</span>
+    <span class="n">safe</span> <span class="kp">true</span>
+    <span class="n">priority</span> <span class="ss">:low</span>
+
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+      <span class="n">all_tags</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="o">|</span><span class="nb">hash</span><span class="p">,</span> <span class="n">key</span><span class="o">|</span> <span class="nb">hash</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span> <span class="p">}</span>
+      <span class="n">all_categories</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="o">|</span><span class="nb">hash</span><span class="p">,</span> <span class="n">key</span><span class="o">|</span> <span class="nb">hash</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span> <span class="p">}</span>
+
+      <span class="c1"># Iterate through all collections (not just posts)</span>
+      <span class="n">site</span><span class="p">.</span><span class="nf">collections</span><span class="p">.</span><span class="nf">each_value</span> <span class="k">do</span> <span class="o">|</span><span class="n">collection</span><span class="o">|</span>
+        <span class="n">collection</span><span class="p">.</span><span class="nf">docs</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">doc</span><span class="o">|</span>
+          <span class="k">if</span> <span class="n">doc</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">]</span>
+            <span class="n">doc</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="o">|</span>
+              <span class="n">all_tags</span><span class="p">[</span><span class="n">tag</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">doc</span>
+            <span class="k">end</span>
+          <span class="k">end</span>
+
+          <span class="k">if</span> <span class="n">doc</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'categories'</span><span class="p">]</span>
+            <span class="no">Array</span><span class="p">(</span><span class="n">doc</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'categories'</span><span class="p">]).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">category</span><span class="o">|</span>
+              <span class="n">all_categories</span><span class="p">[</span><span class="n">category</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">doc</span>
+            <span class="k">end</span>
+          <span class="k">end</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+      <span class="c1"># Make available to Liquid templates</span>
+      <span class="n">site</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'all_tags'</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_tags</span>
+      <span class="n">site</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'all_categories'</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_categories</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p style="text-align: center;"><em>Disclaimer: My experience with Ruby is very limited and I relied on AI to write this code</em></p>
+
+<div class="li-second-level">
+  <p>Then, in order to use the <code class="language-plaintext highlighter-rouge">all_tags</code> and <code class="language-plaintext highlighter-rouge">all_categories</code> collections, I added two layout files: <code class="language-plaintext highlighter-rouge">all-tags.html</code> and <code class="language-plaintext highlighter-rouge">all-categories.html</code></p>
+
+</div>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: archive
+---
+
+<span class="cp">{{</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="cp">}}</span>
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>posts-taxonomy.html<span class="w"> </span><span class="na">taxonomies</span><span class="o">=</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">all_tags</span><span class="w"> </span><span class="cp">%}</span>
+</code></pre></div></div>
+
+<p class="text-center"><em>_layouts/all-tags.html</em></p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: archive
+---
+
+<span class="cp">{{</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="cp">}}</span>
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>posts-taxonomy.html<span class="w"> </span><span class="na">taxonomies</span><span class="o">=</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">all_categories</span><span class="w"> </span><span class="cp">%}</span>
+</code></pre></div></div>
+
+<p class="text-center"><em>_layouts/all-categories.html</em></p>
+
+<div class="li-second-level">
+  
+
+</div>
+
+<div class="li-second-level">
+  <p>As you can see, both of these include <code class="language-plaintext highlighter-rouge">posts-taxonomy.html</code> which comes from Minimal Mistakes, and is located in Minimal Mistakes’ <code class="language-plaintext highlighter-rouge">_includes</code> folder (no need to copy it). This way, I have reused that file as-is, only passed my collections as arguments instead of the built-in <code class="language-plaintext highlighter-rouge">site.categories</code> and <code class="language-plaintext highlighter-rouge">site.tags</code> (which only contain taxonomies for the Posts collection.)</p>
+
+</div>
+
+<p>4. The next obstacle was that I just couldn’t make my <code class="language-plaintext highlighter-rouge">AllTaxonomiesGenerator</code> run. I added all possible debug printing and logging, but it did nothing. My kind and helpful AI assistant tried everything, but after a couple of wasted hours, I realised we were just going in circles. So I did a good ol’ Google search, and the first hit was <a href="https://github.com/jekyll/jekyll/issues/325" target="_blank" rel="nofollow noopener noreferrer">this GitHub issue</a>. And it says: 
+<a id="quote-gh-pages"></a></p>
+<blockquote>
+  <p>mojombo on May 11, 2011</p>
+
+  <p>We can’t run user plugins on GitHub Pages due to security restrictions. You are free to generate your site locally and push the resulting HTML to a Git repo, however.</p>
+</blockquote>
+
+<p>Old post, but still stands. It would have taken me only 5 minutes to figure this out if I started with Google instead of AI. (Don’t get me wrong, AI is great. It has been an immense help during this project, but one should not rely on it blindly.)</p>
+
+<p>So I had two options to choose from:</p>
+<ol>
+  <li>Build my site locally and push it to another Git branch to publish.</li>
+  <li>Use GitHub Actions.</li>
+</ol>
+
+<p>I felt that <code class="language-plaintext highlighter-rouge">2.</code> is a bit too advanced for my use case. It is more powerful, flexible and customisable, but for my case <code class="language-plaintext highlighter-rouge">1.</code> is perfectly adequate.</p>
+
+<p>So I did the following modifications to my <code class="language-plaintext highlighter-rouge">GemFile</code> (<code class="language-plaintext highlighter-rouge">-</code>: line removed, <code class="language-plaintext highlighter-rouge">+</code>: line added)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- gem "github-pages", "~&gt; 232", group: :jekyll_plugins
+group :jekyll_plugins do
+  gem "jekyll-feed", "~&gt; 0.12"
+  gem "jekyll-include-cache"
++ gem "minimal-mistakes-jekyll"
+end
+</code></pre></div></div>
+<p>And my <code class="language-plaintext highlighter-rouge">_config.yaml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">remote_theme</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mmistakes/minimal-mistakes@4.27.1"</span>
+<span class="na">+ theme</span><span class="pi">:</span> <span class="s2">"</span><span class="s">minimal-mistakes-jekyll"</span>
+</code></pre></div></div>
+
+<p>This way I removed <code class="language-plaintext highlighter-rouge">GitHub Pages</code> and <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code> is no longer a remote theme, but installed as a gem. (Don’t forget to run <code class="language-plaintext highlighter-rouge">bundle install</code> to apply those changes.) Now, if I run <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code> or <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>, Jekyll will also run my plugins during build. The compiled site will be placed under the <code class="language-plaintext highlighter-rouge">_site</code> folder.</p>
+
+<h2 id="outroduction">Outroduction</h2>
+
+<p>That concludes Part 1. of the series. In the next post we will continue with the implementation process. I will show how the amusingly named <code class="language-plaintext highlighter-rouge">monkey patching</code> helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.</p>
+
+<h2 id="links">Links</h2>
+<ul>
+  <li>How I Built my Personal Site with Jekyll and Minimal Mistakes - Part 2: coming soon</li>
+  <li>How I Built my Personal Site with Jekyll and Minimal Mistakes - Part 3: coming soon</li>
+  <li><a href="/portfolio/2025-07-29-my-personal-site">Related portfolio entry</a></li>
+  <li><a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a></li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://jekyllrb.com/" target="_blank" rel="nofollow noopener noreferrer">Jekyll</a></li>
+  <li><a href="https://shopify.github.io/liquid/" target="_blank" rel="nofollow noopener noreferrer">Liquid</a></li>
+  <li><a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes</a></li>
+  <li><a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes documentation and demo site</a></li>
+  <li><a href="https://jekyllrb.com/docs/plugins/" target="_blank" rel="nofollow noopener noreferrer">Jekyll plugins</a></li>
+</ul>]]></content><author><name>Péter</name></author><category term="Programming" /><category term="Jekyll" /><category term="Web Development" /><category term="Minimal Mistakes" /><category term="Liquid" /><category term="Jekyll" /><category term="Ruby" /><category term="Github Pages" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Changing Stream for a Perforce Workspace</title><link href="https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/" rel="alternate" type="text/html" title="Changing Stream for a Perforce Workspace" /><published>2025-07-15T06:00:00+02:00</published><updated>2025-07-15T06:00:00+02:00</updated><id>https://petertengg.com/programming/changing-stream-for-a-perforce-workspace</id><content type="html" xml:base="https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/"><![CDATA[<p>Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.</p>
+
+<h2 id="the-problem">The problem</h2>
+
+<p>It has a drawback, however. Repositories can grow pretty huge over time. At my company, 250–300 GB repositories are not uncommon, and you have to sync them down to your workstation in order to carry out your development work. Syncing can take a whole day, depending on your internet connection. It also requires a lot of disk space.</p>
+
+<p>And that’s only one workspace. We have several streams (similar to Git branches), and if you want to work on more than one, you have to have them mapped to different workspaces on your disk. Even more syncing, even more disk space.</p>
+
+<h2 id="the-solution">The solution</h2>
+
+<p>There is a useful trick, however, that can help you save a lot of time and disk space. It is possible to retarget your workspace to another stream. Depending on the differences between the two streams, the synchronisation after the switch can be very fast, and you will have to keep only one workspace worth of data on your disk.</p>
+
+<h2 id="steps">Steps</h2>
+
+<p>1. Go to <code class="language-plaintext highlighter-rouge">Edit &gt; Preferences &gt; Streams</code> tab and make sure that <code class="language-plaintext highlighter-rouge">"Work in stream" menu behaviour</code> is set to <code class="language-plaintext highlighter-rouge">Choose at the time of action</code>.</p>
+
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/1.png" alt="Figure 1: Work in stream menu behaviour" /></p>
+<p class="text-center"><em>Figure 1: Work in stream menu behaviour setting</em></p>
+
+<p>2. In the left panel, select the Workspace tree.</p>
+
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/2.png" alt="Figure 2: Workspace tree" /></p>
+<p class="text-center"><em>Figure 2: Workspace tree</em></p>
+
+<p>In the top dropdown menu, select the workspace whose stream you want to change.</p>
+
+<p>The line marked with <code class="language-plaintext highlighter-rouge">1</code> shows the name of your workspace: <code class="language-plaintext highlighter-rouge">synapse_DESKTOP-BF6888H_9492</code> and in parentheses the stream it is currently tracking: <code class="language-plaintext highlighter-rouge">Develop</code>.</p>
+
+<p>The line marked with <code class="language-plaintext highlighter-rouge">2</code> shows the folder on your disk associated with the workspace.</p>
+
+<p>3. In the right panel, select the Streams tab:</p>
+
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/3.png" alt="Figure 3: Streams view" /></p>
+<p class="text-center"><em>Figure 3: Streams view</em></p>
+
+<p>You will see a tree structure of the streams available in the right panel.</p>
+
+<p>4. Browse to the stream you want to switch to. Right click it and hover <code class="language-plaintext highlighter-rouge">Work in this Stream</code>.</p>
+
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/4.png" alt="Figure 4: Switch stream" /></p>
+<p class="text-center"><em>Figure 4: Switch stream</em></p>
+
+<p>A submenu will open with two choices: <code class="language-plaintext highlighter-rouge">Use different workspace</code> and <code class="language-plaintext highlighter-rouge">Reuse current workspace</code>. We want to choose <code class="language-plaintext highlighter-rouge">Reuse current workspace</code> in this case. This is why we selected <code class="language-plaintext highlighter-rouge">Choose at the time of action</code> in the settings in step 1. If you cannot see <code class="language-plaintext highlighter-rouge">Reuse current workspace</code>, then go back to step 1 to enable it.</p>
+
+<p>5. Click <code class="language-plaintext highlighter-rouge">Yes</code> in the pop-up window asking if you want to get the latest revision:</p>
+
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/5.png" alt="Figure 5: Get latest revision pop-up" /></p>
+<p class="text-center"><em>Figure 5: Get latest revision pop-up</em></p>
+
+<p>Depending on the differences between your previous workspace (<code class="language-plaintext highlighter-rouge">Develop</code>) and the new stream (<code class="language-plaintext highlighter-rouge">release</code>), this operation can be quite fast—certainly faster than syncing down the whole stream from scratch—and you will use half the disk space (only one workspace instead of two). There are some caveats, however:</p>
+
+<ol>
+  <li>If the target stream is very different, Perforce might warn about conflicting files or deletions.</li>
+  <li>Your folder on your disk will still be called <code class="language-plaintext highlighter-rouge">d:\dev\workspaces\gummy\develop</code>, but it now tracks the <code class="language-plaintext highlighter-rouge">release</code> stream. In practice it should not cause any problems, but it’s worth remembering. (Maybe you can plan your naming better next time. 🙂)</li>
+</ol>]]></content><author><name>Péter</name></author><category term="Programming" /><category term="Game Development" /><category term="Perforce" /><category term="Version Control" /><summary type="html"><![CDATA[Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.]]></summary></entry></feed>

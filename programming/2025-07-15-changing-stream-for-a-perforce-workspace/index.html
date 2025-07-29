@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Péter Tengg">
 <meta property="og:title" content="Changing Stream for a Perforce Workspace">
-<meta property="og:url" content="https://petertengg.com/bugs-in-the-soup/2025-07-15-changing-stream-for-a-perforce-workspace/">
+<meta property="og:url" content="https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/">
 
 
   <meta property="og:description" content="Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.">
@@ -37,7 +37,7 @@
 
 
 
-<link rel="canonical" href="https://petertengg.com/bugs-in-the-soup/2025-07-15-changing-stream-for-a-perforce-workspace/">
+<link rel="canonical" href="https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/">
 
 
 
@@ -70,7 +70,6 @@
 
 
     <!-- start custom head snippets -->
-
 <link rel="stylesheet" href="/assets/css/custom.css">
 <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
@@ -81,15 +80,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git." />
 <meta property="og:description" content="Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git." />
-<link rel="canonical" href="https://petertengg.com/bugs-in-the-soup/2025-07-15-changing-stream-for-a-perforce-workspace/" />
-<meta property="og:url" content="https://petertengg.com/bugs-in-the-soup/2025-07-15-changing-stream-for-a-perforce-workspace/" />
+<link rel="canonical" href="https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/" />
+<meta property="og:url" content="https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/" />
 <meta property="og:site_name" content="Péter Tengg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-07-15T06:00:00+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Changing Stream for a Perforce Workspace" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Péter"},"dateModified":"2025-07-15T06:00:00+02:00","datePublished":"2025-07-15T06:00:00+02:00","description":"Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.","headline":"Changing Stream for a Perforce Workspace","mainEntityOfPage":{"@type":"WebPage","@id":"https://petertengg.com/bugs-in-the-soup/2025-07-15-changing-stream-for-a-perforce-workspace/"},"url":"https://petertengg.com/bugs-in-the-soup/2025-07-15-changing-stream-for-a-perforce-workspace/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Péter"},"dateModified":"2025-07-15T06:00:00+02:00","datePublished":"2025-07-15T06:00:00+02:00","description":"Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.","headline":"Changing Stream for a Perforce Workspace","mainEntityOfPage":{"@type":"WebPage","@id":"https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/"},"url":"https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/"}</script>
 <!-- End Jekyll SEO tag -->
 
 <!-- end custom head snippets -->
@@ -124,13 +123,13 @@
               >Updates</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/bugs-in-the-soup/"
+                href="/programming/"
                 
                 
               >Programming</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/optimal-banana/"
+                href="/cooking/"
                 
                 
               >Cooking</a>
@@ -179,7 +178,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="https://petertengg.com/bugs-in-the-soup/2025-07-15-changing-stream-for-a-perforce-workspace/" itemprop="url">Changing Stream for a Perforce Workspace
+            <a href="https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/" itemprop="url">Changing Stream for a Perforce Workspace
 </a>
           </h1>
           
@@ -215,58 +214,58 @@
 
       <section class="page__content" itemprop="text">
         
-        <p class="text-justify">Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.</p>
+        <p>Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.</p>
 
-<h3 id="the-problem">The problem</h3>
+<h2 id="the-problem">The problem</h2>
 
-<p class="text-justify">It has a drawback, however. Repositories can grow pretty huge over time. At my company, 250–300 GB repositories are not uncommon, and you have to sync them down to your workstation in order to carry out your development work. Syncing can take a whole day, depending on your internet connection. It also requires a lot of disk space.</p>
+<p>It has a drawback, however. Repositories can grow pretty huge over time. At my company, 250–300 GB repositories are not uncommon, and you have to sync them down to your workstation in order to carry out your development work. Syncing can take a whole day, depending on your internet connection. It also requires a lot of disk space.</p>
 
-<p class="text-justify">And that’s only one workspace. We have several streams (similar to Git branches), and if you want to work on more than one, you have to have them mapped to different workspaces on your disk. Even more syncing, even more disk space.</p>
+<p>And that’s only one workspace. We have several streams (similar to Git branches), and if you want to work on more than one, you have to have them mapped to different workspaces on your disk. Even more syncing, even more disk space.</p>
 
-<h3 id="the-solution">The solution</h3>
+<h2 id="the-solution">The solution</h2>
 
-<p class="text-justify">There is a useful trick, however, that can help you save a lot of time and disk space. It is possible to retarget your workspace to another stream. Depending on the differences between the two streams, the synchronisation after the switch can be very fast, and you will have to keep only one workspace worth of data on your disk.</p>
+<p>There is a useful trick, however, that can help you save a lot of time and disk space. It is possible to retarget your workspace to another stream. Depending on the differences between the two streams, the synchronisation after the switch can be very fast, and you will have to keep only one workspace worth of data on your disk.</p>
 
-<h3 id="steps">Steps</h3>
+<h2 id="steps">Steps</h2>
 
-<p>1. Go to <code class="language-plaintext highlighter-rouge">Edit &gt; Preferences &gt; Streams</code> tab and make sure that <code class="language-plaintext highlighter-rouge">"Work in stream" menu behavior</code> is set to <code class="language-plaintext highlighter-rouge">Choose at the time of action</code>.</p>
+<p>1. Go to <code class="language-plaintext highlighter-rouge">Edit &gt; Preferences &gt; Streams</code> tab and make sure that <code class="language-plaintext highlighter-rouge">"Work in stream" menu behaviour</code> is set to <code class="language-plaintext highlighter-rouge">Choose at the time of action</code>.</p>
 
-<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/1.png" alt="Figure 1: Work in stream menu behavior" /></p>
-<p class="text-center"><em>Figure 1: Work in stream menu behavior setting</em></p>
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/1.png" alt="Figure 1: Work in stream menu behaviour" /></p>
+<p class="text-center"><em>Figure 1: Work in stream menu behaviour setting</em></p>
 
 <p>2. In the left panel, select the Workspace tree.</p>
 
-<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/2.png" alt="Figure 2: Workspace tree" /></p>
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/2.png" alt="Figure 2: Workspace tree" /></p>
 <p class="text-center"><em>Figure 2: Workspace tree</em></p>
 
-<p class="text-justify">In the top dropdown menu, select the workspace whose stream you want to change.</p>
+<p>In the top dropdown menu, select the workspace whose stream you want to change.</p>
 
-<p class="text-justify">The line marked with <code class="language-plaintext highlighter-rouge">1</code> shows the name of your workspace: <code class="language-plaintext highlighter-rouge">synapse_DESKTOP-BF6888H_9492</code> and in parentheses the stream it is currently tracking: <code class="language-plaintext highlighter-rouge">Develop</code>.</p>
+<p>The line marked with <code class="language-plaintext highlighter-rouge">1</code> shows the name of your workspace: <code class="language-plaintext highlighter-rouge">synapse_DESKTOP-BF6888H_9492</code> and in parentheses the stream it is currently tracking: <code class="language-plaintext highlighter-rouge">Develop</code>.</p>
 
-<p class="text-justify">The line marked with <code class="language-plaintext highlighter-rouge">2</code> shows the folder on your disk associated with the workspace.</p>
+<p>The line marked with <code class="language-plaintext highlighter-rouge">2</code> shows the folder on your disk associated with the workspace.</p>
 
 <p>3. In the right panel, select the Streams tab:</p>
 
-<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/3.png" alt="Figure 3: Streams view" /></p>
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/3.png" alt="Figure 3: Streams view" /></p>
 <p class="text-center"><em>Figure 3: Streams view</em></p>
 
-<p class="text-justify">You will see a tree structure of the streams available in the right panel.</p>
+<p>You will see a tree structure of the streams available in the right panel.</p>
 
 <p>4. Browse to the stream you want to switch to. Right click it and hover <code class="language-plaintext highlighter-rouge">Work in this Stream</code>.</p>
 
-<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/4.png" alt="Figure 4: Switch stream" /></p>
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/4.png" alt="Figure 4: Switch stream" /></p>
 <p class="text-center"><em>Figure 4: Switch stream</em></p>
 
-<p class="text-justify">A submenu will open with two choices: <code class="language-plaintext highlighter-rouge">Use different workspace</code> and <code class="language-plaintext highlighter-rouge">Reuse current workspace</code>. We want to choose <code class="language-plaintext highlighter-rouge">Reuse current workspace</code> in this case. This is why we selected <code class="language-plaintext highlighter-rouge">Choose at the time of action</code> in the settings in step 1. If you cannot see <code class="language-plaintext highlighter-rouge">Reuse current workspace</code>, then go back to step 1 to enable it.</p>
+<p>A submenu will open with two choices: <code class="language-plaintext highlighter-rouge">Use different workspace</code> and <code class="language-plaintext highlighter-rouge">Reuse current workspace</code>. We want to choose <code class="language-plaintext highlighter-rouge">Reuse current workspace</code> in this case. This is why we selected <code class="language-plaintext highlighter-rouge">Choose at the time of action</code> in the settings in step 1. If you cannot see <code class="language-plaintext highlighter-rouge">Reuse current workspace</code>, then go back to step 1 to enable it.</p>
 
 <p>5. Click <code class="language-plaintext highlighter-rouge">Yes</code> in the pop-up window asking if you want to get the latest revision:</p>
 
-<p class="text-center"><img src="/assets/images/bugs-in-the-soup/changing-stream-for-a-perforce-workspace/5.png" alt="Figure 5: Get latest revision pop-up" /></p>
+<p class="text-center"><img src="/assets/images/programming/changing-stream-for-a-perforce-workspace/5.png" alt="Figure 5: Get latest revision pop-up" /></p>
 <p class="text-center"><em>Figure 5: Get latest revision pop-up</em></p>
 
-<p class="text-justify">Depending on the differences between your previous workspace (<code class="language-plaintext highlighter-rouge">Develop</code>) and the new stream (<code class="language-plaintext highlighter-rouge">release</code>), this operation can be quite fast—certainly faster than syncing down the whole stream from scratch—and you will use half the disk space (only one workspace instead of two). There are some caveats, however:</p>
+<p>Depending on the differences between your previous workspace (<code class="language-plaintext highlighter-rouge">Develop</code>) and the new stream (<code class="language-plaintext highlighter-rouge">release</code>), this operation can be quite fast—certainly faster than syncing down the whole stream from scratch—and you will use half the disk space (only one workspace instead of two). There are some caveats, however:</p>
 
-<ol class="text-justify">
+<ol>
   <li>If the target stream is very different, Perforce might warn about conflicting files or deletions.</li>
   <li>Your folder on your disk will still be called <code class="language-plaintext highlighter-rouge">d:\dev\workspaces\gummy\develop</code>, but it now tracks the <code class="language-plaintext highlighter-rouge">release</code> stream. In practice it should not cause any problems, but it’s worth remembering. (Maybe you can plan your naming better next time. 🙂)</li>
 </ol>
@@ -286,11 +285,11 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#programming-game-dev" class="page__taxonomy-item p-category" rel="tag">Programming: Game Dev</a><span class="sep">, </span>
+      <a href="/tags/#game-development" class="page__taxonomy-item p-category" rel="tag">Game Development</a><span class="sep">, </span>
     
-      <a href="/tags/#programming-perforce" class="page__taxonomy-item p-category" rel="tag">Programming: Perforce</a><span class="sep">, </span>
+      <a href="/tags/#perforce" class="page__taxonomy-item p-category" rel="tag">Perforce</a><span class="sep">, </span>
     
-      <a href="/tags/#programming-version-control" class="page__taxonomy-item p-category" rel="tag">Programming: Version Control</a>
+      <a href="/tags/#version-control" class="page__taxonomy-item p-category" rel="tag">Version Control</a>
     
     </span>
   </p>
@@ -322,6 +321,15 @@
       
 
       
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/" class="pagination--pager" title="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions">Next</a>
+    
+  </nav>
+
 
     </div>
 
@@ -356,6 +364,58 @@
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
       <div class="archive__item-teaser">
+        <img src="/assets/images/portfolio/my-personal-site/my-personal-site1.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/portfolio/2025-07-29-my-personal-site/" rel="permalink">My Personal Site
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-29T07:46:00+02:00">July 29, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Built a personal website using Jekyll, hosted on GitHub Pages under a custom domain. Tailored the default setup to better serve my goals for the site.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
         <img src="/assets/images/portfolio/divergo/divergo-chart-1.png" alt="">
       </div>
     
@@ -373,7 +433,7 @@
       <span class="page__meta-date">
         <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2025-07-14T12:00:00+02:00">July 14, 2025</time>
+        <time datetime="2025-07-15T12:00:00+02:00">July 15, 2025</time>
       </span>
     
 
@@ -408,12 +468,12 @@
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
       <div class="archive__item-teaser">
-        <img src="/assets/images/optimal-banana/oven-roasted-whole-chicken/3.jpg" alt="">
+        <img src="/assets/images/cooking/oven-roasted-whole-chicken/3.jpg" alt="">
       </div>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/optimal-banana/2025-07-15-oven-roasted-whole-chicken/" rel="permalink">Oven Roasted Whole Chicken
+        <a href="/cooking/2025-07-15-oven-roasted-whole-chicken/" rel="permalink">Oven Roasted Whole Chicken
 </a>
       
     </h2>
@@ -468,7 +528,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/updates/2025-07-15-welcome-to-my-site/" rel="permalink">Welcome to my Site
+        <a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/" rel="permalink">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions
 </a>
       
     </h2>
@@ -480,7 +540,7 @@
       <span class="page__meta-date">
         <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2025-07-15T06:00:10+02:00">July 15, 2025</time>
+        <time datetime="2025-07-29T07:47:00+02:00">July 29, 2025</time>
       </span>
     
 
@@ -493,14 +553,15 @@
       <span class="page__meta-readtime">
         <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          6 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">I decided to start a blog because I enjoy writing texts for humans just as much as for machines. Some humans even say that my writings are enganging and enjo...</p>
+    <p class="archive__item-excerpt" itemprop="description">Introduction
+</p>
   </article>
 </div>
 
@@ -613,8 +674,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://petertengg.com/bugs-in-the-soup/2025-07-15-changing-stream-for-a-perforce-workspace/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/bugs-in-the-soup/changing-stream-for-a-perforce-workspace"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://petertengg.com/programming/2025-07-15-changing-stream-for-a-perforce-workspace/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/programming/changing-stream-for-a-perforce-workspace"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

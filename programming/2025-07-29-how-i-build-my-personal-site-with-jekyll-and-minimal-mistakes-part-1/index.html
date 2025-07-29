@@ -1,0 +1,851 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions - Péter Tengg</title>
+<meta name="description" content="Introduction">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Péter Tengg">
+<meta property="og:title" content="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions">
+<meta property="og:url" content="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/">
+
+
+  <meta property="og:description" content="Introduction">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-07-29T07:47:00+02:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Péter Tengg Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions | Péter Tengg</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions" />
+<meta name="author" content="Péter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction" />
+<meta property="og:description" content="Introduction" />
+<link rel="canonical" href="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/" />
+<meta property="og:url" content="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/" />
+<meta property="og:site_name" content="Péter Tengg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-29T07:47:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Péter"},"dateModified":"2025-07-29T07:47:00+02:00","datePublished":"2025-07-29T07:47:00+02:00","description":"Introduction","headline":"How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions","mainEntityOfPage":{"@type":"WebPage","@id":"https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/"},"url":"https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Péter Tengg
+          <span class="site-subtitle">Software Engineer</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/updates/"
+                
+                
+              >Updates</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/programming/"
+                
+                
+              >Programming</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/cooking/"
+                
+                
+              >Cooking</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/portfolio/"
+                
+                
+              >Portfolio</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions">
+    <meta itemprop="description" content="Introduction">
+    <meta itemprop="datePublished" content="2025-07-29T07:47:00+02:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/" itemprop="url">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-29T07:47:00+02:00">July 29, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Table of Contents</h4></header>
+              <ul class="toc__menu"><li><a href="#introduction">Introduction</a></li><li><a href="#selecting-the-tech-stack">Selecting the tech stack</a><ul><li><a href="#why-github">Why GitHub?</a></li><li><a href="#why-jekyll">Why Jekyll?</a></li><li><a href="#why-ruby-liquid-html-markdown-javascript-css">Why Ruby, Liquid, HTML, Markdown, JavaScript, CSS?</a></li><li><a href="#why-minimal-mistakes">Why Minimal Mistakes?</a></li></ul></li><li><a href="#design">Design</a><ul><li><a href="#why-sub-blogs">Why sub-blogs?</a></li><li><a href="#complication-with-sub-blogs">Complication with sub-blogs</a></li></ul></li><li><a href="#the-implementation-process">The implementation process</a><ul><li><a href="#getting-started">Getting started</a></li><li><a href="#categories-and-tags-aka-taxonomies">Categories and tags (aka taxonomies)</a></li></ul></li><li><a href="#outroduction">Outroduction</a></li><li><a href="#links">Links</a></li><li><a href="#sources">Sources</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h2 id="introduction">Introduction</h2>
+
+<p>This is Part 1 in a three-post series, where I sum up the journey of building my website. In this part, I will discuss why I chose this tech stack, the structural design choices I made, and we will face our first challenge early in the implementation process.</p>
+
+<h2 id="selecting-the-tech-stack">Selecting the tech stack</h2>
+
+<p>After doing a little research on the topic, it was quite an obvious choice:</p>
+
+<h3 id="why-github">Why GitHub?</h3>
+<ul>
+  <li>You can host your personal site on GitHub Pages for free and use your custom domain.</li>
+  <li>As a software engineer, hosting it on GitHub felt like a natural fit.</li>
+</ul>
+
+<h3 id="why-jekyll">Why Jekyll?</h3>
+<ul>
+  <li>GitHub Pages comes with Jekyll integration, which makes Jekyll the obvious choice.</li>
+  <li><a href="https://jekyllrb.com/" target="_blank" rel="nofollow noopener noreferrer">Jekyll</a> is a static site generator which is “blog-aware” - well suited for portfolio pages and blogs. Exactly what I needed.</li>
+</ul>
+
+<h3 id="why-ruby-liquid-html-markdown-javascript-css">Why Ruby, <a href="https://shopify.github.io/liquid/" target="_blank" rel="nofollow noopener noreferrer">Liquid</a>, HTML, Markdown, JavaScript, CSS?</h3>
+<p>These are the technologies Jekyll uses to build and customise the websites, so they would be hard to avoid. :)</p>
+
+<h3 id="why-minimal-mistakes">Why <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes</a>?</h3>
+<p>There are several good Jekyll themes out there, but I chose <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code>, because it seemed to be flexible, customisable and feature-rich. It is also minimalistic in both style and design, which gives you a lot of freedom. This freedom comes with some drawbacks however. For a non-technical person the wide range of customisation possibilities can be overwhelming, but I was up for the challenge, and luckily it comes with extensive documentation which helped a lot.</p>
+
+<h2 id="design">Design</h2>
+
+<p>In this section I will tell you why I went for this page structure and what implications it had.</p>
+
+<h3 id="why-sub-blogs">Why sub-blogs?</h3>
+
+<p>I have come up with this idea of sub-blogs, because I want to post in quite different topics for quite different audiences (e.g.: programming and cooking), so keeping them separated is a good idea. I could have created standalone sites for each, but that wouldn’t scale very well. If I suddenly decided to post about <a href="https://en.wikipedia.org/wiki/Egg_shoeing" target="_blank" rel="nofollow noopener noreferrer">egg shoeing</a>, which is a completely different topic, I would have to set up another site. Also, I thought it would be a good idea to show my professional and personal interests in one place, so people - my future clients - can get a better, more holistic impression about me.</p>
+
+<h3 id="complication-with-sub-blogs">Complication with sub-blogs</h3>
+
+<p>It caught me by surprise, that Jekyll doesn’t support sub-blogs natively. There are <code class="language-plaintext highlighter-rouge">collections</code>, which are similar. You can define your collections like <code class="language-plaintext highlighter-rouge">Programming</code>, <code class="language-plaintext highlighter-rouge">Cooking</code>, <code class="language-plaintext highlighter-rouge">Portfolio</code> and <code class="language-plaintext highlighter-rouge">Updates</code>, but they don’t get out-of-the box support for related posts and taxonomies (i.e.: categories and tags). There is one prominent collection called <code class="language-plaintext highlighter-rouge">Posts</code> which get all the love, but the rest (custom collections that you make) are left out. If I had gone for a classic single-topic blog, it would have worked beautifully, but I wanted to build my own structure, and I omitted the <code class="language-plaintext highlighter-rouge">Posts</code> collection entirely. This is where things got interesting. I had to extend Jekyll’s default implementation to add support for my sub-blogs. I will discuss this journey, the obstacles faced and the solutions I came up with.</p>
+
+<h2 id="the-implementation-process">The implementation process</h2>
+
+<p>Since I wasn’t familiar with the Jekyll framework, I explored its capabilities and limitations along the way. The road was a bit bumpy, but it wasn’t too steep, and the process was quite enjoyable.</p>
+
+<h3 id="getting-started">Getting started</h3>
+
+<p>1. Since I had no prior knowledge, I started following <a href="https://www.youtube.com/watch?v=fV01b0duZwU" target="_blank" rel="nofollow noopener noreferrer">this video tutorial</a> which proved to be very helpful. It walked me through all the necessary steps to get me going, even installing the prerequisites, like Ruby and Powershell 7. It was easy to follow, and quite soon, I had a basic “Hello Jekyll” site publicly available on the internet. I didn’t complete the tutorial however. I diverged when he installed the <code class="language-plaintext highlighter-rouge">Hacker</code> theme. Even though its name suggests it would be a good fit for a software engineer’s personal site, I found it quite ugly — so I started looking for alternatives.</p>
+
+<p>2. Enter <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code>. I chose this theme because of the reasons discussed in <a href="#why-minimal-mistakes">Why Minimal Mistakes</a>. I installed it as a remote theme in my <code class="language-plaintext highlighter-rouge">_config.yaml</code>:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">remote_theme</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mmistakes/minimal-mistakes@4.27.2"</span>
+</code></pre></div></div>
+<p>A remote theme can be any Jekyll theme that is publicly hosted on GitHub. You only need to declare it in your config file, and the rest is taken care of by the <a href="https://github.com/benbalter/jekyll-remote-theme" target="_blank" rel="nofollow noopener noreferrer">jekyll-remote-theme</a> plugin. No need to clone the Git repo or install the Ruby Gem of the theme.</p>
+
+<p>I also cloned the Minimal Mistakes repository, and studied their <a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">live site</a> which functions as documentation and demonstration at the same time. This way I could compare the code in the repo, and the output it produces. By doing so, I learned how Jekyll works. <code class="language-plaintext highlighter-rouge">Layouts</code>, <code class="language-plaintext highlighter-rouge">pages</code>, <code class="language-plaintext highlighter-rouge">collections</code>, <code class="language-plaintext highlighter-rouge">includes</code> and <code class="language-plaintext highlighter-rouge">Liquid templates</code>.</p>
+
+<h3 id="categories-and-tags-aka-taxonomies">Categories and tags (aka taxonomies)</h3>
+
+<p>3. At this point I had figured out my site structure discussed in <a href="#why-sub-blogs">Why sub-blogs?</a> and realised that Jekyll only supported tags and categories (taxonomies) for the built-in <code class="language-plaintext highlighter-rouge">Posts</code> collection, but not for the custom made ones. I wasn’t happy about it, so this was the first major extension that I decided to make. I wanted the taxonomies work across all my collections (sub-blogs).</p>
+
+<div class="li-second-level">
+  <p>3.1. First approach. I tried implementing it using only Liquid templates. I didn’t succeed, because Liquid is quite limited. I wasn’t able to build and manipulate associative containers, like hashes. If you know how to achieve this purely in Liquid, I’d love to hear from you.</p>
+
+</div>
+
+<!-- This one is too complicated to escape properly, breaks syntax highlight in this file, so I'll just leave it -->
+<div class="li-second-level">
+  <p>3.2. So I had to look into implementing it in Ruby code. You can extend Jekyll’s functionality via plugins written in Ruby. There are several types of plugins about which you can read <a href="https://jekyllrb.com/docs/plugins/" target="_blank" rel="nofollow noopener noreferrer">here</a>. I needed a Generator plugin because they can be used to generate content based on my own rules. Here is the Ruby code of my <code class="language-plaintext highlighter-rouge">AllTaxonomiesGenerator</code> which generates the <code class="language-plaintext highlighter-rouge">site.all_tags</code> and <code class="language-plaintext highlighter-rouge">site.all_categories</code> collections:</p>
+</div>
+
+<p><a id="all-taxonomies-plugin-code"></a></p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">AllTaxonomiesPlugin</span>
+  <span class="k">class</span> <span class="nc">AllTaxonomiesGenerator</span> <span class="o">&lt;</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">Generator</span>
+    <span class="n">safe</span> <span class="kp">true</span>
+    <span class="n">priority</span> <span class="ss">:low</span>
+
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+      <span class="n">all_tags</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="o">|</span><span class="nb">hash</span><span class="p">,</span> <span class="n">key</span><span class="o">|</span> <span class="nb">hash</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span> <span class="p">}</span>
+      <span class="n">all_categories</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="o">|</span><span class="nb">hash</span><span class="p">,</span> <span class="n">key</span><span class="o">|</span> <span class="nb">hash</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span> <span class="p">}</span>
+
+      <span class="c1"># Iterate through all collections (not just posts)</span>
+      <span class="n">site</span><span class="p">.</span><span class="nf">collections</span><span class="p">.</span><span class="nf">each_value</span> <span class="k">do</span> <span class="o">|</span><span class="n">collection</span><span class="o">|</span>
+        <span class="n">collection</span><span class="p">.</span><span class="nf">docs</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">doc</span><span class="o">|</span>
+          <span class="k">if</span> <span class="n">doc</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">]</span>
+            <span class="n">doc</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="o">|</span>
+              <span class="n">all_tags</span><span class="p">[</span><span class="n">tag</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">doc</span>
+            <span class="k">end</span>
+          <span class="k">end</span>
+
+          <span class="k">if</span> <span class="n">doc</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'categories'</span><span class="p">]</span>
+            <span class="no">Array</span><span class="p">(</span><span class="n">doc</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'categories'</span><span class="p">]).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">category</span><span class="o">|</span>
+              <span class="n">all_categories</span><span class="p">[</span><span class="n">category</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">doc</span>
+            <span class="k">end</span>
+          <span class="k">end</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+      <span class="c1"># Make available to Liquid templates</span>
+      <span class="n">site</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'all_tags'</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_tags</span>
+      <span class="n">site</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'all_categories'</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_categories</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p style="text-align: center;"><em>Disclaimer: My experience with Ruby is very limited and I relied on AI to write this code</em></p>
+
+<div class="li-second-level">
+  <p>Then, in order to use the <code class="language-plaintext highlighter-rouge">all_tags</code> and <code class="language-plaintext highlighter-rouge">all_categories</code> collections, I added two layout files: <code class="language-plaintext highlighter-rouge">all-tags.html</code> and <code class="language-plaintext highlighter-rouge">all-categories.html</code></p>
+
+</div>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: archive
+---
+
+<span class="cp">{{</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="cp">}}</span>
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>posts-taxonomy.html<span class="w"> </span><span class="na">taxonomies</span><span class="o">=</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">all_tags</span><span class="w"> </span><span class="cp">%}</span>
+</code></pre></div></div>
+
+<p class="text-center"><em>_layouts/all-tags.html</em></p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: archive
+---
+
+<span class="cp">{{</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="cp">}}</span>
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>posts-taxonomy.html<span class="w"> </span><span class="na">taxonomies</span><span class="o">=</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">all_categories</span><span class="w"> </span><span class="cp">%}</span>
+</code></pre></div></div>
+
+<p class="text-center"><em>_layouts/all-categories.html</em></p>
+
+<div class="li-second-level">
+  
+
+</div>
+
+<div class="li-second-level">
+  <p>As you can see, both of these include <code class="language-plaintext highlighter-rouge">posts-taxonomy.html</code> which comes from Minimal Mistakes, and is located in Minimal Mistakes’ <code class="language-plaintext highlighter-rouge">_includes</code> folder (no need to copy it). This way, I have reused that file as-is, only passed my collections as arguments instead of the built-in <code class="language-plaintext highlighter-rouge">site.categories</code> and <code class="language-plaintext highlighter-rouge">site.tags</code> (which only contain taxonomies for the Posts collection.)</p>
+
+</div>
+
+<p>4. The next obstacle was that I just couldn’t make my <code class="language-plaintext highlighter-rouge">AllTaxonomiesGenerator</code> run. I added all possible debug printing and logging, but it did nothing. My kind and helpful AI assistant tried everything, but after a couple of wasted hours, I realised we were just going in circles. So I did a good ol’ Google search, and the first hit was <a href="https://github.com/jekyll/jekyll/issues/325" target="_blank" rel="nofollow noopener noreferrer">this GitHub issue</a>. And it says: 
+<a id="quote-gh-pages"></a></p>
+<blockquote>
+  <p>mojombo on May 11, 2011</p>
+
+  <p>We can’t run user plugins on GitHub Pages due to security restrictions. You are free to generate your site locally and push the resulting HTML to a Git repo, however.</p>
+</blockquote>
+
+<p>Old post, but still stands. It would have taken me only 5 minutes to figure this out if I started with Google instead of AI. (Don’t get me wrong, AI is great. It has been an immense help during this project, but one should not rely on it blindly.)</p>
+
+<p>So I had two options to choose from:</p>
+<ol>
+  <li>Build my site locally and push it to another Git branch to publish.</li>
+  <li>Use GitHub Actions.</li>
+</ol>
+
+<p>I felt that <code class="language-plaintext highlighter-rouge">2.</code> is a bit too advanced for my use case. It is more powerful, flexible and customisable, but for my case <code class="language-plaintext highlighter-rouge">1.</code> is perfectly adequate.</p>
+
+<p>So I did the following modifications to my <code class="language-plaintext highlighter-rouge">GemFile</code> (<code class="language-plaintext highlighter-rouge">-</code>: line removed, <code class="language-plaintext highlighter-rouge">+</code>: line added)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- gem "github-pages", "~&gt; 232", group: :jekyll_plugins
+group :jekyll_plugins do
+  gem "jekyll-feed", "~&gt; 0.12"
+  gem "jekyll-include-cache"
++ gem "minimal-mistakes-jekyll"
+end
+</code></pre></div></div>
+<p>And my <code class="language-plaintext highlighter-rouge">_config.yaml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">remote_theme</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mmistakes/minimal-mistakes@4.27.1"</span>
+<span class="na">+ theme</span><span class="pi">:</span> <span class="s2">"</span><span class="s">minimal-mistakes-jekyll"</span>
+</code></pre></div></div>
+
+<p>This way I removed <code class="language-plaintext highlighter-rouge">GitHub Pages</code> and <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code> is no longer a remote theme, but installed as a gem. (Don’t forget to run <code class="language-plaintext highlighter-rouge">bundle install</code> to apply those changes.) Now, if I run <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code> or <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>, Jekyll will also run my plugins during build. The compiled site will be placed under the <code class="language-plaintext highlighter-rouge">_site</code> folder.</p>
+
+<h2 id="outroduction">Outroduction</h2>
+
+<p>That concludes Part 1. of the series. In the next post we will continue with the implementation process. I will show how the amusingly named <code class="language-plaintext highlighter-rouge">monkey patching</code> helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.</p>
+
+<h2 id="links">Links</h2>
+<ul>
+  <li>How I Built my Personal Site with Jekyll and Minimal Mistakes - Part 2: coming soon</li>
+  <li>How I Built my Personal Site with Jekyll and Minimal Mistakes - Part 3: coming soon</li>
+  <li><a href="/portfolio/2025-07-29-my-personal-site">Related portfolio entry</a></li>
+  <li><a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a></li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://jekyllrb.com/" target="_blank" rel="nofollow noopener noreferrer">Jekyll</a></li>
+  <li><a href="https://shopify.github.io/liquid/" target="_blank" rel="nofollow noopener noreferrer">Liquid</a></li>
+  <li><a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes</a></li>
+  <li><a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes documentation and demo site</a></li>
+  <li><a href="https://jekyllrb.com/docs/plugins/" target="_blank" rel="nofollow noopener noreferrer">Jekyll plugins</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#github-pages" class="page__taxonomy-item p-category" rel="tag">Github Pages</a><span class="sep">, </span>
+    
+      <a href="/tags/#jekyll" class="page__taxonomy-item p-category" rel="tag">Jekyll</a><span class="sep">, </span>
+    
+      <a href="/tags/#liquid" class="page__taxonomy-item p-category" rel="tag">Liquid</a><span class="sep">, </span>
+    
+      <a href="/tags/#minimal-mistakes" class="page__taxonomy-item p-category" rel="tag">Minimal Mistakes</a><span class="sep">, </span>
+    
+      <a href="/tags/#ruby" class="page__taxonomy-item p-category" rel="tag">Ruby</a><span class="sep">, </span>
+    
+      <a href="/tags/#web-development" class="page__taxonomy-item p-category" rel="tag">Web Development</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#jekyll" class="page__taxonomy-item p-category" rel="tag">Jekyll</a><span class="sep">, </span>
+    
+      <a href="/categories/#programming" class="page__taxonomy-item p-category" rel="tag">Programming</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-07-29T07:47:00+02:00">July 29, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/programming/2025-07-15-changing-stream-for-a-perforce-workspace/" class="pagination--pager" title="Changing Stream for a Perforce Workspace">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+      
+        <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+      
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/portfolio/my-personal-site/my-personal-site1.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/portfolio/2025-07-29-my-personal-site/" rel="permalink">My Personal Site
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-29T07:46:00+02:00">July 29, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Built a personal website using Jekyll, hosted on GitHub Pages under a custom domain. Tailored the default setup to better serve my goals for the site.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/portfolio/divergo/divergo-chart-1.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/portfolio/2025-07-15-divergo/" rel="permalink">Divergo
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-15T12:00:00+02:00">July 15, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">“Others left me disappointed, but Péter delivered exactly what I needed — in just a week and a half.” - Ákos
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/cooking/oven-roasted-whole-chicken/3.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cooking/2025-07-15-oven-roasted-whole-chicken/" rel="permalink">Oven Roasted Whole Chicken
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-15T06:00:00+02:00">July 15, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ingredients
+
+  1 chicken, approx 2 kg
+  500 grams champignon mushrooms
+  4 large carrots
+  1 large potato
+  4 medium yellow onions
+  1 bulb of garlic
+  0.5 l...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programming/2025-07-15-changing-stream-for-a-perforce-workspace/" rel="permalink">Changing Stream for a Perforce Workspace
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-15T06:00:00+02:00">July 15, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Perforce is a popular version control system used in game development, because it handles non-code, binary assets better than Git.
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+        <li><a href="/assets/downloads/CV English - Peter Tengg.pdf" target="_blank" type="application/pdf" download 
+            rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> CV (PDF)</a>
+        </li>
+        
+      
+        
+        <li><a href="https://www.linkedin.com/in/petertengg/" target="_blank" 
+            rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        </li>
+        
+      
+        
+        <li><a href="https://discord.com/users/peti7199" target="_blank" 
+            rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a>
+        </li>
+        
+      
+        
+        <li><a href="https://www.tradingview.com/u/OperationHeadLessChicken/" target="_blank" 
+            rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-chart-line" aria-hidden="true"></i> TradingView</a>
+        </li>
+        
+      
+        
+        <li><a href="https://www.instagram.com/optimal_banana/" target="_blank" 
+            rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a>
+        </li>
+        
+      
+    
+
+    
+      <li><a href="/feeds/"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feeds </a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://petertengg.com">Péter Tengg</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TC8TDGQPHL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TC8TDGQPHL', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://petertengg.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+  </body>
+</html>
