@@ -1,4 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://petertengg.com/feed/programming.xml" rel="self" type="application/atom+xml" /><link href="https://petertengg.com/" rel="alternate" type="text/html" /><updated>2025-07-29T10:45:02+02:00</updated><id>https://petertengg.com/feed/programming.xml</id><title type="html">Péter Tengg | Programming</title><subtitle>A personal site by Péter Tengg — exploring creative programming, tasty cooking, curious bugs, and portfolio projects. Follow along for updates from code to kitchen.</subtitle><author><name>Péter</name></author><entry><title type="html">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions</title><link href="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/" rel="alternate" type="text/html" title="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions" /><published>2025-07-29T07:47:00+02:00</published><updated>2025-07-29T07:47:00+02:00</updated><id>https://petertengg.com/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1</id><content type="html" xml:base="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://petertengg.com/feed/programming.xml" rel="self" type="application/atom+xml" /><link href="https://petertengg.com/" rel="alternate" type="text/html" /><updated>2025-08-05T09:26:52+02:00</updated><id>https://petertengg.com/feed/programming.xml</id><title type="html">Péter Tengg | Programming</title><subtitle>A personal site by Péter Tengg — exploring creative programming, tasty cooking, curious bugs, and portfolio projects. Follow along for updates from code to kitchen.</subtitle><author><name>Péter</name></author><entry><title type="html">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 2: Custom Implementation and Plugins</title><link href="https://petertengg.com/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2/" rel="alternate" type="text/html" title="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 2: Custom Implementation and Plugins" /><published>2025-08-05T07:20:00+02:00</published><updated>2025-08-05T07:20:00+02:00</updated><id>https://petertengg.com/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2</id><content type="html" xml:base="https://petertengg.com/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<p>This is Part 2 in a three-post series, where I sum up the journey of building my website. If you haven’t, make sure to read <a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1">Part 1: Setup and Design Decisions</a>. In this part, I continue with the implementation process. I will show how the amusingly named <code class="language-plaintext highlighter-rouge">monkey patching</code> helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.</p>
+
+<h2 id="the-implementation-process-continues-part-1">The implementation process (<a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1#the-implementation-process">continues Part 1</a>)</h2>
+
+<p>Since I wasn’t familiar with the Jekyll framework, I explored its capabilities and limitations along the way. The road was a bit bumpy, but it wasn’t too steep, and the process was quite enjoyable.</p>
+
+<h3 id="related-posts---monkey-patching-ruby">Related posts - monkey patching (Ruby)</h3>
+
+<p>Another limitation of Jekyll’s default behaviour is that it only suggests related posts from the <code class="language-plaintext highlighter-rouge">Posts</code> collection which I don’t even use. I had to override it to include all my collections. Here, I took a different approach from the <a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1#all-taxonomies-plugin-code">AllTaxonomiesPlugin</a>, because that one creates new collections that don’t exist in Jekyll, but here I wanted to modify Jekyll’s existing behaviour. It uses <code class="language-plaintext highlighter-rouge">Classifier Reborn</code> to calculate similarities between posts based on content, not just categories and tags. I wanted to keep that, so I used Ruby’s so called <code class="language-plaintext highlighter-rouge">monkey patching</code> technique which allows you to overwrite existing code, without modifying Jekyll’s internal code. (When I first heard <code class="language-plaintext highlighter-rouge">monkey patching</code>, I thought it was a joke). The key part of <code class="language-plaintext highlighter-rouge">related_posts_patch.rb</code> is this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Jekyll</span>
+  <span class="k">class</span> <span class="nc">RelatedPosts</span>
+    <span class="o">...</span>
+    <span class="k">def</span> <span class="nf">all_docs</span>
+      <span class="vi">@all_docs</span> <span class="o">||=</span> <span class="k">begin</span>
+        <span class="n">collections</span> <span class="o">=</span> <span class="sx">%w(updates programming cooking portfolio)</span>
+        <span class="n">collections</span><span class="p">.</span><span class="nf">flat_map</span> <span class="p">{</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span> <span class="n">site</span><span class="p">.</span><span class="nf">collections</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">&amp;</span><span class="p">.</span><span class="nf">docs</span> <span class="o">||</span> <span class="p">[]</span> <span class="p">}</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">all_docs</code> returns all documents across all my collections, and replaces the original <code class="language-plaintext highlighter-rouge">site.posts.docs</code> in the code. The rest of the logic is intact.</p>
+
+<h2 id="overriding-and-customising-jekyll-themes">Overriding and customising Jekyll themes</h2>
+
+<p>In the previous chapter, I introduced <code class="language-plaintext highlighter-rouge">Jekyll plugins</code> and <code class="language-plaintext highlighter-rouge">monkey patching</code> as two means of overriding Jekyll’s default behaviour in Ruby code. These are powerful but relatively advanced techniques, best suited for users comfortable with code. However, these are not the only tools available. In this chapter I will show you through examples what else I used. While Ruby coding modifies the behaviour of Jekyll itself, the following techniques allow you to tailor the Jekyll theme you are using (in my case, Minimal Mistakes)</p>
+
+<h3 id="replacing-files">Replacing files</h3>
+
+<p>The most direct way to override some part of a Jekyll theme is by replacing some of its files directly. You do this by placing a file with the same name, under the same path as in the theme. Jekyll will use your file instead of the one defined in the theme. You do not need to change anything in the original theme. For example:</p>
+
+<p>1. <code class="language-plaintext highlighter-rouge">_includes/documents-collection.html</code>: The difference between the two files:</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-  <span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>archive-single.html<span class="w"> </span><span class="na">type</span><span class="o">=</span><span class="nv">include</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="cp">%}</span>
++  <span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="cp">{{</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">included_archive_layout</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">default</span><span class="p">:</span><span class="w"> </span><span class="s2">"archive-single"</span><span class="w"> </span><span class="cp">}}</span><span class="p">.</span><span class="nv">html</span><span class="w"> </span><span class="na">type</span><span class="o">=</span><span class="nv">include</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="cp">%}</span>
+</code></pre></div></div>
+
+<p>Remember, I did not edit Minimal Mistakes’ file, I just overrode it with mine. I added an optional parameter <code class="language-plaintext highlighter-rouge">included_archive_layout</code> to the include file, because from <code class="language-plaintext highlighter-rouge">_layouts/updates.html</code> I want to use a modified version of <code class="language-plaintext highlighter-rouge">archive-single</code>: <code class="language-plaintext highlighter-rouge">archive-update</code>, which also shows the associated categories under each post. This is important because my updates layout shows posts from every collection on the site.</p>
+
+<p>2. <code class="language-plaintext highlighter-rouge">_includes/footer.html</code>: Modified the footer to</p>
+<ul>
+  <li>include a download link of my CV</li>
+  <li>instead of opening the atom feed (of the Post collection) directly. It opens a page with separate feeds for all my collections</li>
+</ul>
+
+<p>One potential drawback of this technique is that if the original file in Minimal Mistakes is updated, your override won’t automatically reflect those changes, which might or might not be an issue, depending on your needs. You most likely won’t even notice, if you don’t check it yourself after a Minimal Mistakes update. This is not the case with the next technique:</p>
+
+<h3 id="including-files-and-extending-them">Including files and extending them</h3>
+
+<p>Here, you don’t replace the original Minimal Mistakes (MM from now on — for Pete’s sake, I’ve typed it enough times!) files, but extend them through inclusion. It works best for layout files, and if the original layout gets updated in a newer MM version, your page will get the update automatically (which can be an advantage or disadvantage as well). An example of this is <code class="language-plaintext highlighter-rouge">_layout/collection-extended.html</code> which reuses MM’s collection layout, but adds a subtitle. For example, the main title is <code class="language-plaintext highlighter-rouge">Bugs in the Soup</code> and the subtitle is <code class="language-plaintext highlighter-rouge">Programming</code>:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">collection</span>
+<span class="nn">---</span>
+
+{{ page.subtitle }}
+{{ content }}
+</code></pre></div></div>
+
+<p>Here, content will be replaced by the original content generated by MM’s collection layout, preceded by the page’s subtitle.</p>
+
+<h3 id="_includesheadcustomhtml">_includes/head/custom.html</h3>
+
+<p>This is a special case of <a href="#replacing-files">Replacing files</a>, but it is a bit different. It deserves mentioning separately because this is by design in Minimal Mistakes. In the MM theme, <code class="language-plaintext highlighter-rouge">_includes/head/custom.html</code> is an existing, empty file, containing only a couple of comments, and it is actually included in MM’s <code class="language-plaintext highlighter-rouge">default.html</code>, which is the root file of the whole layout hierarchy. It includes <code class="language-plaintext highlighter-rouge">custom.html</code> in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> part:</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;head&gt;
+    <span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>head.html<span class="w"> </span><span class="cp">%}</span>
+    <span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>head/custom.html<span class="w"> </span><span class="cp">%}</span>
+  &lt;/head&gt;
+</code></pre></div></div>
+
+<p>This means it will be included in every page on your site, and it provides extensibility. I used it to include my <code class="language-plaintext highlighter-rouge">custom.css</code> file and my <code class="language-plaintext highlighter-rouge">favicon</code> which Jekyll wouldn’t otherwise include during the build process:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"{{ '/assets/css/custom.css' | relative_url }}"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span> <span class="na">href=</span><span class="s">"{{ site.baseurl }}/assets/images/favicon.ico"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Similarly, there is a corresponding <code class="language-plaintext highlighter-rouge">_includes/footer/custom.html</code> file for the footer, which I didn’t use, but the possibility is there, should you need it.</p>
+
+<h2 id="third-party-plugins">Third party plugins</h2>
+
+<p>In this section, I will discuss third party plugins that I used to further enhance the functionality of my site.</p>
+
+<h3 id="jekyll-feed">jekyll-feed</h3>
+
+<p>Installed as a Ruby gem, it performs the generation of feeds based on your site content. It is <a href="https://pages.github.com/versions/" target="_blank" rel="nofollow noopener noreferrer">supported</a> by GitHub Pages (GHP), so you can use it even if you rely on GHP to build your site. After having struggled so much with the Posts vs. custom collections support by Jekyll (<a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1#categories-and-tags-aka-taxonomies">taxonomies</a> and <a href="#related-posts---monkey-patching-ruby">related posts</a>), it was a pleasant surprise that <code class="language-plaintext highlighter-rouge">jekyll-feed</code> is pretty configurable (<a href="https://github.com/jekyll/jekyll-feed#jekyll-feed-plugin" target="_blank" rel="nofollow noopener noreferrer">see more</a>) and is happy to recognise other collections beyond the almighty <code class="language-plaintext highlighter-rouge">Posts</code>. All I had to do in my <code class="language-plaintext highlighter-rouge">_config.yaml</code> is:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+<span class="nn">...</span>
+<span class="na">feed</span><span class="pi">:</span>
+  <span class="na">collections</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">updates</span>
+    <span class="pi">-</span> <span class="s">programming</span>
+    <span class="pi">-</span> <span class="s">cooking</span>
+    <span class="pi">-</span> <span class="s">portfolio</span>
+</code></pre></div></div>
+<p>The generated feeds are then output to the <code class="language-plaintext highlighter-rouge">_site/feed/{collection}.xml</code> files.</p>
+
+<h3 id="jekyll-seo-tag">jekyll-seo-tag</h3>
+
+<p><code class="language-plaintext highlighter-rouge">jekyll-seo-tag</code> is also a low hanging fruit for a newly launched site. It is installed as a Ruby gem and is also supported by GHP. The configuration effort is minimal, and it adds  <a href="https://github.com/jekyll/jekyll-seo-tag?tab=readme-ov-file#about-jekyll-seo-tag" target="_blank" rel="nofollow noopener noreferrer">meta tags</a> to your site. All you need to do is</p>
+
+<p>1. Install it as a Ruby gem.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group :jekyll_plugins do
+...
+  gem "jekyll-seo-tag", "~&gt; 2.8.0"
+...
+end
+</code></pre></div></div>
+
+<p>2. Add it to your <code class="language-plaintext highlighter-rouge">_config.yaml</code>:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+<span class="nn">...</span>
+  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
+</code></pre></div></div>
+<p>3. Include it in the aforementioned <a href="#_includesheadcustomhtml">_includes/head/custom.html</a></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- start custom head snippets --&gt;</span>
+...
+{% seo %}
+<span class="c">&lt;!-- end custom head snippets --&gt;</span>
+</code></pre></div></div>
+
+<h3 id="disqus">Disqus</h3>
+
+<p>Disqus is a comment provider which lets readers comment and discuss under posts. It is even more third party than the two Jekyll plugins above, I could even call it fourth party. Why did I choose it then among all the <a href="https://mmistakes.github.io/minimal-mistakes/docs/configuration/#comments" target="_blank" rel="nofollow noopener noreferrer">supported comment providers</a> by MM? During my research, this is what I found:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">giscus</code> and <code class="language-plaintext highlighter-rouge">utterances</code>
+    <ul>
+      <li>Pros: they leverage GitHub’s infrastructure, which would make them well suited for my site, however…</li>
+      <li>Cons: they require a GitHub account for the reader to comment. Since my target audience does not only consist of developers, but also traders and hobby cooks, they were out of the equation.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Facebook</code>:
+    <ul>
+      <li>Pros: big, battle tested, most people have FB accounts.</li>
+      <li>Cons: privacy concerns.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Disqus</code>:
+    <ul>
+      <li>Pros: big, battle tested, widely used, lets people comment without registration.</li>
+      <li>Cons: privacy concerns, shows ads (unless paid subscription), limited styling options (although you can choose between dark and light themes, which was more than enough for me)</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Staticman v2/v3</code>, <code class="language-plaintext highlighter-rouge">Discourse</code>: Although there are some key differences, I will cover them together. Both of these are really cool!
+    <ul>
+      <li>Pros: Self hosted, open source, no privacy concerns</li>
+      <li>Cons: quite advanced setup in both cases.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Since my site is not that big, and I don’t expect it to be in the near future, I wanted to start with something easy to set up. This excluded <code class="language-plaintext highlighter-rouge">Staticman</code> and <code class="language-plaintext highlighter-rouge">Discourse</code>. With <code class="language-plaintext highlighter-rouge">giscus</code> and <code class="language-plaintext highlighter-rouge">utterances</code> also out of the equation, I chose <code class="language-plaintext highlighter-rouge">Disqus</code> as the lesser evil of the two remaining giants. I won’t go over the installation process of <code class="language-plaintext highlighter-rouge">Disqus</code> here. It was relatively straightforward. If you want me to cover it, feel free to leave a (Disqus) comment below. I will be happy to write it, and open a champagne for my first reader comment. :)</p>
+
+<p>In the future, if my site were to see a serious discussion activity, I would definitely consider switching to <code class="language-plaintext highlighter-rouge">Staticman</code> or <code class="language-plaintext highlighter-rouge">Discourse</code>, but that’s for a later story.</p>
+
+<h2 id="outroduction">Outroduction</h2>
+
+<p>That concludes Part 2. of the series. In the next post, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.</p>
+
+<h2 id="links">Links</h2>
+<ul>
+  <li><a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1">Part 1: Setup and Design Decisions</a></li>
+  <li>Part 3: Publishing Takeaways and Final Thoughts: coming soon</li>
+  <li><a href="/portfolio/2025-07-29-my-personal-site">Portfolio entry</a></li>
+  <li><a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a></li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://pages.github.com/versions/" target="_blank" rel="nofollow noopener noreferrer">GitHub Pages dependencies</a></li>
+  <li><a href="https://github.com/jekyll/jekyll-feed" target="_blank" rel="nofollow noopener noreferrer">jekyll-feed plugin GitHub</a></li>
+  <li><a href="https://github.com/jekyll/jekyll-seo-tag" target="_blank" rel="nofollow noopener noreferrer">jekyll-seo-tag plugin GitHub</a></li>
+  <li><a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes documentation and demo site</a></li>
+</ul>]]></content><author><name>Péter</name></author><category term="Programming" /><category term="Jekyll" /><category term="Web Development" /><category term="Minimal Mistakes" /><category term="Liquid" /><category term="Jekyll" /><category term="Ruby" /><category term="Monkey Patching" /><category term="Github Pages" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions</title><link href="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/" rel="alternate" type="text/html" title="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions" /><published>2025-07-29T07:47:00+02:00</published><updated>2025-07-29T07:47:00+02:00</updated><id>https://petertengg.com/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1</id><content type="html" xml:base="https://petertengg.com/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>This is Part 1 in a three-post series, where I sum up the journey of building my website. In this part, I will discuss why I chose this tech stack, the structural design choices I made, and we will face our first challenge early in the implementation process.</p>
 
@@ -175,11 +355,11 @@ end
 
 <h2 id="outroduction">Outroduction</h2>
 
-<p>That concludes Part 1. of the series. In the next post we will continue with the implementation process. I will show how the amusingly named <code class="language-plaintext highlighter-rouge">monkey patching</code> helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.</p>
+<p>That concludes Part 1. of the series. In the <a href="/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2">next</a> post we will continue with the implementation process. I will show how the amusingly named <code class="language-plaintext highlighter-rouge">monkey patching</code> helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.</p>
 
 <h2 id="links">Links</h2>
 <ul>
-  <li>Part 2: Custom Implementation and Plugins: coming soon</li>
+  <li><a href="/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2">Part 2: Custom Implementation and Plugins</a></li>
   <li>Part 3: Publishing Takeaways and Final Thoughts: coming soon</li>
   <li><a href="/portfolio/2025-07-29-my-personal-site">Portfolio entry</a></li>
   <li><a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a></li>
