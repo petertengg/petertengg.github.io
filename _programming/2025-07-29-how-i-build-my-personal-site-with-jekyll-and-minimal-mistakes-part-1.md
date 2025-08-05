@@ -184,10 +184,10 @@ This way I removed `GitHub Pages` and `Minimal Mistakes` is no longer a remote t
 
 ## Outroduction
 
-That concludes Part 1. of the series. In the next post we will continue with the implementation process. I will show how the amusingly named `monkey patching` helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.
+That concludes Part 1. of the series. In the [next](/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2) post we will continue with the implementation process. I will show how the amusingly named `monkey patching` helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.
 
 ## Links
-- Part 2: Custom Implementation and Plugins: coming soon
+- [Part 2: Custom Implementation and Plugins](/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2)
 - Part 3: Publishing Takeaways and Final Thoughts: coming soon
 - [Portfolio entry](/portfolio/2025-07-29-my-personal-site)
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
