@@ -27,23 +27,18 @@ lunr:
 
 minimal_mistakes_skin: "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-collections:
-  updates:
-    output: true
-    permalink: /:collection/:path/
+# collections:
+#   updates:
+#     output: true
+#     permalink: /:collection/:path/
 
-  programming:
-    output: true
-    permalink: /:collection/:path/
+#   programming:
+#     output: true
+#     permalink: /:collection/:path/
 
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-
-  cooking:
-    output: true
-    permalink: /:collection/:path/
-
+#   portfolio:
+#     output: true
+#     permalink: /:collection/:path/
 
 defaults:
   # _pages
@@ -69,18 +64,6 @@ defaults:
   - scope:
       path: ""
       type: programming
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      show_date: true
-      share: false
-      comments: true
-      related: true
-  # _cooking
-  - scope:
-      path: ""
-      type: cooking
     values:
       layout: single
       author_profile: false
@@ -129,11 +112,10 @@ tag_archive:
   path: /tags/
 
 feed:
-  collections:
-    - updates
-    - programming
-    - cooking
-    - portfolio
+  categories:
+    - Programming
+    - Updates
+    - Portfolio
 
 social:
   type:  "Person"

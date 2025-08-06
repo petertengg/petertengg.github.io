@@ -1,6 +1,6 @@
 ---
 title: "Posts by Category"
-layout: "all-categories"
+layout: "categories"
 permalink: /categories/
 author_profile: true
 ---

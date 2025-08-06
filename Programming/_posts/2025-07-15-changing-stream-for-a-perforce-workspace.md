@@ -1,8 +1,6 @@
 ---
 title: "Changing Stream for a Perforce Workspace"
 date:   2025-07-15 06:00:00 +0200
-categories:
-  - Programming
 tags: 
   - "Game Development"
   - "Perforce"

@@ -2,11 +2,11 @@
 title: "How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 2: Custom Implementation and Plugins"
 date:   2025-08-05 07:20:00 +0200
 published: true
+excerpt: In this part, I continue with the implementation process. I will show how the amusingly named `monkey patching` helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 categories:
-  - Programming
   - Jekyll
 tags:
   - "Web Development"

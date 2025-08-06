@@ -13,7 +13,6 @@ This is the source code for my personal site and blog, where I write about:
 
 - **Programming**: C++, Python, performance, tools, and technical deep dives  
 - **Trading**: Algorithms, Pine Script, MetaTrader, and related experiments  
-- **Cooking**: Favourite recipes and kitchen experiments  
 - **Portfolio**: Selected projects, freelance work, and technical showcases  
 
 The site is structured around multiple sub-blogs using [Jekyll custom collections](https://jekyllrb.com/docs/collections/).
@@ -27,7 +26,7 @@ The site is structured around multiple sub-blogs using [Jekyll custom collection
 - **Hosting**: GitHub Pages (manual deploy to `gh-pages` branch)
 - **Languages**: Markdown, HTML, CSS, Liquid, Ruby
 - **Features**:
-  - Custom collections: `programming`, `cooking`, `portfolio`, `updates`
+  - Custom collections: `programming`, `portfolio`, `updates`
   - Custom Ruby plugin: `AllTaxonomiesGenerator` for cross-collection tags/categories
   - Monkey-patched `related_posts` to work across all collections
   - Custom layouts, shortcodes, and includes

@@ -2,11 +2,11 @@
 title: "How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions"
 date:   2025-07-29 07:47:00 +0200
 published: true
+excerpt: In this part, I will discuss why I chose this tech stack, the structural design choices I made, and we will face our first challenge early in the implementation process.
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 categories:
-  - Programming
   - Jekyll
 tags:
   - "Web Development"
