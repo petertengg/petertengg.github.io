@@ -31,3 +31,8 @@
 .page__content code {
   color: orange; /* or #f97316 for Tailwind orange-500 */
 }
+
+.toc .active a {
+  background-color: #699ea3 !important; /* Softer highlight */
+  color: #1e1e1e !important; /* Adjust text if needed */
+}

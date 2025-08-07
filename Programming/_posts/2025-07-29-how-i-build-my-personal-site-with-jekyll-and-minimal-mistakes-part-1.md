@@ -17,6 +17,10 @@ tags:
   - "Github Pages"
 ---
 
+*Edit 2025-08-02*: I wrote this post before retiring the Cooking sub-blog. However, I will leave it as an example throughout this series to keep the original story telling.
+{: .notice}
+
+
 ## Introduction
 
 This is Part 1 in a three-post series, where I sum up the journey of building my website. In this part, I will discuss why I chose this tech stack, the structural design choices I made, and we will face our first challenge early in the implementation process.

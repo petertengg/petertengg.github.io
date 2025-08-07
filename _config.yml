@@ -1,14 +1,14 @@
 title: Péter Tengg
 subtitle: Software Engineer
 author: Péter
-email: your-email@example.com
+email:
 description: >- # this means to ignore newlines until "baseurl:"
-  A personal site by Péter Tengg — exploring creative programming, tasty cooking,
-  curious bugs, and portfolio projects. Follow along for updates from code to kitchen.
+  A personal site by Péter Tengg — exploring creative programming, algorithmic trading, and technical projects. 
+  Follow along for insights, experiments, and portfolio updates.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://petertengg.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
-github_username:  petertengg
+github_username: petertengg
 
 # Build settings
 theme: "minimal-mistakes-jekyll"

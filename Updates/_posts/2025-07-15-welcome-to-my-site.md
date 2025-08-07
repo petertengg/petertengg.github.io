@@ -2,6 +2,9 @@
 title: "Welcome to my Site"
 date:   2025-07-15 06:00:10 +0200
 excerpt: "I decided to start a blog because I enjoy writing texts for humans just as much as for machines. Some humans even say that my writings are enganging and enjoyable to read."
+toc: true
+toc_label: "Table of Contents"
+toc_sticky: true
 tags: 
   - "Welcome"
 ---

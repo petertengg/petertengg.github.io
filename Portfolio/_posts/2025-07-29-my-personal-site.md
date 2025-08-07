@@ -3,6 +3,9 @@ title: "My Personal Site"
 date:   2025-07-29 07:46:00 +0200
 published: true
 excerpt: "Built a personal website using Jekyll, hosted on GitHub Pages under a custom domain. Tailored the default setup to better serve my goals for the site."
+toc: true
+toc_label: "Table of Contents"
+toc_sticky: true
 header:
   image:
   teaser: /assets/images/portfolio/my-personal-site/my-personal-site1.png
@@ -27,7 +30,7 @@ Built a personal website in Jekyll, hosted on Github Pages under my custom domai
 
 ## Key features
 
-- Multiple sub-blogs (Programming, Cooking, Portfolio, Updates), with a flexible structure for future topics
+- Multiple sub-blogs (Programming, Portfolio, Updates), with a flexible structure for future topics
 - Unified tags, categories, and related posts across all sections
 - Updates page highlighting the latest content
 - Per-section Atom feeds

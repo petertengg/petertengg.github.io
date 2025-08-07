@@ -1,6 +1,9 @@
 ---
 title: "Changing Stream for a Perforce Workspace"
 date:   2025-07-15 06:00:00 +0200
+toc: true
+toc_label: "Table of Contents"
+toc_sticky: true
 tags: 
   - "Game Development"
   - "Perforce"
