@@ -1,4 +1,186 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://petertengg.com/feed/programming.xml" rel="self" type="application/atom+xml" /><link href="https://petertengg.com/" rel="alternate" type="text/html" /><updated>2025-08-05T09:26:52+02:00</updated><id>https://petertengg.com/feed/programming.xml</id><title type="html">Péter Tengg | Programming</title><subtitle>A personal site by Péter Tengg — exploring creative programming, tasty cooking, curious bugs, and portfolio projects. Follow along for updates from code to kitchen.</subtitle><author><name>Péter</name></author><entry><title type="html">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 2: Custom Implementation and Plugins</title><link href="https://petertengg.com/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2/" rel="alternate" type="text/html" title="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 2: Custom Implementation and Plugins" /><published>2025-08-05T07:20:00+02:00</published><updated>2025-08-05T07:20:00+02:00</updated><id>https://petertengg.com/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2</id><content type="html" xml:base="https://petertengg.com/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://petertengg.com/feed/programming.xml" rel="self" type="application/atom+xml" /><link href="https://petertengg.com/" rel="alternate" type="text/html" /><updated>2025-08-12T13:50:50+02:00</updated><id>https://petertengg.com/feed/programming.xml</id><title type="html">Péter Tengg | Programming</title><subtitle>A personal site by Péter Tengg — exploring creative programming, tasty cooking, curious bugs, and portfolio projects. Follow along for updates from code to kitchen.</subtitle><author><name>Péter</name></author><entry><title type="html">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts</title><link href="https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/" rel="alternate" type="text/html" title="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts" /><published>2025-08-12T13:00:00+02:00</published><updated>2025-08-12T13:00:00+02:00</updated><id>https://petertengg.com/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3</id><content type="html" xml:base="https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<p>This is the third and final part of a three-post series, where I sum up the journey of building my website. If you haven’t, make sure to read <a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1">Part 1: Setup and Design Decisions</a> and <a href="/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2">Part 2: Custom Implementation and Plugins</a>. In this part, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.</p>
+
+<h2 id="publishing">Publishing</h2>
+
+<p>At this point, I have implemented what I planned for a minimum viable product (MVP). I have also created one initial post in each of my sub-blogs, so my site was ready to go public.</p>
+
+<h3 id="gh-pages-deploy-branch">gh-pages deploy branch</h3>
+
+<p>Since I <a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1#quote-gh-pages">cannot use GHP</a> directly to build my site, I have to build it locally, and push it to a separate branch. I set it up this way.</p>
+
+<h4 id="1-create-an-orphan-branch-called-gh-pages">1. Create an orphan branch called <code class="language-plaintext highlighter-rouge">gh-pages</code>.</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">--orphan</span> gh-pages
+git <span class="nb">rm</span> <span class="nt">-rf</span> <span class="nb">.</span>   <span class="c"># Clean working directory</span>
+<span class="nb">echo</span> <span class="s2">"My site is published here"</span> <span class="o">&gt;</span> index.html
+git add index.html
+git commit <span class="nt">-m</span> <span class="s2">"Initial gh-pages commit"</span>
+git push origin gh-pages
+git checkout main  <span class="c"># Go back to your main branch</span>
+</code></pre></div></div>
+
+<p>An <code class="language-plaintext highlighter-rouge">orphan branch</code> means that it has no commit history when created. It is like starting a brand new repository inside the existing one. It is useful, because the <code class="language-plaintext highlighter-rouge">gh-pages</code> deployment branch will contain the built site and needs nothing else from the <code class="language-plaintext highlighter-rouge">main</code> branch. That’s why the second command cleans the working directory to prevent adding all the existing files to gh-pages.</p>
+
+<h4 id="2-set-github-pages-to-use-the-gh-pages-branch">2. Set GitHub Pages to use the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch</h4>
+
+<p class="text-center"><img src="/assets/images/programming/building-my-personal-site-with-jekyll-and-minimal-mistakes/1.png" alt="Setting up GitHub Pages to use deploy branch" /></p>
+
+<ul>
+  <li>Go to your repo on <code class="language-plaintext highlighter-rouge">GitHub -&gt; Settings -&gt; Pages</code></li>
+  <li>Source: Select <code class="language-plaintext highlighter-rouge">gh-pages</code> branch, <code class="language-plaintext highlighter-rouge">/(root)</code></li>
+  <li>Save.</li>
+</ul>
+
+<h4 id="3-publishing-the-website-these-are-the-steps-you-need-to-carry-out-every-time-you-want-to-publish">3. Publishing the website. These are the steps you need to carry out every time you want to publish.</h4>
+
+<div class="li-second-level">
+  <p>3.1. Build your site locally.</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  bundle <span class="nb">exec </span>jekyll build
+</code></pre></div>  </div>
+  <p>This will generate the site under the <code class="language-plaintext highlighter-rouge">_site</code> folder.</p>
+</div>
+<div class="li-second-level">
+  <p>3.2. Copy <code class="language-plaintext highlighter-rouge">_site</code> contents to <code class="language-plaintext highlighter-rouge">gh-pages</code> branch</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git worktree add ../_deploy gh-pages
+</code></pre></div>  </div>
+  <p>This has to be done only once at the initial setup. It is a subdirectory clone trick. <code class="language-plaintext highlighter-rouge">_deploy</code> won’t be physically inside your working folder, but will be a sibling to it, keeping <code class="language-plaintext highlighter-rouge">gh-pages</code> in a separate working tree at <code class="language-plaintext highlighter-rouge">../_deploy</code>, which avoids messy branch switching.</p>
+</div>
+<div class="li-second-level">
+  <p>3.3. Then:</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-rf</span> ../_deploy/<span class="k">*</span>
+<span class="nb">cp</span> <span class="nt">-r</span> _site/<span class="k">*</span> ../_deploy/
+<span class="nb">cd</span> ../_deploy
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Publish site"</span>
+git push origin gh-pages
+<span class="nb">cd</span> -
+</code></pre></div>  </div>
+  <p>That’s it. Your site is now pushed to the deploy branch on your GitHub repo. If all went well, GitHub Pages should begin building your site automatically and soon it will be publicly available under <code class="language-plaintext highlighter-rouge">{your_repo_name}.github.io</code>. In my case <code class="language-plaintext highlighter-rouge">petertengg.github.io</code>.</p>
+</div>
+<div class="li-second-level">
+  <p>3.4. Finally, if it works, you can put these steps together into a reusable deploy script. This is optional, but I love automating, so here is the script I use:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Set Jekyll to production environment</span>
+<span class="nv">JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll build
+
+<span class="c"># Continue deployment steps</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> ../_deploy/<span class="k">*</span>
+<span class="nb">cp</span> <span class="nt">-r</span> _site/<span class="k">*</span> ../_deploy/
+<span class="nb">cd</span> ../_deploy
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Publish site"</span>
+git push origin gh-pages
+<span class="nb">cd</span> -
+</code></pre></div>  </div>
+  <p>I set <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production</code>, because it is needed for the comment section to be displayed by <a href="https://mmistakes.github.io/minimal-mistakes/docs/configuration/#comments" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes</a>.</p>
+
+  <p>Whenever I publish my site, I just run:</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy.sh
+</code></pre></div>  </div>
+</div>
+
+<h3 id="publishing-experiences-and-checklist">Publishing experiences and checklist</h3>
+
+<p>In this section, I will sum up my experiences launching my site. In general, it went quite smoothly without major issues (not that the risk was very high :P), but I want to remember some takeaways for the next time.</p>
+
+<h4 id="key-takeaways">Key takeaways</h4>
+<ul>
+  <li>It was a good idea to do a “soft” launch one day before the “official” launch.
+    <ul>
+      <li>“soft” launch: I shared the link with my friends and family asking for feedback. This caught smaller issues and got some improvement ideas for the future.</li>
+      <li>“official” launch: one day later I announced my site on LinkedIn and Instagram</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="checkliststeps-to-do-when-publishing">Checklist/steps to do when publishing</h4>
+
+<p>1. Build with <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production</code> and run locally (http://127.0.0.1:4000/)</p>
+
+<div class="li-second-level">
+  <p>1.1. Check desktop version in a browser.</p>
+
+</div>
+
+<div class="li-third-level">
+  <p>1.1.1. If you have renamed any file, check for broken links</p>
+
+</div>
+
+<div class="li-third-level">
+  <p>1.1.2. Click all new links on new pages/posts</p>
+
+</div>
+
+<div class="li-second-level">
+  <p>1.2. Check how it looks in the mobile version (in Chrome: <code class="language-plaintext highlighter-rouge">F12 -&gt; Toggle Device Toolbar (or Ctrl + Shift + M)</code>)</p>
+
+</div>
+
+<p>2. Publish</p>
+<div class="li-second-level">
+  <p>2.1. Check live site on desktop.</p>
+
+</div>
+
+<div class="li-second-level">
+  <p>2.2. Check live site on an actual mobile device.</p>
+
+</div>
+
+<div class="li-second-level">
+  <p>2.3. <em>Optional</em>: ask feedback from friends.</p>
+
+</div>
+
+<div class="li-second-level">
+  <p>2.4. <em>Optional</em>: announce new content on social media.</p>
+
+</div>
+
+<div class="li-third-level">
+  <p>2.4.1. Start with your least important audience/platform.</p>
+
+</div>
+
+<div class="li-third-level">
+  <p>2.4.2. Finish with the most important target audience.</p>
+
+</div>
+
+<h2 id="after-publishing">After publishing</h2>
+
+<p>After my site has gone live, I have set up a couple of more things.</p>
+<ol>
+  <li>I bought my <code class="language-plaintext highlighter-rouge">domain</code> and set it up in GitHub Pages. Now my site is available at <a href="https://petertengg.com/">https://petertengg.com/</a></li>
+  <li><code class="language-plaintext highlighter-rouge">Google Search Console</code>: helps monitor how your site appears in Google Search and fix indexing or SEO issues.</li>
+  <li><code class="language-plaintext highlighter-rouge">Google Analytics</code>: tracks and reports website traffic, showing how visitors interact with your site.</li>
+</ol>
+
+<p>I mention them here just for the sake of completeness, but the details are out of the scope of this (already quite long) blog post. If you want me to cover them, let me know and I will be happy to do so.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I feel I have managed to set up a good framework for my further blogging endeavours. It was a relatively big initial investment, but it was totally worth it. I am really satisfied and proud of the result. I got to learn a lot about <code class="language-plaintext highlighter-rouge">GitHub Pages</code>, <code class="language-plaintext highlighter-rouge">Jekyll</code> and <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code>. In hindsight, I am happy to have chosen this path and would do the same if I had to start over. The learning curve of this stack is relatively easy, I had a lot of fun building my site, and the result is satisfying. I also have the feeling that I haven’t reached the limits of this framework, it still offers plenty of room for future improvements. For now, however, I want to enjoy my site and focus on writing posts and publishing content.</p>
+
+<p>Before this, I had very limited experience with web development, and it wasn’t exactly positive either. <code class="language-plaintext highlighter-rouge">Jekyll</code> may have been the gateway drug for me to web development. Who knows, maybe next time I will get into dynamic site development as well. But for now, I want to focus on my core areas: C++, (performance) optimisations and trading.</p>
+
+<p>Before dropping the pen, I want to give a shoutout to <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code> and its creator <a href="https://mademistakes.com/">Micheal Rose</a>. MM proved to be a good choice, even though I don’t have much experience with other themes. Great experience, very well documented, flexible and a lot of fun to work with. Very happy with the outcome.</p>
+
+<h2 id="links">Links</h2>
+<ul>
+  <li><a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1">Part 1: Setup and Design Decisions</a></li>
+  <li><a href="/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2">Part 2: Custom Implementation and Plugins</a></li>
+  <li><a href="/portfolio/2025-07-29-my-personal-site">Portfolio entry</a></li>
+  <li><a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a></li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes documentation and demo site</a></li>
+</ul>]]></content><author><name>Péter</name></author><category term="Programming" /><category term="Jekyll" /><category term="Web Development" /><category term="Minimal Mistakes" /><category term="Jekyll" /><category term="Ruby" /><category term="Git" /><category term="Github Pages" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 2: Custom Implementation and Plugins</title><link href="https://petertengg.com/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2/" rel="alternate" type="text/html" title="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 2: Custom Implementation and Plugins" /><published>2025-08-05T07:20:00+02:00</published><updated>2025-08-05T07:20:00+02:00</updated><id>https://petertengg.com/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2</id><content type="html" xml:base="https://petertengg.com/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>This is Part 2 in a three-post series, where I sum up the journey of building my website. If you haven’t, make sure to read <a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1">Part 1: Setup and Design Decisions</a>. In this part, I continue with the implementation process. I will show how the amusingly named <code class="language-plaintext highlighter-rouge">monkey patching</code> helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.</p>
 
@@ -162,12 +344,12 @@ end
 
 <h2 id="outroduction">Outroduction</h2>
 
-<p>That concludes Part 2. of the series. In the next post, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.</p>
+<p>That concludes Part 2. of the series. In the <a href="/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3">next post</a>, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.</p>
 
 <h2 id="links">Links</h2>
 <ul>
   <li><a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1">Part 1: Setup and Design Decisions</a></li>
-  <li>Part 3: Publishing Takeaways and Final Thoughts: coming soon</li>
+  <li><a href="/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3">Part 3: Publishing Takeaways and Final Thoughts</a></li>
   <li><a href="/portfolio/2025-07-29-my-personal-site">Portfolio entry</a></li>
   <li><a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a></li>
 </ul>
@@ -360,7 +542,7 @@ end
 <h2 id="links">Links</h2>
 <ul>
   <li><a href="/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2">Part 2: Custom Implementation and Plugins</a></li>
-  <li>Part 3: Publishing Takeaways and Final Thoughts: coming soon</li>
+  <li><a href="/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3">Part 3: Publishing Takeaways and Final Thoughts</a></li>
   <li><a href="/portfolio/2025-07-29-my-personal-site">Portfolio entry</a></li>
   <li><a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a></li>
 </ul>

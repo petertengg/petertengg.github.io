@@ -1,0 +1,839 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts - Péter Tengg</title>
+<meta name="description" content="Introduction">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Péter Tengg">
+<meta property="og:title" content="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts">
+<meta property="og:url" content="https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/">
+
+
+  <meta property="og:description" content="Introduction">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-08-12T13:00:00+02:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Péter Tengg Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts | Péter Tengg</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts" />
+<meta name="author" content="Péter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction" />
+<meta property="og:description" content="Introduction" />
+<link rel="canonical" href="https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/" />
+<meta property="og:url" content="https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/" />
+<meta property="og:site_name" content="Péter Tengg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-12T13:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Péter"},"dateModified":"2025-08-12T13:00:00+02:00","datePublished":"2025-08-12T13:00:00+02:00","description":"Introduction","headline":"How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts","mainEntityOfPage":{"@type":"WebPage","@id":"https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/"},"url":"https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Péter Tengg
+          <span class="site-subtitle">Software Engineer</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/updates/"
+                
+                
+              >Updates</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/programming/"
+                
+                
+              >Programming</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/cooking/"
+                
+                
+              >Cooking</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/portfolio/"
+                
+                
+              >Portfolio</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts">
+    <meta itemprop="description" content="Introduction">
+    <meta itemprop="datePublished" content="2025-08-12T13:00:00+02:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/" itemprop="url">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-08-12T13:00:00+02:00">August 12, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Table of Contents</h4></header>
+              <ul class="toc__menu"><li><a href="#introduction">Introduction</a></li><li><a href="#publishing">Publishing</a><ul><li><a href="#gh-pages-deploy-branch">gh-pages deploy branch</a><ul><li><a href="#1-create-an-orphan-branch-called-gh-pages">1. Create an orphan branch called gh-pages.</a></li><li><a href="#2-set-github-pages-to-use-the-gh-pages-branch">2. Set GitHub Pages to use the gh-pages branch</a></li><li><a href="#3-publishing-the-website-these-are-the-steps-you-need-to-carry-out-every-time-you-want-to-publish">3. Publishing the website. These are the steps you need to carry out every time you want to publish.</a></li></ul></li><li><a href="#publishing-experiences-and-checklist">Publishing experiences and checklist</a><ul><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#checkliststeps-to-do-when-publishing">Checklist/steps to do when publishing</a></li></ul></li></ul></li><li><a href="#after-publishing">After publishing</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#links">Links</a></li><li><a href="#sources">Sources</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h2 id="introduction">Introduction</h2>
+
+<p>This is the third and final part of a three-post series, where I sum up the journey of building my website. If you haven’t, make sure to read <a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1">Part 1: Setup and Design Decisions</a> and <a href="/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2">Part 2: Custom Implementation and Plugins</a>. In this part, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.</p>
+
+<h2 id="publishing">Publishing</h2>
+
+<p>At this point, I have implemented what I planned for a minimum viable product (MVP). I have also created one initial post in each of my sub-blogs, so my site was ready to go public.</p>
+
+<h3 id="gh-pages-deploy-branch">gh-pages deploy branch</h3>
+
+<p>Since I <a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1#quote-gh-pages">cannot use GHP</a> directly to build my site, I have to build it locally, and push it to a separate branch. I set it up this way.</p>
+
+<h4 id="1-create-an-orphan-branch-called-gh-pages">1. Create an orphan branch called <code class="language-plaintext highlighter-rouge">gh-pages</code>.</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">--orphan</span> gh-pages
+git <span class="nb">rm</span> <span class="nt">-rf</span> <span class="nb">.</span>   <span class="c"># Clean working directory</span>
+<span class="nb">echo</span> <span class="s2">"My site is published here"</span> <span class="o">&gt;</span> index.html
+git add index.html
+git commit <span class="nt">-m</span> <span class="s2">"Initial gh-pages commit"</span>
+git push origin gh-pages
+git checkout main  <span class="c"># Go back to your main branch</span>
+</code></pre></div></div>
+
+<p>An <code class="language-plaintext highlighter-rouge">orphan branch</code> means that it has no commit history when created. It is like starting a brand new repository inside the existing one. It is useful, because the <code class="language-plaintext highlighter-rouge">gh-pages</code> deployment branch will contain the built site and needs nothing else from the <code class="language-plaintext highlighter-rouge">main</code> branch. That’s why the second command cleans the working directory to prevent adding all the existing files to gh-pages.</p>
+
+<h4 id="2-set-github-pages-to-use-the-gh-pages-branch">2. Set GitHub Pages to use the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch</h4>
+
+<p class="text-center"><img src="/assets/images/programming/building-my-personal-site-with-jekyll-and-minimal-mistakes/1.png" alt="Setting up GitHub Pages to use deploy branch" /></p>
+
+<ul>
+  <li>Go to your repo on <code class="language-plaintext highlighter-rouge">GitHub -&gt; Settings -&gt; Pages</code></li>
+  <li>Source: Select <code class="language-plaintext highlighter-rouge">gh-pages</code> branch, <code class="language-plaintext highlighter-rouge">/(root)</code></li>
+  <li>Save.</li>
+</ul>
+
+<h4 id="3-publishing-the-website-these-are-the-steps-you-need-to-carry-out-every-time-you-want-to-publish">3. Publishing the website. These are the steps you need to carry out every time you want to publish.</h4>
+
+<div class="li-second-level">
+  <p>3.1. Build your site locally.</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  bundle <span class="nb">exec </span>jekyll build
+</code></pre></div>  </div>
+  <p>This will generate the site under the <code class="language-plaintext highlighter-rouge">_site</code> folder.</p>
+</div>
+<div class="li-second-level">
+  <p>3.2. Copy <code class="language-plaintext highlighter-rouge">_site</code> contents to <code class="language-plaintext highlighter-rouge">gh-pages</code> branch</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git worktree add ../_deploy gh-pages
+</code></pre></div>  </div>
+  <p>This has to be done only once at the initial setup. It is a subdirectory clone trick. <code class="language-plaintext highlighter-rouge">_deploy</code> won’t be physically inside your working folder, but will be a sibling to it, keeping <code class="language-plaintext highlighter-rouge">gh-pages</code> in a separate working tree at <code class="language-plaintext highlighter-rouge">../_deploy</code>, which avoids messy branch switching.</p>
+</div>
+<div class="li-second-level">
+  <p>3.3. Then:</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-rf</span> ../_deploy/<span class="k">*</span>
+<span class="nb">cp</span> <span class="nt">-r</span> _site/<span class="k">*</span> ../_deploy/
+<span class="nb">cd</span> ../_deploy
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Publish site"</span>
+git push origin gh-pages
+<span class="nb">cd</span> -
+</code></pre></div>  </div>
+  <p>That’s it. Your site is now pushed to the deploy branch on your GitHub repo. If all went well, GitHub Pages should begin building your site automatically and soon it will be publicly available under <code class="language-plaintext highlighter-rouge">{your_repo_name}.github.io</code>. In my case <code class="language-plaintext highlighter-rouge">petertengg.github.io</code>.</p>
+</div>
+<div class="li-second-level">
+  <p>3.4. Finally, if it works, you can put these steps together into a reusable deploy script. This is optional, but I love automating, so here is the script I use:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Set Jekyll to production environment</span>
+<span class="nv">JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll build
+
+<span class="c"># Continue deployment steps</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> ../_deploy/<span class="k">*</span>
+<span class="nb">cp</span> <span class="nt">-r</span> _site/<span class="k">*</span> ../_deploy/
+<span class="nb">cd</span> ../_deploy
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Publish site"</span>
+git push origin gh-pages
+<span class="nb">cd</span> -
+</code></pre></div>  </div>
+  <p>I set <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production</code>, because it is needed for the comment section to be displayed by <a href="https://mmistakes.github.io/minimal-mistakes/docs/configuration/#comments" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes</a>.</p>
+
+  <p>Whenever I publish my site, I just run:</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy.sh
+</code></pre></div>  </div>
+</div>
+
+<h3 id="publishing-experiences-and-checklist">Publishing experiences and checklist</h3>
+
+<p>In this section, I will sum up my experiences launching my site. In general, it went quite smoothly without major issues (not that the risk was very high :P), but I want to remember some takeaways for the next time.</p>
+
+<h4 id="key-takeaways">Key takeaways</h4>
+<ul>
+  <li>It was a good idea to do a “soft” launch one day before the “official” launch.
+    <ul>
+      <li>“soft” launch: I shared the link with my friends and family asking for feedback. This caught smaller issues and got some improvement ideas for the future.</li>
+      <li>“official” launch: one day later I announced my site on LinkedIn and Instagram</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="checkliststeps-to-do-when-publishing">Checklist/steps to do when publishing</h4>
+
+<p>1. Build with <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production</code> and run locally (http://127.0.0.1:4000/)</p>
+
+<div class="li-second-level">
+  <p>1.1. Check desktop version in a browser.</p>
+
+</div>
+
+<div class="li-third-level">
+  <p>1.1.1. If you have renamed any file, check for broken links</p>
+
+</div>
+
+<div class="li-third-level">
+  <p>1.1.2. Click all new links on new pages/posts</p>
+
+</div>
+
+<div class="li-second-level">
+  <p>1.2. Check how it looks in the mobile version (in Chrome: <code class="language-plaintext highlighter-rouge">F12 -&gt; Toggle Device Toolbar (or Ctrl + Shift + M)</code>)</p>
+
+</div>
+
+<p>2. Publish</p>
+<div class="li-second-level">
+  <p>2.1. Check live site on desktop.</p>
+
+</div>
+
+<div class="li-second-level">
+  <p>2.2. Check live site on an actual mobile device.</p>
+
+</div>
+
+<div class="li-second-level">
+  <p>2.3. <em>Optional</em>: ask feedback from friends.</p>
+
+</div>
+
+<div class="li-second-level">
+  <p>2.4. <em>Optional</em>: announce new content on social media.</p>
+
+</div>
+
+<div class="li-third-level">
+  <p>2.4.1. Start with your least important audience/platform.</p>
+
+</div>
+
+<div class="li-third-level">
+  <p>2.4.2. Finish with the most important target audience.</p>
+
+</div>
+
+<h2 id="after-publishing">After publishing</h2>
+
+<p>After my site has gone live, I have set up a couple of more things.</p>
+<ol>
+  <li>I bought my <code class="language-plaintext highlighter-rouge">domain</code> and set it up in GitHub Pages. Now my site is available at <a href="https://petertengg.com/">https://petertengg.com/</a></li>
+  <li><code class="language-plaintext highlighter-rouge">Google Search Console</code>: helps monitor how your site appears in Google Search and fix indexing or SEO issues.</li>
+  <li><code class="language-plaintext highlighter-rouge">Google Analytics</code>: tracks and reports website traffic, showing how visitors interact with your site.</li>
+</ol>
+
+<p>I mention them here just for the sake of completeness, but the details are out of the scope of this (already quite long) blog post. If you want me to cover them, let me know and I will be happy to do so.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I feel I have managed to set up a good framework for my further blogging endeavours. It was a relatively big initial investment, but it was totally worth it. I am really satisfied and proud of the result. I got to learn a lot about <code class="language-plaintext highlighter-rouge">GitHub Pages</code>, <code class="language-plaintext highlighter-rouge">Jekyll</code> and <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code>. In hindsight, I am happy to have chosen this path and would do the same if I had to start over. The learning curve of this stack is relatively easy, I had a lot of fun building my site, and the result is satisfying. I also have the feeling that I haven’t reached the limits of this framework, it still offers plenty of room for future improvements. For now, however, I want to enjoy my site and focus on writing posts and publishing content.</p>
+
+<p>Before this, I had very limited experience with web development, and it wasn’t exactly positive either. <code class="language-plaintext highlighter-rouge">Jekyll</code> may have been the gateway drug for me to web development. Who knows, maybe next time I will get into dynamic site development as well. But for now, I want to focus on my core areas: C++, (performance) optimisations and trading.</p>
+
+<p>Before dropping the pen, I want to give a shoutout to <code class="language-plaintext highlighter-rouge">Minimal Mistakes</code> and its creator <a href="https://mademistakes.com/">Micheal Rose</a>. MM proved to be a good choice, even though I don’t have much experience with other themes. Great experience, very well documented, flexible and a lot of fun to work with. Very happy with the outcome.</p>
+
+<h2 id="links">Links</h2>
+<ul>
+  <li><a href="/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1">Part 1: Setup and Design Decisions</a></li>
+  <li><a href="/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2">Part 2: Custom Implementation and Plugins</a></li>
+  <li><a href="/portfolio/2025-07-29-my-personal-site">Portfolio entry</a></li>
+  <li><a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a></li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes documentation and demo site</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#git" class="page__taxonomy-item p-category" rel="tag">Git</a><span class="sep">, </span>
+    
+      <a href="/tags/#github-pages" class="page__taxonomy-item p-category" rel="tag">Github Pages</a><span class="sep">, </span>
+    
+      <a href="/tags/#jekyll" class="page__taxonomy-item p-category" rel="tag">Jekyll</a><span class="sep">, </span>
+    
+      <a href="/tags/#minimal-mistakes" class="page__taxonomy-item p-category" rel="tag">Minimal Mistakes</a><span class="sep">, </span>
+    
+      <a href="/tags/#ruby" class="page__taxonomy-item p-category" rel="tag">Ruby</a><span class="sep">, </span>
+    
+      <a href="/tags/#web-development" class="page__taxonomy-item p-category" rel="tag">Web Development</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#jekyll" class="page__taxonomy-item p-category" rel="tag">Jekyll</a><span class="sep">, </span>
+    
+      <a href="/categories/#programming" class="page__taxonomy-item p-category" rel="tag">Programming</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-08-12T13:00:00+02:00">August 12, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2/" class="pagination--pager" title="How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 2: Custom Implementation and Plugins">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+      
+        <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+      
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/portfolio/my-personal-site/my-personal-site1.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/portfolio/2025-07-29-my-personal-site/" rel="permalink">My Personal Site
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-29T07:46:00+02:00">July 29, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Built a personal website using Jekyll, hosted on GitHub Pages under a custom domain. Tailored the default setup to better serve my goals for the site.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/portfolio/divergo/divergo-chart-1.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/portfolio/2025-07-15-divergo/" rel="permalink">Divergo
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-15T12:00:00+02:00">July 15, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">“Others left me disappointed, but Péter delivered exactly what I needed — in just a week and a half.” - Ákos
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/cooking/oven-roasted-whole-chicken/3.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cooking/2025-07-15-oven-roasted-whole-chicken/" rel="permalink">Oven Roasted Whole Chicken
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-15T06:00:00+02:00">July 15, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ingredients
+
+  1 chicken, approx 2 kg
+  500 grams champignon mushrooms
+  4 large carrots
+  1 large potato
+  4 medium yellow onions
+  1 bulb of garlic
+  0.5 l...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2/" rel="permalink">How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 2: Custom Implementation and Plugins
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-08-05T07:20:00+02:00">August 5, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Introduction
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+        <li><a href="/assets/downloads/CV English - Peter Tengg.pdf" target="_blank" type="application/pdf" download 
+            rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> CV (PDF)</a>
+        </li>
+        
+      
+        
+        <li><a href="https://www.linkedin.com/in/petertengg/" target="_blank" 
+            rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        </li>
+        
+      
+        
+        <li><a href="https://discord.com/users/peti7199" target="_blank" 
+            rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a>
+        </li>
+        
+      
+        
+        <li><a href="https://www.tradingview.com/u/OperationHeadLessChicken/" target="_blank" 
+            rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-chart-line" aria-hidden="true"></i> TradingView</a>
+        </li>
+        
+      
+        
+        <li><a href="https://www.instagram.com/optimal_banana/" target="_blank" 
+            rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a>
+        </li>
+        
+      
+    
+
+    
+      <li><a href="/feeds/"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feeds </a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://petertengg.com">Péter Tengg</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TC8TDGQPHL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TC8TDGQPHL', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://petertengg.com/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/programming/how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://petertengg.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+  </body>
+</html>
