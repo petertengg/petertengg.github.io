@@ -178,11 +178,11 @@ In the future, if my site were to see a serious discussion activity, I would def
 
 ## Outroduction
 
-That concludes Part 2. of the series. In the next post, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.
+That concludes Part 2. of the series. In the [next post](/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3), the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.
 
 ## Links
 - [Part 1: Setup and Design Decisions](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1)
-- Part 3: Publishing Takeaways and Final Thoughts: coming soon
+- [Part 3: Publishing Takeaways and Final Thoughts](/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3)
 - [Portfolio entry](/portfolio/2025-07-29-my-personal-site)
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
 

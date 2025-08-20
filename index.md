@@ -4,10 +4,8 @@
 
 layout: single
 permalink: /
-author_proile: true
+title: About me
 ---
-
-## About me
 
 I am a software engineer with an interest in
 - High-performance systems
