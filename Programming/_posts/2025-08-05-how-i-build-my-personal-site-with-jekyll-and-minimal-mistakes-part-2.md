@@ -18,6 +18,9 @@ tags:
   - "Github Pages"
 ---
 
+*Edit 2025-08-28*: This three-part series describes the original design of my site, which is now obsolete. However, the techniques and features presented remain useful for Jekyll development, so I’m keeping it here for future reference.
+{: .notice}
+
 ## Introduction
 
 This is Part 2 in a three-post series, where I sum up the journey of building my website. If you haven't, make sure to read [Part 1: Setup and Design Decisions](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1). In this part, I continue with the implementation process. I will show how the amusingly named `monkey patching` helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.

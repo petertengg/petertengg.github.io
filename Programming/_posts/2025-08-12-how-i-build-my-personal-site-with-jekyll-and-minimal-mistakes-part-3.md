@@ -18,6 +18,9 @@ tags:
   - "Github Pages"
 ---
 
+*Edit 2025-08-28*: This three-part series describes the original design of my site, which is now obsolete. However, the techniques and features presented remain useful for Jekyll development, so I’m keeping it here for future reference.
+{: .notice}
+
 ## Introduction
 
 This is the third and final part of a three-post series, where I sum up the journey of building my website. If you haven't, make sure to read [Part 1: Setup and Design Decisions](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1) and [Part 2: Custom Implementation and Plugins](/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2). In this part, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.
