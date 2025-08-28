@@ -2,6 +2,8 @@
 layout: archive
 ---
 
+{{ page.subtitle }}
+{% if page.category == "Portfolio" %}<br><br>{% endif %}
 {{ content }}
 
 {% assign posts = site.posts %}

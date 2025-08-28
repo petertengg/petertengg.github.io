@@ -1,0 +1,10 @@
+{% assign url = site.data.links[include.key] %}
+{% assign is_external = false %}
+
+{%- if url contains '://' -%}
+  {% assign is_external = true %}
+{%- endif -%}
+
+<a href="{{ url }}" {% if is_external %} target="_blank" rel="nofollow noopener noreferrer" {% endif %}>
+  {{ include.text }}
+</a>

@@ -183,11 +183,11 @@ That concludes Part 2. of the series. In the [next post](/programming/2025-08-12
 ## Links
 - [Part 1: Setup and Design Decisions](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1)
 - [Part 3: Publishing Takeaways and Final Thoughts](/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3)
-- [Portfolio entry](/portfolio/2025-07-29-my-personal-site)
+- {% include link.html key="portfolio_my_personal_site" text="Portfolio entry" %}
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
 
 ## Sources
-- <a href="https://pages.github.com/versions/" target="_blank" rel="nofollow noopener noreferrer">GitHub Pages dependencies</a>
+- {% include link.html key="ghpages_versions" text="GitHub Pages dependencies" %}
 - <a href="https://github.com/jekyll/jekyll-feed" target="_blank" rel="nofollow noopener noreferrer">jekyll-feed plugin GitHub</a>
 - <a href="https://github.com/jekyll/jekyll-seo-tag" target="_blank" rel="nofollow noopener noreferrer">jekyll-seo-tag plugin GitHub</a>
 - <a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank" rel="nofollow noopener noreferrer">Minimal Mistakes documentation and demo site</a>

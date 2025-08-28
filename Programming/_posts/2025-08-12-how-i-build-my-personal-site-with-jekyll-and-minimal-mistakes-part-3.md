@@ -147,12 +147,12 @@ I feel I have managed to set up a good framework for my further blogging endeavo
 
 Before this, I had very limited experience with web development, and it wasn't exactly positive either. `Jekyll` may have been the gateway drug for me to web development. Who knows, maybe next time I will get into dynamic site development as well. But for now, I want to focus on my core areas: C++, (performance) optimisations and trading.
 
-Before dropping the pen, I want to give a shoutout to `Minimal Mistakes` and its creator [Micheal Rose](https://mademistakes.com/). MM proved to be a good choice, even though I don't have much experience with other themes. Great experience, very well documented, flexible and a lot of fun to work with. Very happy with the outcome.
+Before dropping the pen, I want to give a shoutout to `Minimal Mistakes` and its creator {% include link.html key="mademistakes_com" text="Michael Rose" %}. MM proved to be a good choice, even though I don't have much experience with other themes. Great experience, very well documented, flexible and a lot of fun to work with. Very happy with the outcome.
 
 ## Links
 - [Part 1: Setup and Design Decisions](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1)
 - [Part 2: Custom Implementation and Plugins](/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2)
-- [Portfolio entry](/portfolio/2025-07-29-my-personal-site)
+- {% include link.html key="portfolio_my_personal_site" text="Portfolio entry" %}
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
 
 ## Sources

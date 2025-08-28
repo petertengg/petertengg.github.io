@@ -17,7 +17,6 @@ plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
 
-
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
 search_provider          : "lunr"
