@@ -2,10 +2,7 @@
 title: "How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 3: Publishing Takeaways and Final Thoughts"
 date:   2025-08-12 13:00:00 +0200
 published: true
-<<<<<<< HEAD:_programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3.md
-=======
 excerpt: In this part, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.
->>>>>>> website-overhaul:Programming/_posts/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3.md
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
