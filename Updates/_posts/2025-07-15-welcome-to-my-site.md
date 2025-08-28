@@ -2,8 +2,9 @@
 title: "Welcome to my Site"
 date:   2025-07-15 06:00:10 +0200
 excerpt: "I decided to start a blog because I enjoy writing texts for humans just as much as for machines. Some humans even say that my writings are enganging and enjoyable to read."
-categories:
-  - Updates
+toc: true
+toc_label: "Table of Contents"
+toc_sticky: true
 tags: 
   - "Welcome"
 ---
@@ -22,30 +23,6 @@ You can find more information about each topic below.
 ### [Bugs in the Soup](/programming/) - Programming
 
 I used to have a standalone blog titled `Bugs in the Soup` before on a paid domain. I started it with big enthusiasm, but then my activity dropped. However, it was still a fun project, and I was happy with its content. I have now discovered Jekyll and Github Pages, and I feel like they are the perfect tools to revive my blog. My posts often revolve around the aforementioned obstacle-struggle-solution cycle.
-
-### [Optimal Banana](/cooking/) - Cooking
-
-#### Why *"Optimal Banana"*? 
-
-I used to post about cooking and food on 
-<i class="fab fa-instagram"></i>
-<a href="https://www.instagram.com/optimal_banana/" target="_blank">Instagram</a> as `optimal_banana`, but that name was a bit misleading for someone who loves onions and garlic, so I am rebranding. *Optimal* sounds more related to engineering as well. Cooking and engineering are not so different after all. :)
-
-Here I will share some of my experiments, successes and learning points in the kitchen. It also helps me remember what I’ve made and how to improve it next time.
-
-#### Why "*Hogwash*"?
-
-At the end of each cooking post you will see a section titled `Hogwash`. The obvious explanation would be, because that's where the leftover after a meal ends up. Well, I don't throw any food, so that's not the correct explanation. Have you ever tried searching for a recipe for that delicious Pecan Breaded Chicken Breast you had at a restaurant last week? And when you click it, you are directed to a blogpost where a wall of texts awaits you. You don't even see the ingredient list. You have to scroll down 3 pages to find the "bread and butter" of the post. The recipe is carefully hidden in a huge wall of BS, that no one cares about. Well, `Hogwash` is a synonym for `BS` and I decided to put my *Hogwash* at the end, so you can jump into the cooking right away, and if you really want to read my charming story about the given recipe, you can do it after cooking. It is optional, it is *optimal*. :)
-
-You can see my older food posts on
-<i class="fab fa-instagram"></i>
-<a href="https://www.instagram.com/optimal_banana/" target="_blank">Instagram</a>
-
-Also, for a couple of recipes in Hungarian you can visit my
-<a href="https://www.nosalty.hu/receptkonyv/259694?sajat=1">
-  <img src="/assets/images/nosalty-icon.png" alt="Nosalty icon" width="20" height="20" style="vertical-align: middle; margin-right: 5px;">
-  Nosalty
-</a> profile. 
 
 ### [Portfolio](/portfolio/)
 

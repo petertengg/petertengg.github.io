@@ -4,8 +4,8 @@ layout: archive
 
 {{ content }}
 
-{% assign all_posts = site.programming | concat: site.cooking | concat: site.portfolio | concat: site.updates %}
-{% assign sorted_posts = all_posts | sort: 'date' | reverse%}
+{% assign posts = site.posts %}
+{% assign sorted_posts = posts | sort: 'date' | reverse %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">

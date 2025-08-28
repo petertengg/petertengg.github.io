@@ -1,22 +1,21 @@
 title: Péter Tengg
 subtitle: Software Engineer
 author: Péter
-email: your-email@example.com
+email:
 description: >- # this means to ignore newlines until "baseurl:"
-  A personal site by Péter Tengg — exploring creative programming, tasty cooking,
-  curious bugs, and portfolio projects. Follow along for updates from code to kitchen.
+  A personal site by Péter Tengg — exploring creative programming, algorithmic trading, and technical projects. 
+  Follow along for insights, experiments, and portfolio updates.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://petertengg.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
-github_username:  petertengg
+github_username: petertengg
 
 # Build settings
-theme: "minimal-mistakes-jekyll"
+remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
-
 
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
@@ -27,24 +26,6 @@ lunr:
 
 minimal_mistakes_skin: "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-collections:
-  updates:
-    output: true
-    permalink: /:collection/:path/
-
-  programming:
-    output: true
-    permalink: /:collection/:path/
-
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-
-  cooking:
-    output: true
-    permalink: /:collection/:path/
-
-
 defaults:
   # _pages
   - scope:
@@ -53,57 +34,9 @@ defaults:
     values:
       layout: single
       author_profile: false
-  # _updates
-  - scope:
-      path: ""
-      type: updates
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      show_date: true
-      share: false
-      comments: true
-      related: true
-  # _programming
-  - scope:
-      path: ""
-      type: programming
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      show_date: true
-      share: false
-      comments: true
-      related: true
-  # _cooking
-  - scope:
-      path: ""
-      type: cooking
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      show_date: true
-      share: false
-      comments: true
-      related: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      show_date: true
-      share: false
-      comments: true
-      related: true
+
   # _posts
   - scope:
-      path: ""
       type: posts
     values:
       layout: single
@@ -112,6 +45,21 @@ defaults:
       read_time: true
       share: false
       related: true
+
+  - scope:
+      path: "Portfolio/_posts"
+    values:
+      permalink: /portfolio/:year-:month-:day-:title/
+  
+  - scope:
+      path: "Programming/_posts"
+    values:
+      permalink: /programming/:year-:month-:day-:title/
+
+  - scope:
+      path: "Updates/_posts"
+    values:
+      permalink: /updates/:year-:month-:day-:title/
 
 comments:
   provider: "disqus"
@@ -129,11 +77,10 @@ tag_archive:
   path: /tags/
 
 feed:
-  collections:
-    - updates
-    - programming
-    - cooking
-    - portfolio
+  categories:
+    - Programming
+    - Updates
+    - Portfolio
 
 social:
   type:  "Person"

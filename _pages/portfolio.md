@@ -3,7 +3,7 @@ title: Portfolio
 subtitle: "Things I Have Cooked Up"
 layout: "collection-extended"
 permalink: /portfolio/
-collection: portfolio
+category: "Portfolio"
 entries_layout: grid
 classes: wide
 ---

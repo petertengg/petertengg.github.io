@@ -2,11 +2,11 @@
 title: "How I Built My Personal Site with Jekyll and Minimal Mistakes - Part 1: Setup and Design Decisions"
 date:   2025-07-29 07:47:00 +0200
 published: true
+excerpt: In this part, I will discuss why I chose this tech stack, the structural design choices I made, and we will face our first challenge early in the implementation process.
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 categories:
-  - Programming
   - Jekyll
 tags:
   - "Web Development"
@@ -16,6 +16,10 @@ tags:
   - "Ruby"
   - "Github Pages"
 ---
+
+*Edit 2025-08-02*: I wrote this post before retiring the Cooking sub-blog. However, I will leave it as an example throughout this series to keep the original story telling.
+{: .notice}
+
 
 ## Introduction
 
@@ -189,7 +193,7 @@ That concludes Part 1. of the series. In the [next](/programming/2025-08-05-how-
 ## Links
 - [Part 2: Custom Implementation and Plugins](/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2)
 - [Part 3: Publishing Takeaways and Final Thoughts](/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3)
-- [Portfolio entry](/portfolio/2025-07-29-my-personal-site)
+- {% include link.html key="portfolio_my_personal_site" text="Portfolio entry" %}
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
 
 ## Sources
