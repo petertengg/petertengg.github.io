@@ -24,6 +24,20 @@ You can find more information about each topic below.
 
 I used to have a standalone blog titled `Bugs in the Soup` before on a paid domain. I started it with big enthusiasm, but then my activity dropped. However, it was still a fun project, and I was happy with its content. I have now discovered Jekyll and Github Pages, and I feel like they are the perfect tools to revive my blog. My posts often revolve around the aforementioned obstacle-struggle-solution cycle.
 
+### <a href="/trading/"><span class="text-highlight">O</span>peration <span class="text-highlight">H</span>ead<span class="text-highlight">L</span>ess <span class="text-highlight">C</span>hicken</a> - Trading
+
+If you get the joke in the title, then you are in the right place, welcome. :) 
+
+If you don't, don't worry, I will bring you up to speed. 
+
+In trading, the most common chart-type to depict the price action of a financial asset over time is the so called candlestick chart. On a candlestick chart, each period (for example a day of trading) is represented by a candle. A candle tells you these four pieces of information about any given day: 
+  - The <span class="text-highlight">O</span>pening price
+  - The <span class="text-highlight">H</span>ighest price 
+  - The <span class="text-highlight">L</span>owest price and 
+  - The <span class="text-highlight">C</span>losing price of the day. 
+  
+  Now, before heading off to conquer the markets and making life changing money, I suggest you equip yourself with a bit more knowledge at [my trading sub-blog](/trading/).
+
 ### [Portfolio](/portfolio/)
 
 Here I will present exciting projects that I have built.
