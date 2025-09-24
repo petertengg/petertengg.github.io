@@ -17,9 +17,7 @@ tags:
   - "Github Pages"
 ---
 
-*Edit 2025-08-28*: This three-part series describes the original design of my site, which is now obsolete. However, the techniques and features presented remain useful for Jekyll development, so I’m keeping it here for future reference.
-{: .notice}
-
+{% include jekyll-deprecation-notice.html %}
 
 ## Introduction
 
