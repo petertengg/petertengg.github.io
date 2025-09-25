@@ -42,8 +42,6 @@ The market doesn't consist of homogenous traders. There are bigger and smaller p
 
 These two sectors are competing with each other. Or, better put, the institutions hunt the retail. The field is tilted heavily towards the institutions, which is why most retail traders lose. If I have already turned your interest in trading off, that's completely fair, I won't blame you. If you stop reading now, and avoid trading altogether, that's not a bad choice either, you surely won't lose any money. But if you want to know how it is still possible to take advantage of this unfair situation, read on!
 
-{% include smc-glossary.html %}
-
 ## Introduction
 - Forex trading is a zero-sum game
 - Smart Money Concepts (SMC): the institutional players try to extract money from retail

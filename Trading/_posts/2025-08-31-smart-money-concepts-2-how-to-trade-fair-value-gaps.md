@@ -214,9 +214,6 @@ It turned out to be a successful trade.
 
 
 
-
-{% include smc-glossary.html %}
-
 ## Links and further reading
 - Volume Profile
 - RSI
