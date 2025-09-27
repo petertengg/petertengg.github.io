@@ -5,6 +5,4 @@
   {% assign is_external = true %}
 {%- endif -%}
 
-<a href="{{ url }}" {% if is_external %} target="_blank" rel="nofollow noopener noreferrer" {% endif %}>
-  {{ include.text }}
-</a>
+<a href="{{ url }}" {% if is_external %} target="_blank" rel="nofollow noopener noreferrer" {% endif %}>{{ include.text }}</a>

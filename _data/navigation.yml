@@ -3,5 +3,7 @@ main:
   url: /updates/
 - title: "Programming"
   url: /programming/
+- title: "Trading"
+  url: /trading/
 - title: "Portfolio"
   url: /portfolio/

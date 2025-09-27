@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: single
 permalink: /
 title: About me
@@ -47,6 +44,7 @@ If you’re interested in collaboration or discussing freelancing opportunities,
 
 This site is a mixture of professional and personal topics. Instead of maintaining separate blogs, I collect everything here and organise it into sub-blogs. I hope you will find something that interest you. For now you can explore the following topics:
 - Programming – [Bugs in the Soup](/programming/)
+- Trading – <a href="/trading/"><span class="text-highlight">O</span>peration <span class="text-highlight">H</span>ead<span class="text-highlight">L</span>ess <span class="text-highlight">C</span>hicken</a>
 - Portfolio – [Things I Have Cooked Up (Not Food!)](/portfolio/)
 - Updates – [What’s New](/updates/)
 
