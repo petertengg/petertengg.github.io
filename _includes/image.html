@@ -1,0 +1,13 @@
+{% assign img = include.src %}
+{% assign alt = include.alt | default: "" %}
+{% assign caption = include.caption | default: alt %}
+{% assign id = include.id | default: "" %}
+
+{% if id != "" %}<a id="{{ id }}"></a>{% endif %}
+
+<a href="{{ img }}" target="_blank" rel="noopener noreferrer">
+  <img src="{{ img }}" alt="{{ alt }}" style="max-width:100%; height:auto;">
+</a>
+{% if caption != "" %}
+  <p class="text-center"><em>{{ caption }}</em></p>
+{% endif %}

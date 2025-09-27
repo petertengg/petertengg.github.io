@@ -1,7 +1,7 @@
 ---
 title: "Smart Money Concepts - Part 3: Liquidity Sweep, Break of Structure"
 date:   2025-08-31 09:00:00 +0200
-published: true
+published: false
 excerpt: In this part, I will discuss Fair Value Gaps (FVG), which is more of a trading psychology topic, but you will see how it relates to Smart Money Concepts in the following parts.
 toc: true
 toc_label: "Table of Contents"
