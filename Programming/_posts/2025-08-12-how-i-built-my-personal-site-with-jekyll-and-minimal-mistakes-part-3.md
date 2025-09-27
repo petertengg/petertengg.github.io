@@ -22,7 +22,7 @@ tags:
 
 ## Introduction
 
-This is the third and final part of a three-post series, where I sum up the journey of building my website. If you haven't, make sure to read [Part 1: Setup and Design Decisions](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1) and [Part 2: Custom Implementation and Plugins](/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2). In this part, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.
+This is the third and final part of a three-post series, where I sum up the journey of building my website. If you haven't, make sure to read {% include link.html key="programming_personal_site_1" text="Part 1: Setup and Design Decisions" %} and {% include link.html key="programming_personal_site_2" text="Part 2: Custom Implementation and Plugins" %}. In this part, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.
 
 ## Publishing
 
@@ -30,7 +30,7 @@ At this point, I have implemented what I planned for a minimum viable product (M
 
 ### gh-pages deploy branch
 
-Since I [cannot use GHP](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1#quote-gh-pages) directly to build my site, I have to build it locally, and push it to a separate branch. I set it up this way. 
+Since I {% include link.html key="programming_personal_site_1" text="cannot use GHP" anchor="#quote-gh-pages" %} directly to build my site, I have to build it locally, and push it to a separate branch. I set it up this way. 
 
 #### 1\. Create an orphan branch called `gh-pages`.
 
@@ -152,8 +152,8 @@ Before this, I had very limited experience with web development, and it wasn't e
 Before dropping the pen, I want to give a shoutout to `Minimal Mistakes` and its creator {% include link.html key="mademistakes_com" text="Michael Rose" %}. MM proved to be a good choice, even though I don't have much experience with other themes. Great experience, very well documented, flexible and a lot of fun to work with. Very happy with the outcome.
 
 ## Links
-- [Part 1: Setup and Design Decisions](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1)
-- [Part 2: Custom Implementation and Plugins](/programming/2025-08-05-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-2)
+- {% include link.html key="programming_personal_site_1" text="Part 1: Setup and Design Decisions" %}
+- {% include link.html key="programming_personal_site_2" text="Part 2: Custom Implementation and Plugins" %}
 - {% include link.html key="portfolio_my_personal_site" text="Portfolio entry" %}
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
 

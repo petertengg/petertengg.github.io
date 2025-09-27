@@ -1,5 +1,9 @@
-{% assign url = site.data.links[include.key] %}
-{% assign is_external = false %}
+{%- assign url = site.data.links[include.key] -%}
+{%- assign is_external = false -%}
+
+{%- if include.anchor -%}
+  {% assign url = url | append: include.anchor %}
+{%- endif -%}
 
 {%- if url contains '://' -%}
   {% assign is_external = true %}

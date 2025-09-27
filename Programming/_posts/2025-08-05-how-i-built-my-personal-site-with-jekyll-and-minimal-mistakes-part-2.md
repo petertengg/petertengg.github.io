@@ -22,15 +22,15 @@ tags:
 
 ## Introduction
 
-This is Part 2 in a three-post series, where I sum up the journey of building my website. If you haven't, make sure to read [Part 1: Setup and Design Decisions](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1). In this part, I continue with the implementation process. I will show how the amusingly named `monkey patching` helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.
+This is Part 2 in a three-post series, where I sum up the journey of building my website. If you haven't, make sure to read {% include link.html key="programming_personal_site_1" text="Part 1: Setup and Design Decisions" %}. In this part, I continue with the implementation process. I will show how the amusingly named `monkey patching` helped me overcome another technical challenge, and we’ll explore how to customise a Jekyll theme to your liking.
 
-## The implementation process ([continues Part 1](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1#the-implementation-process))
+<h2>The implementation process ({% include link.html key="programming_personal_site_1" text="continues Part 1" anchor="#the-implementation-process" %})</h2>
 
 Since I wasn't familiar with the Jekyll framework, I explored its capabilities and limitations along the way. The road was a bit bumpy, but it wasn't too steep, and the process was quite enjoyable.
 
 ### Related posts - monkey patching (Ruby)
 
-Another limitation of Jekyll's default behaviour is that it only suggests related posts from the `Posts` collection which I don't even use. I had to override it to include all my collections. Here, I took a different approach from the [AllTaxonomiesPlugin](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1#all-taxonomies-plugin-code), because that one creates new collections that don't exist in Jekyll, but here I wanted to modify Jekyll's existing behaviour. It uses `Classifier Reborn` to calculate similarities between posts based on content, not just categories and tags. I wanted to keep that, so I used Ruby's so called `monkey patching` technique which allows you to overwrite existing code, without modifying Jekyll's internal code. (When I first heard `monkey patching`, I thought it was a joke). The key part of `related_posts_patch.rb` is this:
+Another limitation of Jekyll's default behaviour is that it only suggests related posts from the `Posts` collection which I don't even use. I had to override it to include all my collections. Here, I took a different approach from the {% include link.html key="programming_personal_site_1" text="AllTaxonomiesPlugin" anchor="#all-taxonomies-plugin-code" %}, because that one creates new collections that don't exist in Jekyll, but here I wanted to modify Jekyll's existing behaviour. It uses `Classifier Reborn` to calculate similarities between posts based on content, not just categories and tags. I wanted to keep that, so I used Ruby's so called `monkey patching` technique which allows you to overwrite existing code, without modifying Jekyll's internal code. (When I first heard `monkey patching`, I thought it was a joke). The key part of `related_posts_patch.rb` is this:
 
 ```ruby
 module Jekyll
@@ -114,7 +114,7 @@ In this section, I will discuss third party plugins that I used to further enhan
 
 ### jekyll-feed
 
-Installed as a Ruby gem, it performs the generation of feeds based on your site content. It is <a href="https://pages.github.com/versions/" target="_blank" rel="nofollow noopener noreferrer">supported</a> by GitHub Pages (GHP), so you can use it even if you rely on GHP to build your site. After having struggled so much with the Posts vs. custom collections support by Jekyll ([taxonomies](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1#categories-and-tags-aka-taxonomies) and [related posts](#related-posts---monkey-patching-ruby)), it was a pleasant surprise that `jekyll-feed` is pretty configurable (<a href="https://github.com/jekyll/jekyll-feed#jekyll-feed-plugin" target="_blank" rel="nofollow noopener noreferrer">see more</a>) and is happy to recognise other collections beyond the almighty `Posts`. All I had to do in my `_config.yaml` is:
+Installed as a Ruby gem, it performs the generation of feeds based on your site content. It is <a href="https://pages.github.com/versions/" target="_blank" rel="nofollow noopener noreferrer">supported</a> by GitHub Pages (GHP), so you can use it even if you rely on GHP to build your site. After having struggled so much with the Posts vs. custom collections support by Jekyll ({% include link.html key="programming_personal_site_1" text="taxonomies" anchor="#categories-and-tags-aka-taxonomies" %} and [related posts](#related-posts---monkey-patching-ruby)), it was a pleasant surprise that `jekyll-feed` is pretty configurable (<a href="https://github.com/jekyll/jekyll-feed#jekyll-feed-plugin" target="_blank" rel="nofollow noopener noreferrer">see more</a>) and is happy to recognise other collections beyond the almighty `Posts`. All I had to do in my `_config.yaml` is:
 ```yaml
 plugins:
   - jekyll-feed
@@ -180,11 +180,11 @@ In the future, if my site were to see a serious discussion activity, I would def
 
 ## Outroduction
 
-That concludes Part 2. of the series. In the [next post](/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3), the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.
+That concludes Part 2. of the series. In the {% include link.html key="programming_personal_site_3" text="next post" %}, the site will finally go live! I will share a useful checklist for pre- and post-publishing, based on my experiences, and we will conclude the series with my final thoughts.
 
 ## Links
-- [Part 1: Setup and Design Decisions](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1)
-- [Part 3: Publishing Takeaways and Final Thoughts](/programming/2025-08-12-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-3)
+- {% include link.html key="programming_personal_site_1" text="Part 1: Setup and Design Decisions" %}
+- {% include link.html key="programming_personal_site_3" text="Part 3: Publishing Takeaways and Final Thoughts" %}
 - {% include link.html key="portfolio_my_personal_site" text="Portfolio entry" %}
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
 

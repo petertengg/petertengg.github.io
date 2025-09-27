@@ -53,4 +53,4 @@ Built a personal website in Jekyll, hosted on Github Pages under my custom domai
 ## Links
 - [The live site](https://petertengg.com/)
 - <a href="https://github.com/petertengg/petertengg.github.io" target="_blank" rel="nofollow noopener noreferrer">GitHub repo</a>
-- [Blog post](/programming/2025-07-29-how-i-build-my-personal-site-with-jekyll-and-minimal-mistakes-part-1)
+- {% include link.html key="programming_personal_site_1" text="Blog post" %}
