@@ -1,6 +1,6 @@
 ---
 title: "Smart Money Concepts - Part 1: Fair Value Gaps"
-date:   2025-09-27 10:00:00 +0200
+date:   2025-09-28 15:00:00 +0200
 published: true
 excerpt: In this part, I will discuss Fair Value Gaps (FVG), which is more of a trading psychology topic, but you will see how it relates to Smart Money Concepts in the following parts.
 toc: true

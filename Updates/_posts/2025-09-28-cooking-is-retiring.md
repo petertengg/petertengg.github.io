@@ -1,6 +1,6 @@
 ---
 title: "The Cooking Sub-blog is Retiring, but the Chicken Remains with Us!"
-date:   2025-09-27 10:00:10 +0200
+date:   2025-09-28 15:00:10 +0200
 excerpt: "I’m discontinuing my cooking sub-blog to focus on programming and trading. Operation HeadLess Chicken begins!"
 toc: true
 toc_label: "Table of Contents"
@@ -26,4 +26,4 @@ From now on, I’ll dedicate my time and energy to the original purpose of this 
 
 The only post in the cooking section was an oven roasted chicken recipe. While the recipe is gone, the chicken remains with us in spirit. My new trading-focused sub-blog will have the codename "<a href="/trading/"><span class="text-highlight">O</span>peration <span class="text-highlight">H</span>ead<span class="text-highlight">L</span>ess <span class="text-highlight">C</span>hicken</a>". 
 
-I will kick it off with a series of posts about `Smart Money Concepts (SMC)`. Are you ready to take a deep dive in the fascinating, but often ruthless world of exchange trading?
+I will kick it off with a series of posts about {% include link.html key="trading_smc_1" text="Smart Money Concepts (SMC)" %}. Are you ready to take a deep dive in the fascinating, but often ruthless world of exchange trading?

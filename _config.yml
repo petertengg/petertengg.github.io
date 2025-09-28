@@ -57,6 +57,11 @@ defaults:
       permalink: /programming/:year-:month-:day-:title/
 
   - scope:
+      path: "Trading/_posts"
+    values:
+      permalink: /trading/:year-:month-:day-:title/
+
+  - scope:
       path: "Updates/_posts"
     values:
       permalink: /updates/:year-:month-:day-:title/
