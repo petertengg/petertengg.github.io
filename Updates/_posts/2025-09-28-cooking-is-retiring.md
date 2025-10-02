@@ -1,5 +1,5 @@
 ---
-title: "The Cooking Sub-blog is Retiring, but the Chicken Remains with Us!"
+title: "The Cooking Sub-blog Is Retiring, but the Chicken Cannot Be Destroyed, Only Transformed!"
 date:   2025-09-28 15:00:10 +0200
 excerpt: "I’m discontinuing my cooking sub-blog to focus on programming and trading. Operation HeadLess Chicken begins!"
 toc: true
