@@ -83,8 +83,9 @@ tag_archive:
 
 feed:
   categories:
-    - Programming
     - Updates
+    - Programming
+    - Trading
     - Portfolio
 
 social:
