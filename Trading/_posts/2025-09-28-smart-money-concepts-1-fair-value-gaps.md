@@ -151,7 +151,7 @@ In this post I have discussed
 - Discussed what makes the best setups and what are the weakening factors to avoid
 - Finally we had a look at how market psychology works as a `conductor` who makes the price action and indicators `move in unison`
 
-This wraps up the theory about FVGs. In the next post, I will show you different approaches of trading FVGs. Stay tuned.
+This wraps up the theory about FVGs. In the next post(!link), I will show you different approaches of trading FVGs. Stay tuned.
 
 ## Glossary
 
@@ -163,6 +163,7 @@ This wraps up the theory about FVGs. In the next post, I will show you different
 - VP: Volume Profile (indicator)
 
 ## Links and further reading
+- Part 2(!link)
 - {% include link.html key="investopedia_marubozu" text="Marubozu" %}
 - {% include link.html key="investopedia_rsi" text="Relative Strength Index (RSI)" %}
 - {% include link.html key="trading_view_volume_profile" text="Volume Profile (VP)" %}

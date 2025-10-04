@@ -1,12 +1,12 @@
 {%- assign url = site.data.links[include.key] -%}
-{%- assign is_external = false -%}
+{%- assign target = "" -%}
 
 {%- if include.anchor -%}
   {% assign url = url | append: include.anchor %}
 {%- endif -%}
 
-{%- if url contains '://' -%}
-  {% assign is_external = true %}
+{%- if url contains '://' or include.newtab == true or include.newtab == "true" -%}
+  {% assign target = ' target="_blank" rel="nofollow noopener noreferrer"' -%}
 {%- endif -%}
 
-<a href="{{ url }}" {% if is_external %} target="_blank" rel="nofollow noopener noreferrer" {% endif %}>{{ include.text }}</a>
+<a href="{{ url }}"{{ target }}>{{ include.text }}</a>
