@@ -6,3 +6,5 @@ vendor
 
 Gemfile.lock
 drafts/
+
+*hard-link-to*.md
