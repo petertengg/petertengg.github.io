@@ -1,8 +1,8 @@
 ---
 title: "Smart Money Concepts - Part 2: How to Trade Fair Value Gaps"
-date:   2025-08-31 09:00:00 +0200 (!update)
+date:   2025-10-07 07:00:00 +0200
 published: true
-excerpt: In this part, I will discuss Fair Value Gaps (FVG), which is more of a trading psychology topic, but you will see how it relates to Smart Money Concepts in the following parts.
+excerpt: In this post I am going to show you some possible ways to trade Fair Value Gaps (FVGs) based on what we have seen in the previous post.
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
@@ -169,7 +169,7 @@ Stay tuned!
 - TP: Take Profit (order)
 
 ## Links and further reading
-- Part 1(!link)
+- {% include link.html key="trading_smc_1" text="Fair Value Gaps Part 1" %}
 - {% include link.html key="investopedia_marubozu" text="Marubozu" %}
 - {% include link.html key="investopedia_limit_order" text="Limit Order" %}
 - {% include link.html key="investopedia_sl" text="Stop Loss (SL) order" %}
