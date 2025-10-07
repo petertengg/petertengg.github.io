@@ -3,12 +3,14 @@ binance_cme_gap: https://www.binance.com/en/square/post/23718589921394
 
 ghpages_versions: https://pages.github.com/versions.json
 
-investopedia_nfp: https://www.investopedia.com/terms/n/nonfarmpayroll.asp
+investopedia_limit_order: https://www.investopedia.com/terms/l/limitorder.asp
 investopedia_marubozu: https://www.investopedia.com/terms/m/marubozo.asp
+investopedia_nfp: https://www.investopedia.com/terms/n/nonfarmpayroll.asp
 investopedia_rr: https://www.investopedia.com/terms/r/riskrewardratio.asp
 investopedia_rsi: https://www.investopedia.com/terms/r/rsi.asp
 investopedia_sl: https://www.investopedia.com/terms/s/stop-lossorder.asp
 investopedia_tp: https://www.investopedia.com/terms/t/take-profitorder.asp
+investopedia_buy_limit_sell_stop: https://www.investopedia.com/ask/answers/050515/what-difference-between-buy-limit-and-sell-stop-order.asp
 
 mademistakes_com: https://mademistakes.com
 
@@ -24,3 +26,4 @@ programming_personal_site_2: /programming/2025-08-05-how-i-built-my-personal-sit
 programming_personal_site_3: /programming/2025-08-12-how-i-built-my-personal-site-with-jekyll-and-minimal-mistakes-part-3
 
 trading_smc_1: /trading/2025-09-28-smart-money-concepts-1-fair-value-gaps
+trading_smc_2: /trading/2025-08-31-smart-money-concepts-2-how-to-trade-fair-value-gaps
