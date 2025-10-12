@@ -1,4 +1,6 @@
 # external links
+bitcoin_it_difficulty: https://en.bitcoin.it/wiki/Difficulty
+
 coinmarketcap_puell_multiple: https://coinmarketcap.com/academy/article/what-is-puell-multiple-in-crypto-and-how-to-use-it
 
 ghpages_versions: https://pages.github.com/versions.json
@@ -17,6 +19,8 @@ mademistakes_com: https://mademistakes.com
 medium_warren_buffet: https://devxhub.medium.com/warren-buffetts-5-25-rule-for-sky-high-productivity-1c0fc3308421
 
 trading_view_volume_profile: https://www.tradingview.com/support/solutions/43000502040-volume-profile-indicators-basic-concepts
+
+wikipedia_bitcoin_protocol: https://en.wikipedia.org/wiki/Bitcoin_protocol
 
 # internal links
 portfolio_my_personal_site: /portfolio/2025-07-29-my-personal-site
