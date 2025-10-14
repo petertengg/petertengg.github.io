@@ -1,6 +1,6 @@
 ---
 title: "Crypto Market Indicators Part 1: Puell Multiple and Its Improvements"
-date:   2025-10-10 09:00:00 +0200 (!update)
+date:   2025-10-14 09:00:00 +0200
 published: true
 excerpt: We will have a look at Puell Multiple, its shortcomings and possible approaches to overcome those
 toc: true
@@ -191,7 +191,7 @@ It is important to note that there is a problem with custom indicators. If no-on
 
 ### TradingView indicator
 
-I have made the TradingView indicator demonstrated in this post open source (!link). Feel free to experiment with it and let me know your findings.
+I have made the TradingView indicator demonstrated in this post {% include link.html key="trading_view_puell_multiple_variants" text="open source" %}. Feel free to experiment with it and let me know your findings.
 
 ### Final thoughts
 
@@ -206,3 +206,4 @@ This has been a deep dive on the Puell Multiple. A deeper one than I originally 
 - {% include link.html key="investopedia_rsi" text="Relative Strength Index (RSI)" %}
 - {% include link.html key="wikipedia_bitcoin_protocol" text="Bitcoin Protocol" %}
 - {% include link.html key="bitcoin_it_difficulty" text="Bitcoin Difficulty" %}
+- {% include link.html key="trading_view_puell_multiple_variants" text="Puell Multiple Variants indicator on TradingView" %}
