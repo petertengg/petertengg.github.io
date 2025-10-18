@@ -33,8 +33,8 @@ if (Test-Path $postPath) {
     }
 }
 
-# Create symbolic link
-Write-Host "Creating symbolic link..."
+# Create hard link
+Write-Host "Creating hard link..."
 cmd /c mklink /H "$postPath" "$draftPath" | Out-Null
 
 if (Test-Path $postPath) {

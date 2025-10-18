@@ -207,3 +207,4 @@ This has been a deep dive on the Puell Multiple. A deeper one than I originally 
 - {% include link.html key="wikipedia_bitcoin_protocol" text="Bitcoin Protocol" %}
 - {% include link.html key="bitcoin_it_difficulty" text="Bitcoin Difficulty" %}
 - {% include link.html key="trading_view_puell_multiple_variants" text="Puell Multiple Variants indicator on TradingView" %}
+- {% include link.html key="portfolio_puell_multiple_variants" text="Related portfolio post" %}
