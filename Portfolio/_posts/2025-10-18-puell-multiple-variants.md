@@ -64,9 +64,6 @@ Includes three related indicators for analysing Bitcoin miner revenue dynamics:
 ## Gallery
 {% include gallery caption="" layout="half" %}
 
-## Client testimonial
-Within three days of release, the indicator received nearly 350 likes on TradingView.
-
 ## Tech stack
 - Pine Script v6
 - TradingView
