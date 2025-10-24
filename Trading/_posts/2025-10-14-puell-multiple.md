@@ -71,13 +71,13 @@ Which means that the indicator shows how the current miner revenue compares to t
 
 Before further analysing the Puell Multiple and what it suggests to us, we need to understand Bitcoin cycles as well. 
 
-Bitcoin, since its inception, has shown cyclic market behaviour which is heavily driven (although not exclusively) by its `halving events`. Halving events occur about every four years, and it halves the global BTC block reward for miners. It sounds quite bad for miners, but it also means, that less new BTC will enter the market, which eventually drives prices up. Now let's take another look at the Puell Multiple chart with the halving events marked, using a logarithmic* scale this time:
+Bitcoin, since its inception, has shown cyclic market behaviour which is heavily driven (although not exclusively) by its `halving events`. Halving events occur about every four years, and it halves the global BTC block reward for miners. It sounds quite bad for miners, but it also means, that less new BTC will enter the market, which eventually drives prices up. Now let's take another look at the Puell Multiple chart with the halving events marked, using a logarithmic\* scale this time:
 
 {% include image.html src="/assets/images/trading/puell-multiple/puell-2.png"
    alt="Figure 2: Puell Multiple and halving events"
    id="fig-puell-2" %}
 
-*: The logarithmic scale allows me to draw a straight trend line instead of a *1/(2^k)* exponential decay function. *k* is the number of halvings in the past. Every halving cuts the miner rewards in half, so it will be 1/2, 1/4, 1/8... etc. of the initial block reward. I also use the monthly chart to reduce noise
+\*: The logarithmic scale allows me to draw a straight trend line instead of a *1/(2^k)* exponential decay function. *k* is the number of halvings in the past. Every halving cuts the miner rewards in half, so it will be 1/2, 1/4, 1/8... etc. of the initial block reward. I also use the monthly chart to reduce noise
 {: .notice}
 
 In [Figure 2](#fig-puell-2), you can see how miner revenues and bitcoin halvings are closely related. The peaks in the Puell Multiple marked with 1,3,5,7 indicate extreme high revenues. Historically, they have always followed a halving event (with the exception of 9, see later). As discussed earlier, halvings press down miner revenues, which is clearly visible as local bottoms right after the halvings (purple lines), but they cause a supply shortage in the longer term, which leads to subsequent peaks (1,3,5,7). Then the peaks in Puell Multiple have indicated overvalued market conditions which was followed by a reversal and has lead to the dreaded `crypto bear markets`, until BTC's price (and thus miner revenues) bottomed (2,4,6,8).
@@ -119,7 +119,10 @@ As you can see at `10`, the indicator is approaching the trendline, and the Bitc
 3. This one is not a problem with the Puell Multiple itself, but {% include link.html key="coinmarketcap_puell_multiple" text="CoinMarketCap" %} stated that 
 > When the indicator reaches levels between 3.5 and 10, it enters what’s called the "red zone" – a territory that has often coincided with Bitcoin price peaks
 
-While this is certainly true, I don't understand why they determine a constant `3.5` value, despite the diminishing nature of the $\frac{1}{2^k}$ block reward function. If you acted by this rule, you would have completely missed [peaks 7,9 and 10](#fig-puell-3a) (whenever that happens) as they don't even stand a chance reaching `3.5` after all those halvings. This made me thinking of other solutions, and while switching the chart to logarithmic scale and drawing a trendline seems to work well, I have come up with some other approaches.
+This is true. A value of `3.5` has always been overvalued, and would certainly be today, but the problem is that the last time the Puell Multiple reached 3.5, was at the end of the 2017 bull run (5). Since then, peaks 7,9 and 10\*\* are getting [lower and lower](#fig-puell-3a). This made me thinking of other solutions, and while switching the chart to logarithmic scale and drawing a trendline seems to work, I have come up with some other approaches.
+
+\*\*: 10 is not a confirmed cycle or local top yet, but it is a higher value compared to the previous ones, so it is worth mentioning
+{: .notice}
 
 ## Experiments and improvements
 
@@ -127,7 +130,7 @@ If you have read up until this point, congratulations. You have all the necessar
 
 ### Puell Multiple halving corrected
 
-As we have seen earlier, the overvalued peaks of the Puell Multiple follow an $\frac{1}{2^k}$ function, but `CoinMarketCap` wrote about a constant value at `3.5`. This gave me the idea to compensate the BTC halvings by multiplying the Puell Multiple value by $2^k$ after each halving. It turned out that multiplying by $2^k$ was an overcompensation, and the peaks (1,3,5,7) were rising heavily. After some experimentation I found an approximate value: `1.63` which brings the trendline to a horizontal position at `12.49` (see below).
+As we have seen earlier, the overvalued peaks of the Puell Multiple follow an $\frac{1}{2^k}$ like function, but `CoinMarketCap` wrote about a constant value at `3.5`. This gave me the idea to compensate the BTC halvings by multiplying the Puell Multiple value by $2$ after each halving. It turned out to be an overcompensation, and the peaks (1,3,5,7) were rising heavily. After some experimentation I found an approximate value: `1.63` which brings the trendline to a horizontal position at `12.49` (see below).
 
 {% include image.html src="/assets/images/trading/puell-multiple/puell-4.png"
    alt="Figure 4: Puell Multiple compensated for BTC halvings"
