@@ -205,6 +205,7 @@ This has been a deep dive on the Puell Multiple. A deeper one than I originally 
 - RSI: Relative Strength Index
 
 ## Links
+- {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}
 - {% include link.html key="coinmarketcap_puell_multiple" text="Puell Multiple" %}
 - {% include link.html key="investopedia_rsi" text="Relative Strength Index (RSI)" %}
 - {% include link.html key="wikipedia_bitcoin_protocol" text="Bitcoin Protocol" %}
