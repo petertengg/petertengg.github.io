@@ -18,7 +18,7 @@ tags:
 
 ## Introduction
 
-Predicting Bitcoin's price for the cycle top is a fool's game, and any prudent person with some relf-respect should stay away from it. 
+Predicting Bitcoin's price for the cycle top is a fool's game, and any prudent person with some self-respect should stay away from it. 
 
 In my view, it is like playing the lottery. I have a very high chance of not winning anything, and only a negligible chance of hitting the jackpot. If I don't guess the top, I will be just one of the {% include link.html key="youtube_1000_more_fools" text="thousand fools being born every freakin' day" %}. But if I nail it, that is a pretty nice achievement that I can brag about, so I will give it a shot.
 
