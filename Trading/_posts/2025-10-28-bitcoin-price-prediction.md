@@ -46,7 +46,7 @@ The current correction factor, after the 4th halving is $1,63^4 = 7.059$. Dividi
 
 The Puell Multiple is a ratio between the `Current Miner Revenue` and the `365-Day Moving Average of the Miner Revenue`. We know the ratio. In order to calculate either term of the ratio, we have to know the other one. Here, it is easier to predict the `Moving Average`, as its movement is much smoother and more predictable than the erratic raw `Miner Revenue`. 
 
-The `365-day Moving Average of the Mining Revenue ` is at `44.572M` USD on the monthly chart at the time of writing. We can expect that it will go higher as the `Miner Revenue` goes higher as we are approaching the cycle top, so even the conservative case should be higher than the current value. My `Miner Revenue MA` estimates based on this, are:
+The `365-day Moving Average of the Mining Revenue ` is at `44.752M` USD on the monthly chart at the time of writing. We can expect that it will go higher as the `Miner Revenue` goes higher while we are approaching the cycle top, so even the conservative case should be higher than the current value. My `Miner Revenue MA` estimates based on this, are:
 - *Conservative case*: `46.8M`
 - *Base case*: `50M`
 - *Bull case*: `52M`
