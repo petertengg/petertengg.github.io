@@ -1,5 +1,5 @@
 ---
-title: "Crypto Market Indicators Part 1: Puell Multiple and Its Improvements"
+title: "Crypto Market Indicators - Part 1: Puell Multiple and Its Improvements"
 date:   2025-10-14 09:00:00 +0200
 published: true
 excerpt: We will have a look at the Puell Multiple, its shortcomings and possible approaches to overcome those

@@ -1,5 +1,5 @@
 ---
-title: "Crypto Market Indicators Part 2: Bitcoin Price Prediction"
+title: "Crypto Market Indicators - Part 2: Bitcoin Price Prediction"
 date:   2025-10-28 07:00:00 +0200
 published: true
 excerpt: Predicting Bitcoin's price for the cycle top is a fool's game, and any prudent person with some relf-respect should stay away from it
