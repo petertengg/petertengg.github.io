@@ -1,4 +1,6 @@
 # external links
+bestbrokers_usd_global_share: https://www.bestbrokers.com/forex-trading/us-dollar-share-of-global-currency-reserves/
+
 bitcoin_it_difficulty: https://en.bitcoin.it/wiki/Difficulty
 
 coinmarketcap_puell_multiple: https://coinmarketcap.com/academy/article/what-is-puell-multiple-in-crypto-and-how-to-use-it
@@ -24,6 +26,7 @@ trading_view_volume_profile: https://www.tradingview.com/support/solutions/43000
 trading_view_puell_multiple_variants: https://www.tradingview.com/script/3wL26GR7-Puell-Multiple-Variants-OperationHeadLessChicken/
 
 wikipedia_bitcoin_protocol: https://en.wikipedia.org/wiki/Bitcoin_protocol
+wikipedia_dxy: https://en.wikipedia.org/wiki/U.S._Dollar_Index
 
 youtube_1000_more_fools: https://youtu.be/_RRJODpdOyQ?si=6yb5S8-Wzgc0JaFD
 youtube_along_the_way: https://youtu.be/_b4h_QbBxEw?si=XTIpEALBETY0D3Hg
@@ -31,6 +34,7 @@ youtube_cb_crypto_cycle_top_strategy: https://youtu.be/JUtHFSRZ9Zo?si=iP8Frp4sfd
 youtube_cb_the_crypto_bull_market_is_ending: https://youtu.be/NWGPdeaAm4c?si=9GS77UEwNDbztsyX
 youtube_cb_top_crypto_indicators_that_actually_work: https://youtu.be/I0J2kG6f9ZU?si=HhFuIOhtwF4dBSDL
 youtube_cb_q4_crypto_surge_incoming: https://youtu.be/eCxEqunyDYc?si=YTC5nvxbAcw2aepY
+youtube_cb_no_alt_season: https://youtu.be/8t1CAq-DxY0?si=MZ8k4O2ALgH-eK6J
 
 # internal links
 portfolio_my_personal_site: /portfolio/2025-07-29-my-personal-site
@@ -40,7 +44,8 @@ programming_personal_site_1: /programming/2025-07-29-how-i-built-my-personal-sit
 programming_personal_site_2: /programming/2025-08-05-how-i-built-my-personal-site-with-jekyll-and-minimal-mistakes-part-2
 programming_personal_site_3: /programming/2025-08-12-how-i-built-my-personal-site-with-jekyll-and-minimal-mistakes-part-3
 
+trading_btc_price_prediction: /trading/2025-10-28-bitcoin-price-prediction
+trading_puell_multiple: /trading/2025-10-14-puell-multiple
 trading_smc_1: /trading/2025-09-28-smart-money-concepts-1-fair-value-gaps
 trading_smc_2: /trading/2025-10-07-smart-money-concepts-2-how-to-trade-fair-value-gaps
-trading_puell_multiple: /trading/2025-10-14-puell-multiple
-trading_btc_price_prediction: /trading/2025-10-28-bitcoin-price-prediction
+trading_important_indicators_to_watch: /trading/2025-10-30-hard-link-to-important-indicators-to-watch
