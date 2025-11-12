@@ -101,7 +101,7 @@ In this section, I will discuss indicators that are focused on the broad crypto 
 
 #### 2.2.1 BTC Dominance
 
-Let's start with the most important one. `BTC Dominance` or `BTC.D` for short, which is also the symbol used by TradingView. It is the ratio between `BTC's market capitalisation` (market cap) and `TOTAL`, the market cap of the total crypto market. 
+Let's start with the most important one. `BTC Dominance` or `BTC.D` for short, which is also the symbol used by TradingView. It is the ratio between `BTC's market capitalisation` (market cap) and [TOTAL](#22141-total), the market cap of the total crypto market. 
 
 At the time of writing, `BTC.D` is at `60.01%`, which means that BTC gives `60%` of the total crypto market cap, while all the other coins (including stablecoins) give `40%` together. Do you still wonder why BTC is referred to as `The King`? :P
 

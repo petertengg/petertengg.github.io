@@ -146,7 +146,7 @@ Thanks for reading. Let me know in the comments what you think about this estima
 ## Links
 
 - {% include link.html key="trading_puell_multiple" text="Part 1: Puell Multiple and Its Improvements" %}
-- {% include link.html key="trading_important_indicators_to_watch" text="Part 3: Important Indicators to Watch" %}
+- {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
 - {% include link.html key="macromicro_btc_issuance" text="Bitcoin issuance" %}
 
 ## Appendix
