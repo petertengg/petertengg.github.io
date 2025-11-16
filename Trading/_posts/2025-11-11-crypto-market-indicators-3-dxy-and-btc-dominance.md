@@ -194,7 +194,7 @@ If you are heavy on BTC, it doesn't mean that you have to sell it and buy alts i
 Excludes BTC from TOTAL.
 - [OTHERS](#22144-others) `up`, but `TOTAL2 is rising more`: rally is focused on ETH and a few other large caps
 
-###### 2.2.1.4.3 Total2ES
+###### 2.2.1.4.3 TOTAL2ES
 
 Similar to `TOTAL2`, but excludes stablecoins as well: `total market cap of altcoins that can rally` in an altseason without BTC and stablecoins. ES stands for Excluding Stablecoins.
 
