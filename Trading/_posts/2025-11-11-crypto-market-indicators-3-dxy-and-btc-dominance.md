@@ -30,7 +30,7 @@ Many believe that the `crypto market cycle top` is about to happen in late 2025 
 
 While these questions can only be answered with certainty in hindsight, there are indicators that can help you navigate this upcoming period. In the upcoming posts, I am going to discuss some of the most notable ones. 
 
-This is part 3 in my `Crypto Market Indicators` series. It is loosely related to {% include link.html key="trading_puell_multiple" text="Part 1: Puell Multiple" %} and {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}, but is closely related to the upcoming parts 4-6, which are all products of the same research project.
+This is part 3 in my `Crypto Market Indicators` series. It is loosely related to {% include link.html key="trading_puell_multiple" text="Part 1: Puell Multiple" %} and {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}, but is closely related to the upcoming [parts 4-6](#5-links-and-further-reading), which are all products of the same research project.
 
 ## 2 Indicators
 
@@ -222,7 +222,7 @@ As we have seen [earlier](#capital-flow), in an altseason, `ETH` starts moving f
 
 In this post, we have discussed the `DXY`, which is a macro indicator measuring the US Dollar's strength on the global market, and `Bitcoin dominance` which is the most important indicator focusing on the crypto sector. These are the highest level indicators you should watch to get a sense of the global markets.
 
-In the next post we will take one step down in our top-down hierarchy and have a look at the `Pi Cycle Top` and `MVRV Z-score`, which are more Bitcoin-specific, but can still provide valuable information about the crypto sector as a whole. Stay tuned! :)
+In the {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="next post" %} we will take one step down in our top-down hierarchy and have a look at the `Pi Cycle Top` and `MVRV Z-score`, which are more Bitcoin-specific, but can still provide valuable information about the crypto sector as a whole. Stay tuned! :)
 
 ## 4 Glossary
 - Alts: Altcoins, alternative coins, all cryptos except BTC
@@ -241,6 +241,7 @@ In the next post we will take one step down in our top-down hierarchy and have a
 - {% include link.html key="trading_puell_multiple" text="Part 1: Puell Multiple and Its Improvements" %}
 - {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}
 - {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="Part 4: Pi Cycle Top and MVRV Z-score" %}
+- {% include link.html key="the_versatile_technical_indicators" text="Part 5: The Versatile Technical Indicators!" %}
 
 ## 6 Sources
 - {% include link.html key="youtube_cb_q4_crypto_surge_incoming" text="Q4 Crypto Surge Incoming? (Youtube)" %}
