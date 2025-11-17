@@ -240,6 +240,7 @@ In the next post we will take one step down in our top-down hierarchy and have a
 ## 5 Links and further reading
 - {% include link.html key="trading_puell_multiple" text="Part 1: Puell Multiple and Its Improvements" %}
 - {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}
+- {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="Part 4: Pi Cycle Top and MVRV Z-score" %}
 
 ## 6 Sources
 - {% include link.html key="youtube_cb_q4_crypto_surge_incoming" text="Q4 Crypto Surge Incoming? (Youtube)" %}
