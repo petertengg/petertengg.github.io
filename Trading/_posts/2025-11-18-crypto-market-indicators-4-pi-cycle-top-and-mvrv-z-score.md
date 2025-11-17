@@ -32,7 +32,7 @@ as they are all outcomes of the same research effort.
 
 ## 2 Indicators
 
-This section picks up where {% include link.html key="trading_dxy_and_btc_d" text="Part 3 Indicators" anchor="#2-indicators" %} section left off and goes one level deeper in the rabbit hole: `Part 3` discussed macro and global crypto indicators, while this part zooms in on Bitcoin itself. The indicators introduced here will still carry valuable information about the crypto sector as a whole, since Bitcoin is so dominant in the market.
+This section picks up where {% include link.html key="trading_dxy_and_btc_d" text="Part 3 Indicators" anchor="#2-indicators" %} section left off and goes one level deeper in the rabbit hole: {% include link.html key="trading_dxy_and_btc_d" text="Part 3" %} discussed macro and global crypto indicators, while this part zooms in on Bitcoin itself. The indicators introduced here will still carry valuable information about the crypto sector as a whole, since Bitcoin is so dominant in the market.
 
 ### 2.1 Pi Cycle Top
 
@@ -116,7 +116,7 @@ In this post I have discussed two Bitcoin specific indicators, `Pi Cycle Top` an
 
 In {% include link.html key="the_versatile_technical_indicators" text="Part 5" %}, we will go one more level lower in the indicator hierarchy, and have a look at technical indicators. They are versatile and powerful tools that can be combined with each other and other indicators as well. Personally, I am a big fan of them. :) See you there! 
 
-## Glossary
+## 4 Glossary
 - BTC: Bitcoin
 - DAT: Digital Asset Treasury
 - ETF: Exchange-Traded Fund
@@ -126,13 +126,13 @@ In {% include link.html key="the_versatile_technical_indicators" text="Part 5" %
   - RV: Realised Value: (the value at which BTC holders bought their BTC originally)
   - Z-score: a standardised value calculated from MV and RV
 
-## Links and further reading
+## 5 Links and further reading
 - {% include link.html key="trading_puell_multiple" text="Part 1: Puell Multiple and Its Improvements" %}
 - {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}
 - {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
 - {% include link.html key="the_versatile_technical_indicators" text="Part 5: The Versatile Technical Indicators!" %}
 - Part 6 (coming soon)
 
-## Sources
+## 6 Sources
 - {% include link.html key="youtube_cb_top_crypto_indicators_that_actually_work" text="Top Crypto Indicators That Actually Work (Youtube)" %}
 - {% include link.html key="coinglass_mvrv_z_score" text="MVRV Z-score" %}
