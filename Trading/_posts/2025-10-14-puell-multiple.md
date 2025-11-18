@@ -209,6 +209,7 @@ This has been a deep dive on the Puell Multiple. A deeper one than I originally 
 - {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
 - {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="Part 4: Pi Cycle Top and MVRV Z-score" %}
 - {% include link.html key="the_versatile_technical_indicators" text="Part 5: The Versatile Technical Indicators!" %}
+- {% include link.html key="indicator_cheat_sheet" text="Part 6: Indicator Cheat Sheet" %}
 - {% include link.html key="coinmarketcap_puell_multiple" text="Puell Multiple" %}
 - {% include link.html key="investopedia_rsi" text="Relative Strength Index (RSI)" %}
 - {% include link.html key="wikipedia_bitcoin_protocol" text="Bitcoin Protocol" %}

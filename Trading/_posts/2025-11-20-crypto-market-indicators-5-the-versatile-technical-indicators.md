@@ -28,11 +28,11 @@ This is part 5 in my `Crypto Market Indicators` series, loosely related to
 Closely related to 
 - {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
 - {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="Part 4: Pi Cycle Top and MVRV Z-score" %}
-- Part 6 (coming soon)
+- {% include link.html key="indicator_cheat_sheet" text="Part 6: Indicator Cheat Sheet" %}
 
 as they are all outcomes of the same research effort.
 
-In this series, I follow a top-down hierarchy to discuss indicators. While `Part 3` discussed {% include link.html key="trading_dxy_and_btc_d" text="global macro and crypto indicators" %}, `Part 4` focused on Bitcoin (BTC)(!link) related ones, and this one will explore `technical indicators`, which are versatile enough to be applied from very high-level charts to intra-day trading and everything in between.
+In this series, I follow a top-down hierarchy to discuss indicators. While `Part 3` discussed {% include link.html key="trading_dxy_and_btc_d" text="global macro and crypto indicators" %}, {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="Part 4" %} focused on Bitcoin (BTC) related ones, and this one will explore `technical indicators`, which are versatile enough to be applied from very high-level charts to intra-day trading and everything in between.
 
 ## 2 Technical indicators
 
@@ -224,7 +224,7 @@ As you can see in [Figure 10](#fig-10), we got much less, but much better qualit
 
 In this post we have learned about some common technical indicators: `Moving Averages (MA)`, `Relative Strength Index (RSI)` and `Bollinger Bands`. We have seen how they work on long, mid and short-term timeframes as well. Their versatility and effectiveness are thanks to the fact that they all measure the market sentiment in some way, and due to their simplicity many traders watch them, strengthening their self-fulfilling property. 
 
-This concludes my research on crypto market indicators, but there is still one post remaining. In the next post I will publish a cheatsheet that summarises briefly each indicator discussed in this series. It will give you a quick overview and the most important signals they can provide, and my final thoughts about this topic. Thanks for reading, stay tuned!
+This concludes my research on crypto market indicators, but there is still one post remaining. In the {% include link.html key="indicator_cheat_sheet" text="next post" %} I will publish a cheatsheet that summarises briefly each indicator discussed in this series. It will give you a quick overview and the most important signals they can provide, and my final thoughts about this topic. Thanks for reading, stay tuned!
 
 ## 4 Glossary
 - Alts: Altcoins, alternative coins, all cryptos, except for BTC
@@ -243,7 +243,7 @@ This concludes my research on crypto market indicators, but there is still one p
 - {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}
 - {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
 - {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="Part 4: Pi Cycle Top and MVRV Z-score" %}
-- Part 6: coming soon
+- {% include link.html key="indicator_cheat_sheet" text="Part 6: Indicator Cheat Sheet" %}
 - {% include link.html key="investopedia_rsi" text="Relative Strength Index (RSI)" %}
 - {% include link.html key="investopedia_bollinger_bands" text="Bollinger Bands (BB)" %}
 - {% include link.html key="investopedia_sl" text="Stop Loss (SL)" %}

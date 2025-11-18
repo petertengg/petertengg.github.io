@@ -26,7 +26,7 @@ This is part 4 in my `Crypto Market Indicators` series, loosely related to
 Closely related to 
 - {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
 - {% include link.html key="the_versatile_technical_indicators" text="Part 5: The Versatile Technical Indicators!" %}
-- Part 6 (coming soon)
+- {% include link.html key="indicator_cheat_sheet" text="Part 6: Indicator Cheat Sheet" %}
 
 as they are all outcomes of the same research effort.
 
@@ -131,7 +131,7 @@ In {% include link.html key="the_versatile_technical_indicators" text="Part 5" %
 - {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}
 - {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
 - {% include link.html key="the_versatile_technical_indicators" text="Part 5: The Versatile Technical Indicators!" %}
-- Part 6 (coming soon)
+- {% include link.html key="indicator_cheat_sheet" text="Part 6: Indicator Cheat Sheet" %}
 
 ## 6 Sources
 - {% include link.html key="youtube_cb_top_crypto_indicators_that_actually_work" text="Top Crypto Indicators That Actually Work (Youtube)" %}
