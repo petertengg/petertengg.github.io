@@ -32,7 +32,7 @@ Closely related to
 
 as they are all outcomes of the same research effort.
 
-In this series, I follow a top-down hierarchy to discuss indicators. While `Part 3` discussed {% include link.html key="trading_dxy_and_btc_d" text="global macro and crypto indicators" %}, `Part 4` focused on Bitcoin (BTC)(!link) related ones, and this one will explore `technical indicators`, which are versatile enough to be applied from very high-level charts to intra-day trading and everything in between.
+In this series, I follow a top-down hierarchy to discuss indicators. While {% include link.html key="trading_dxy_and_btc_d" text="Part 3" %} discussed global macro and crypto indicators, {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="Part 4" %} focused on Bitcoin (BTC) related ones, and this one will explore `technical indicators`, which are versatile enough to be applied from very high-level charts to intra-day trading and everything in between.
 
 ## 2 Technical indicators
 
