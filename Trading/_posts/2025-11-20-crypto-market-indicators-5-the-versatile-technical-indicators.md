@@ -16,6 +16,8 @@ tags:
   - "Indicators"
   - "Relative Strength Index"
   - "RSI"
+  - "Bollinger Bands"
+  - "BB"
 ---
 {% include trading-disclaimer.html %}
 
