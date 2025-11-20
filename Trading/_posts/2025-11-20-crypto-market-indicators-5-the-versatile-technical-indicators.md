@@ -1,6 +1,6 @@
 ---
 title: "Crypto Market Indicators - Part 5: The Versatile Technical Indicators!"
-date:   2025-11-20 08:00:00 +0100
+date:   2025-11-20 06:00:00 +0100
 published: true
 excerpt: Technical indicators can be applied from very high-level charts to intra-day trading and everything in between
 toc: true
