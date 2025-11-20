@@ -148,6 +148,7 @@ Thanks for reading. Let me know in the comments what you think about this estima
 - {% include link.html key="trading_puell_multiple" text="Part 1: Puell Multiple and Its Improvements" %}
 - {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
 - {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="Part 4: Pi Cycle Top and MVRV Z-score" %}
+- {% include link.html key="the_versatile_technical_indicators" text="Part 5: The Versatile Technical Indicators!" %}
 - {% include link.html key="macromicro_btc_issuance" text="Bitcoin issuance" %}
 
 ## Appendix

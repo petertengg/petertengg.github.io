@@ -25,7 +25,7 @@ This is part 4 in my `Crypto Market Indicators` series, loosely related to
 
 Closely related to 
 - {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
-- Part 5 (coming soon)
+- {% include link.html key="the_versatile_technical_indicators" text="Part 5: The Versatile Technical Indicators!" %}
 - Part 6 (coming soon)
 
 as they are all outcomes of the same research effort.
@@ -114,7 +114,7 @@ However, this doesn't mean that the Z-Score has become obsolete, we just need to
 
 In this post I have discussed two Bitcoin specific indicators, `Pi Cycle Top` and `MVRV Z-score`. They have a good track record of signaling Bitcoin cycle tops. It is important because BTC leads the crypto market, and around the time it tops, alts have their big rally too. However, the market is maturing, which means that we will need a bit different approach when utilising them. We cannot expect the market to become so overheated anymore, and we have to interpret these signals more in context.
 
-In the `part 5`, we will go one more level lower in the indicator hierarchy, and have a look at technical indicators. They are versatile and powerful tools that can be combined with each other and other indicators as well. Personally, I am a big fan of them. :) See you there! 
+In {% include link.html key="the_versatile_technical_indicators" text="Part 5" %}, we will go one more level lower in the indicator hierarchy, and have a look at technical indicators. They are versatile and powerful tools that can be combined with each other and other indicators as well. Personally, I am a big fan of them. :) See you there! 
 
 ## 4 Glossary
 - BTC: Bitcoin
@@ -130,7 +130,7 @@ In the `part 5`, we will go one more level lower in the indicator hierarchy, and
 - {% include link.html key="trading_puell_multiple" text="Part 1: Puell Multiple and Its Improvements" %}
 - {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}
 - {% include link.html key="trading_dxy_and_btc_d" text="Part 3: US Dollar Index and Bitcoin Dominance" %}
-- Part 5 (coming soon)
+- {% include link.html key="the_versatile_technical_indicators" text="Part 5: The Versatile Technical Indicators!" %}
 - Part 6 (coming soon)
 
 ## 6 Sources

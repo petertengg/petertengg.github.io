@@ -241,6 +241,7 @@ In the {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="ne
 - {% include link.html key="trading_puell_multiple" text="Part 1: Puell Multiple and Its Improvements" %}
 - {% include link.html key="trading_btc_price_prediction" text="Part 2: Bitcoin Price Prediction" %}
 - {% include link.html key="trading_pi_cycle_top_and_mvrv_z_score" text="Part 4: Pi Cycle Top and MVRV Z-score" %}
+- {% include link.html key="the_versatile_technical_indicators" text="Part 5: The Versatile Technical Indicators!" %}
 
 ## 6 Sources
 - {% include link.html key="youtube_cb_q4_crypto_surge_incoming" text="Q4 Crypto Surge Incoming? (Youtube)" %}
