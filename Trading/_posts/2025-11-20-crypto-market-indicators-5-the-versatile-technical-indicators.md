@@ -194,12 +194,12 @@ Let's have a look at our previous example, but now utilising Bollinger Bands:
    id="fig-9" %}
 
 In [Figure 9](#fig-9) you can see the following cases:
-- 1: The BB is squeezing together, and as mentioned before, it is followed by a breakout. This time to the down-side (two large red candles)
-- 2, 5, 7, 11: pretty good long entries, 10 as well, if you manage to catch the wick
-- 4: a potentially losing long (depending on your {% include link.html key="investopedia_sl" text="Stop Loss" %} (SL))
-- 3, 9: pretty good short signals
-- 6: a decent short signal, if the initial upward movement doesn't stop you out
-- 8: a potentially losing short (depending on your SL)
+- `1`: The BB is squeezing together, and as mentioned before, it is followed by a breakout. This time to the down-side (two large red candles)
+- `2`, `5`, `7`, `11`: pretty good long entries, 10 as well, if you manage to catch the wick
+- `4`: a potentially losing long (depending on your {% include link.html key="investopedia_sl" text="Stop Loss" %} (SL))
+- `3`, `9`: pretty good short signals
+- `6`: a decent short signal, if the initial upward movement doesn't stop you out
+- `8`: a potentially losing short (depending on your SL)
 
 As you can see, the BB seem to work pretty well, at least according to this admittedly small sample.
 
@@ -215,10 +215,10 @@ Let's see our example again:
    alt="Figure 10: BTC sideways market, RSI and BB signals, daily"
    id="fig-10" %}
 
-As you can see in [Figure 10](#fig-10), we got much less, but much better quality signals:
-- 1, marked with yellow circle is not a valid signal, because the market is not moving sideways. It is in a strong uptrend. It ran to an All-Time High (ATH).
-- 2, 4: touch the `BB`, and they come close on the `RSI`, but don’t quite reach it. Regardless, `2` worked out pretty well, and whether `4` will work out or not, I don't know at the time of writing. It will be interesting to see. (Opening on these signals would mean relaxing the rules of the strategy which may or may not be acceptable. Only backtesting could tell.)
-- 3: the only clean signal, that fulfills all the criteria: `sideways market` + `touches the BB` + `RSI at least 70`.
+As you can see in [Figure 10](#fig-10), we got fewer, but higher quality signals:
+- `1`, marked with yellow circle is not a valid signal, because the market is not moving sideways. It is in a strong uptrend. It ran to an All-Time High (ATH).
+- `2`, `4`: touch the `BB`, and they come close on the `RSI`, but don’t quite reach it. Regardless, `2` worked out pretty well, and whether `4` will work out or not, I don't know at the time of writing. It will be interesting to see. (Opening on these signals would mean relaxing the rules of the strategy which may or may not be acceptable. Only backtesting could tell.)
+- `3`: the only clean signal, that fulfills all the criteria: `sideways market` + `touches the BB` + `RSI at least 70`.
 
 ## 3 Conclusion
 
