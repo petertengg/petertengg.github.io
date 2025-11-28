@@ -9,7 +9,7 @@ param(
     [string]$Date = (Get-Date -Format "yyyy-MM-dd")  # defaults to today's date
 )
 
-$draftPath = "drafts\drafts\$DraftName"
+$draftPath = "drafts\$DraftName"
 Write-Host "$draftPath"
 $postName = "$Date-hard-link-to-$DraftName"
 $postPath = "$Category\_posts\$postName"

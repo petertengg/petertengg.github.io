@@ -4,6 +4,8 @@ date:   2025-07-15 06:00:00 +0200
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
+categories: 
+  - "How-to"
 tags: 
   - "Game Development"
   - "Perforce"
